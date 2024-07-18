@@ -1,3 +1,5 @@
+import { color } from "framer-motion";
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -5,9 +7,8 @@ const {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,6 +16,35 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {},
+    colors: {
+      gradient: {
+        end: "#C1A4FF",
+        start: "#0026FF",
+      },
+      primary: {},
+      accent: {
+        secondary: "#FFBE62",
+        primary: { light: "#0252CD", dark: "#428DFF" },
+      },
+      black: {
+        200: "#151E2C",
+        300: "#192333",
+        400: "#778295",
+      },
+      dark: {
+        200: "#191939",
+        100: "#08080F",
+      },
+
+      white: {
+        900: "#FFFFFF",
+        800: "#F3F8FF",
+        500: "#6F74A7",
+      },
+    },
+  },
+  fontFamily: {
+    default: ["Inter", "FigTree"],
   },
   plugins: [addVariablesForColors],
 };

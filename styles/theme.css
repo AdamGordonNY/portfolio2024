@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer utilities {
+  .heading-1-bold {
+    @apply font-bold text-[64px] leading-[1.3] tracking-[-0.01em];
+  }
+  .heading-2-bold {
+    @apply font-bold text-[48px] leading-[1.15] tracking-[-0.25em];
+  }
+  .heading-3-bold {
+    @apply font-semibold text-[32px] leading-[1.2] tracking-[-0.5em];
+  }
+  .base-regular {
+    @apply font-normal text-[24px] leading-[1.3];
+  }
+  .base-semibold {
+    @apply font-semibold text-[24px] leading-[1.3];
+  }
+  .paragraph-regular {
+    @apply text-[20px] leading-[1.5];
+  }
+  .paragraph-semibold {
+    @apply font-semibold text-[20px] leading-[1.3];
+  }
+  .body-regular {
+    @apply text-[16px] leading-[1.6];
+  }
+  .body-semibold {
+    @apply font-semibold text-[16px] leading-[1.6];
+  }
+  .small-regular {
+    @apply text-[14px] leading-[1.55];
+  }
+  .small-bold {
+    @apply font-bold text-[14px] leading-[1.45];
+  }
+  .modern-h1 {
+    @apply font-semibold text-[64px] leading-[70px] tracking-[-2%];
+  }
+  .modern-h2 {
+    @apply font-semibold text-[40px] leading-[56px] tracking-[-2%];
+  }
+  .modern-h3 {
+    @apply font-bold text-[32px] leading-[1.3] tracking-[-2%];
+  }
+  .modern-base-regular {
+    @apply font-normal text-[24px] leading-[1.4] tracking-[-2%];
+  }
+  .modern-paragraph-regular {
+    @apply text-[22px] leading-normal tracking-[-2%];
+  }
+  .modern-paragraph-medium {
+    @apply font-medium text-[22px] leading-normal tracking-[-2%];
+  }
+
+  .modern-paragraph-semibold {
+    @apply font-semibold text-[22px] leading-normal tracking-[-2%];
+  }
+  .modern-body-medium {
+    @apply font-medium text-[18px] leading-[1.5];
+  }
+}
