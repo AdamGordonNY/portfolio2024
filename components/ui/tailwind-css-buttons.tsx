@@ -21,7 +21,7 @@ export const ButtonsCard = ({
       )}
     >
       <div className="dark:bg-dot-white/[0.1] bg-dot-black/[0.1] absolute inset-0" />
-      <IconClipboard className="text-neutral-300 absolute right-2 top-2 hidden size-4 transition duration-200 group-hover/btn:block" />
+      <IconClipboard className="absolute right-2 top-2 hidden size-4 text-neutral-300 transition duration-200 group-hover/btn:block" />
       <div className="relative z-40">{children}</div>
     </div>
   );
