@@ -37,6 +37,7 @@
     @apply font-bold text-[14px] leading-[1.45];
   }
   .modern-h1 {
+    font-family: "Figtree";
     @apply font-semibold text-[64px] leading-[70px] tracking-[-2%];
   }
   .modern-h2 {

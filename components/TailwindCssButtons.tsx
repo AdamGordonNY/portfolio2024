@@ -4,7 +4,23 @@ import reactElementToJSXString from "react-element-to-jsx-string";
 import { toast, Toaster } from "sonner";
 import { ButtonsCard } from "./ui/tailwind-css-buttons";
 import { buttons } from "@/lib/constants";
+import { useRouter } from "next/navigation";
 
+export const GradientButton = ({ text }: { text: string }) => {
+  const router = useRouter();
+  const handleNavigate = async () => {
+    router.push("/projects");
+  };
+  return (
+    <button
+      type="button"
+      onClick={handleNavigate}
+      className="rounded-full bg-gradient-to-b from-gradient-start to-gradient-end px-8 py-2 text-white-900 transition duration-200 hover:shadow-xl focus:ring-2 focus:ring-blue-400"
+    >
+      {text}
+    </button>
+  );
+};
 export function TailwindcssButtons() {
   const copy = (button: any) => {
     if (button.code) {

@@ -1,5 +1,8 @@
 import type { Config } from "tailwindcss";
 
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 const config = {
   darkMode: ["class"],
   content: [
@@ -18,19 +21,40 @@ const config = {
       },
     },
     extend: {
-      boxShadow: {
-        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
-      },
       colors: {
+        gradient: {
+          end: "#C1A4FF",
+          start: "#0026FF",
+        },
+        primary: {},
+        accent: {
+          secondary: "#FFBE62",
+          primary: {
+            light: "#0252CD",
+            dark: "#428DFF",
+          },
+        },
+        black: {
+          200: "#151E2C",
+          300: "#192333",
+          400: "#778295",
+        },
+        dark: {
+          200: "#191939",
+          100: "#08080F",
+        },
+
+        white: {
+          900: "#FFFFFF",
+          800: "#F3F8FF",
+          500: "#6F74A7",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
+
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -42,10 +66,6 @@ const config = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -70,6 +90,14 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -79,5 +107,14 @@ const config = {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+export function addVariablesForColors({ addBase, theme }: any) {
+  const allColors = flattenColorPalette(theme("colors"));
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
 
+  addBase({
+    ":root": newVars,
+  });
+}
 export default config;
