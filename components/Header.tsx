@@ -7,7 +7,7 @@ const Header = () => {
     </div>
   );
 };
-const NavButton = ({ children }: { children: React.ReactNode }) => {
-  return <button className="bg-transparent text-white-900"> {children}</button>;
-};
+// const NavButton = ({ children }: { children: React.ReactNode }) => {
+//   return <button className="bg-transparent text-white-900"> {children}</button>;
+// };
 export default Header;
