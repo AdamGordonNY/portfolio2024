@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Figtree } from "next/font/google";
+import { Inter, Figtree, Poppins } from "next/font/google";
 import React from "react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const figtree = Figtree({ subsets: ["latin"], weight: ["400", "500", "700"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "700"] });
 export const metadata: Metadata = {
   title: "Adan Gordon - Full Stack NextJs Developer | New York, NY",
   description:
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${figtree.className}`}>
+      <body
+        className={`${inter.className} ${figtree.className} ${poppins.className}`}
+      >
         {children}
       </body>
     </html>
