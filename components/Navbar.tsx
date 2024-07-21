@@ -1,70 +1,73 @@
-import { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+"use client";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { Tabs } from "./ui/tabs";
 
-export function NavbarDemo() {
+const DummyContent = () => {
   return (
-    <div className="relative flex w-full items-center justify-center">
-      <Navbar className="top-2" />
-      <p className="text-black dark:text-white">
-        The Navbar will show on top of the page
-      </p>
-    </div>
+    <Image
+      src="/linear.webp"
+      alt="dummy image"
+      width="1000"
+      height="1000"
+      className="absolute inset-x-0 -bottom-10  mx-auto h-3/5 w-[90%] rounded-xl object-cover object-left-top md:h-[90%]"
+    />
   );
-}
-
-function Navbar({ className }: { className?: string }) {
-  const [active, setActive] = useState<string | null>(null);
+};
+export function Navbar({ className }: { className?: string }) {
+  const tabs = [
+    {
+      title: "Home",
+      value: "home",
+      content: (
+        <div className="text-white  relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold md:text-4xl">
+          <p>Home</p>
+          <DummyContent />
+        </div>
+      ),
+    },
+    {
+      title: "Projects",
+      value: "projects",
+      content: (
+        <div className="text-white relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold md:text-4xl">
+          <p>Projects</p>
+        </div>
+      ),
+    },
+    {
+      title: "About",
+      value: "about",
+      content: (
+        <div className="text-white relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold md:text-4xl">
+          <p>Skills</p>
+        </div>
+      ),
+    },
+    {
+      title: "Contact",
+      value: "contact",
+      content: (
+        <div className="text-white relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold md:text-4xl">
+          <p>Contact</p>
+        </div>
+      ),
+    },
+  ];
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn(
+        "fixed top-10 inset-x-0 max-w-2xl mx-auto font-sans z-50 bg-dark-100 text-white-800",
+        className
+      )}
     >
-      <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="  grid grid-cols-2 gap-10 p-4 text-sm">
-            <ProductItem
-              title="Algochurn"
-              href="https://algochurn.com"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
-              description="Prepare for tech interviews like never before."
-            />
-            <ProductItem
-              title="Tailwind Master Kit"
-              href="https://tailwindmasterkit.com"
-              src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-              description="Production ready Tailwind css components for your next project"
-            />
-            <ProductItem
-              title="Moonbeam"
-              href="https://gomoonbeam.com"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-              description="Never write from scratch again. Go from idea to blog in minutes."
-            />
-            <ProductItem
-              title="Rogue"
-              href="https://userogue.com"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-            />
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-          </div>
-        </MenuItem>
-      </Menu>
+      <Tabs
+        tabs={tabs}
+        contentClassName="hidden"
+        containerClassName="bg-black-100 rounded-full flex justify-center rounded-full"
+        activeTabClassName="text-dark-100 modern-paragraph-medium "
+        tabClassName="text-white-500 modern-paragraph-medium"
+      />
     </div>
   );
 }

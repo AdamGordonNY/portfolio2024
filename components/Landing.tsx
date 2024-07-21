@@ -2,18 +2,18 @@
 import React from "react";
 import { GradientButton } from "./TailwindCssButtons";
 import { WavyBackground } from "./ui/wavy-background";
-import { TextGenerateEffect } from "./ui/text-generate-effect";
+// import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const Landing = () => {
   return (
     <WavyBackground className="flex w-full flex-col  items-center justify-center px-10">
       {" "}
-      <header>
+      {/* <header>
         <TextGenerateEffect
           words="Under Construction! Coming 8/2024 "
           className="text-red-500"
         />
-      </header>
+      </header> */}
       <div className="flex w-full flex-col items-center align-top">
         <h1 className="heading-1-bold z-10 flex w-full items-center justify-center text-center text-white-900  ">
           Hi! I&apos;m Adam Gordon , <br />a Next.JS developer from New York.
