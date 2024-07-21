@@ -11,7 +11,7 @@ const Contact = () => {
       <h1 className="modern-h1 mb-6">
         Thanks for stopping by!. Let&apos;s get in touch!
       </h1>
-      <GradientButton text="Contact" />
+      <GradientButton text="Contact" className="z-20 mx-auto my-4" />
       <div className="mb-6 flex flex-row justify-center space-x-6">
         <p className="modern-body-regula text-white-900r">
           <Link
