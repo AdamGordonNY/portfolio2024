@@ -5,20 +5,38 @@ import { toast, Toaster } from "sonner";
 import { ButtonsCard } from "./ui/tailwind-css-buttons";
 import { buttons } from "@/lib/constants";
 import { useRouter } from "next/navigation";
-
-export const GradientButton = ({ text }: { text: string }) => {
+import Image from "next/image";
+import nextArrow from "@/public/nextarrow.svg";
+export const GradientButton = ({
+  text,
+  className,
+}: {
+  text: string;
+  className: string;
+}) => {
   const router = useRouter();
   const handleNavigate = async () => {
     router.push("/projects");
   };
   return (
-    <button
-      type="button"
-      onClick={handleNavigate}
-      className="rounded-full bg-gradient-to-b from-gradient-start to-gradient-end px-8 py-2 text-white-900 transition duration-200 hover:shadow-xl focus:ring-2 focus:ring-blue-400"
+    <div
+      className={`${className} inline-flex  w-[225px] h-16 items-center gap-x-[10px] justify-center rounded-full bg-gradient-to-b from-gradient-start to-gradient-end px-8 py-1 text-center text-white-900 transition duration-200 hover:shadow-xl focus:ring-2 focus:ring-blue-400`}
     >
-      {text}
-    </button>
+      <button
+        type="button"
+        onClick={handleNavigate}
+        className="inline-flex justify-between items-center max-h-full "
+      >
+        <span className="mr-2">{text}</span>
+        <Image
+          src={nextArrow}
+          alt="arrow"
+          width={16}
+          height={16}
+          className="ml-2 place-self-auto"
+        />
+      </button>
+    </div>
   );
 };
 export function TailwindcssButtons() {

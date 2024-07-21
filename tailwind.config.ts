@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+const svgToDataUri = require("mini-svg-data-uri");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -13,6 +13,12 @@ const config = {
   ],
   prefix: "",
   theme: {
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+      figtree: ["Figtree", "sans"],
+      poppins: ["Poppins", "sans"],
+    },
+
     container: {
       center: true,
       padding: "2rem",
@@ -49,7 +55,7 @@ const config = {
           800: "#F3F8FF",
           500: "#6F74A7",
         },
-        border: "hsl(var(--border))",
+        border: "#A4ADFF",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
@@ -97,15 +103,57 @@ const config = {
           to: {
             backgroundPosition: "-200% 0",
           },
+          move: {
+            "0%": { transform: "translateX(-200px)" }.toString(),
+            "100%": { transform: "translateX(200px)" }.toString(),
+          },
+        },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
         },
       },
       animation: {
+        move: "move 5s linear infinite",
+        "meteor-effect": "meteor 5s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ matchUtilities, theme }: any) {
+      matchUtilities(
+        {
+          "bg-dot-thick": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="2.5"></circle></svg>`
+            )}")`,
+          }),
+        },
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+      );
+    },
+    require("tailwindcss-animate"),
+    function ({ addUtilities, theme }: any) {
+      const newUtilities = {
+        ".text-gradient": {
+          background: `linear-gradient(to right, ${theme(
+            "colors.gradient.start"
+          )}, ${theme("colors.gradient.end")})`,
+          "-webkit-background-clip": "text",
+          "-webkit-text-fill-color": "transparent",
+        },
+      };
+
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 } satisfies Config;
 export function addVariablesForColors({ addBase, theme }: any) {
   const allColors = flattenColorPalette(theme("colors"));

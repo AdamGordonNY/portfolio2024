@@ -1,15 +1,29 @@
 "use client";
 import React from "react";
-import { BackgroundBeams } from "./ui/background-beams";
+import { GradientButton } from "./TailwindCssButtons";
+import { WavyBackground } from "./ui/wavy-background";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-const landingText =
-  "Hi, my name is Adam. I'm a Full Stack, Next.JS developer from New York.";
+
 const Landing = () => {
   return (
-    <div className="flex w-full">
-      <TextGenerateEffect words={landingText} className="" />
-      <BackgroundBeams className="bg-dark-100 text-white-900" />
-    </div>
+    <WavyBackground className="flex w-full flex-col  items-center justify-center px-10">
+      {" "}
+      <header>
+        <TextGenerateEffect
+          words="Under Construction! Coming 8/2024 "
+          className="text-red-500"
+        />
+      </header>
+      <div className="flex w-full flex-col items-center align-top">
+        <h1 className="heading-1-bold z-10 flex w-full items-center justify-center text-center text-white-900  ">
+          Hi! I&apos;m Adam Gordon , <br />a Next.JS developer from New York.
+        </h1>
+        <p className="modern-paragraph-regular z-10 text-white-800">
+          Specializing in Full Stack NextJS projects, you draw it, I build it.
+        </p>
+        <GradientButton className="z-20 mx-auto my-4" text="See My Work" />
+      </div>
+    </WavyBackground>
   );
 };
 
