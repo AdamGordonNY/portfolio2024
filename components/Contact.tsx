@@ -13,7 +13,7 @@ const Contact = () => {
       </h1>
       <GradientButton text="Contact" className="z-20 mx-auto my-4" />
       <div className="mb-6 flex flex-row justify-center space-x-6">
-        <p className="modern-body-regula text-white-900">
+        <p className="modern-body-regular text-white-900">
           <Link
             href={`mailto:adam@adam-gordon.info`}
             className="medium-paragraph-regular"
