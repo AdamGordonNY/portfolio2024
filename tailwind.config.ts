@@ -16,7 +16,7 @@ const config = {
     fontFamily: {
       sans: ["Inter", "sans-serif"],
       figtree: ["Figtree", "sans"],
-      poppins: ["Poppins", "sans"],
+      poppins: ["Poppins", "serif"],
     },
 
     container: {
@@ -24,6 +24,9 @@ const config = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        mq450: {
+          raw: "screen and (max-width: 450px)",
+        },
       },
     },
     extend: {
@@ -40,6 +43,12 @@ const config = {
             dark: "#428DFF",
           },
         },
+        darkslategray: "rgba(54, 55, 73, 0.43)",
+        plum: "#cbacf9",
+        steelblue: "rgba(102, 105, 156, 0.43)",
+        lightsteelblue: "#bec1dd",
+
+        gray: "#13162d",
         black: {
           200: "#151E2C",
           300: "#192333",
@@ -49,7 +58,10 @@ const config = {
           200: "#191939",
           100: "#08080F",
         },
-
+        darkGradient: {
+          start: "#04071D",
+          end: "#0C0E23",
+        },
         white: {
           900: "#FFFFFF",
           800: "#F3F8FF",
@@ -126,6 +138,7 @@ const config = {
     },
   },
   plugins: [
+    require("@tailwindcss/aspect-ratio"),
     require("tailwindcss-animate"),
     function ({ matchUtilities, theme }: any) {
       matchUtilities(

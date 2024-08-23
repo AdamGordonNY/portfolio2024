@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter, Figtree, Poppins } from "next/font/google";
 import React from "react";
 import "./globals.css";
+import ThemeContextProvider from "@/providers/ThemeContextProvider";
+import { Navbar } from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +27,13 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${figtree.className} ${poppins.className}`}
       >
-        {children}
+        <ThemeContextProvider>
+          <BackgroundBeamsWithCollision className="flex min-h-screen min-w-full flex-1  flex-col items-center justify-center">
+            <Navbar />
+            {children}
+            <Footer />
+          </BackgroundBeamsWithCollision>
+        </ThemeContextProvider>
       </body>
     </html>
   );

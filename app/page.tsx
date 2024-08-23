@@ -1,13 +1,12 @@
 import Landing from "@/components/Landing";
-import { Navbar } from "@/components/Navbar";
-import SocialLinks from "@/components/SocialLinks";
+import ProjectOverview from "@/components/Projects/ProjectOverview";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col  bg-dark-100 ">
-      <Navbar />
+    <main className="flex min-h-screen items-center justify-center ">
       <Landing />
-      <SocialLinks />
+
+      <ProjectOverview />
     </main>
   );
 }

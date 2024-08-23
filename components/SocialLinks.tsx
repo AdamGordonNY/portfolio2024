@@ -1,7 +1,13 @@
 "use client";
 import React from "react";
 import { FloatingDock } from "./ui/floating-dock";
-import { IconBrandGithub, IconBrandX, IconMail } from "@tabler/icons-react";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandX,
+  IconBrandXbox,
+  IconMail,
+} from "@tabler/icons-react";
 const socialArray = [
   {
     title: "Email",
@@ -18,15 +24,24 @@ const socialArray = [
     icon: <IconBrandX />,
     href: "https://x.ai/realadamgordon1985",
   },
+  {
+    title: "LinkedIn",
+    icon: <IconBrandLinkedin />,
+    href: "https://www.linkedin.com/in/adam-gordon119",
+  },
+  {
+    title: "Xbox",
+    icon: <IconBrandXbox />,
+    href: "https://account.xbox.com/en-us/profile?gamertag=bingpot789",
+  },
 ];
 const SocialLinks = () => {
   return (
-    <div className="bottom-10 flex w-full items-center  justify-center">
-      <FloatingDock
-        items={socialArray}
-        desktopClassName="sticky bottom-5 bg-dark-900"
-      />
-    </div>
+    <FloatingDock
+      items={socialArray}
+      desktopClassName="sticky bottom-2 "
+      mobileClassName="sticky bottom-0 w-full "
+    />
   );
 };
 

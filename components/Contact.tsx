@@ -7,7 +7,7 @@ import { GradientButton } from "./TailwindCssButtons";
 import { HeartIcon } from "lucide-react";
 const Contact = () => {
   return (
-    <main className="items-cente flex min-h-screen w-full flex-col justify-center bg-dark-100 pt-10">
+    <main className="flex min-h-screen w-full flex-col items-center justify-center bg-white-900 pt-10 dark:bg-dark-100">
       <h1 className="modern-h1 mb-6">
         Thanks for stopping by!. Let&apos;s get in touch!
       </h1>
