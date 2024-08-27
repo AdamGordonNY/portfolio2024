@@ -1,6 +1,4 @@
-import { Icon, IconProps } from "@tabler/icons-react";
 import { links } from "./data";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
 
 export type SectionName = (typeof links)[number]["name"];
 export type CaseStudy = {
@@ -13,7 +11,7 @@ export type CaseStudy = {
     liveSite: string;
     portfolioPath?: string;
   };
-  tech: ForwardRefExoticComponent<IconProps & RefAttributes<Icon>>[];
+  tech: string[];
   summary: string;
   mission: string;
 

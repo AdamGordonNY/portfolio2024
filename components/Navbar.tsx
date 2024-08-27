@@ -1,62 +1,71 @@
 "use client";
 import { cn } from "@/lib/utils";
-
-import { Tabs } from "./ui/tabs";
-import Landing from "./Landing";
-
+import { MdWorkHistory } from "react-icons/md";
+import { GiSkills } from "react-icons/gi";
+import { FloatingDock } from "./ui/floating-dock";
+import { IconHome, IconMail } from "@tabler/icons-react";
+import { BsPersonWorkspace } from "react-icons/bs";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 export function Navbar({ className }: { className?: string }) {
   const tabs = [
     {
       title: "Home",
-      value: "home",
-      content: (
-        <div className="text-white  relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold md:text-4xl">
-          <Landing />
-        </div>
-      ),
+      icon: <IconHome size={50} className="dark:stroke-white-500" />,
+      href: "/",
     },
     {
       title: "Projects",
-      value: "projects",
-      content: (
-        <div className="text-white relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold md:text-4xl">
-          <p>Projects</p>
-        </div>
+      icon: (
+        <BsPersonWorkspace
+          size={50}
+          className="dark:fill-white-500 dark:stroke-white-500"
+        />
       ),
+      href: "/projects",
     },
     {
       title: "Background",
-      value: "about",
-      content: (
-        <div className="text-white relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold md:text-4xl">
-          <p>Background</p>
-        </div>
+      icon: (
+        <MdWorkHistory
+          size={50}
+          className="dark:fill-white-500 dark:stroke-white-500"
+        />
       ),
+      href: "/background",
     },
     {
-      title: "Contact Me",
-      value: "contact",
-      content: (
-        <div className="text-white relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold md:text-4xl">
-          <p>Contact</p>
-        </div>
+      title: "Skills",
+      icon: (
+        <GiSkills
+          size={50}
+          className="dark:fill-white-500 dark:stroke-white-500"
+        />
       ),
+      href: "/skills",
+    },
+    {
+      title: "Contact",
+      icon: <IconMail size={50} className="dark:stroke-white-500" />,
+      href: "/contact",
     },
   ];
   return (
     <header
       className={cn(
-        "fixed top-10 inset-x-0 max-w-2xl mx-auto font-sans z-50 bg-dark-100 text-white-800",
+        "fixed top-10 inset-x-0 w-full mx-auto font-sans z-50 flex items-center justify-center",
         className
       )}
     >
-      <Tabs
-        tabs={tabs}
-        contentClassName="hidden"
-        containerClassName="darK:bg-white-500 rounded-full flex justify-center rounded-full"
-        activeTabClassName="dark:text-dark-100 text-white-900 modern-paragraph-medium "
-        tabClassName="text-white-500 modern-paragraph-medium"
-      />
+      <HoverBorderGradient
+        as="div"
+        className="flex w-full items-center justify-center"
+      >
+        <FloatingDock
+          items={tabs}
+          desktopClassName="items-center justify-center bg-gradient-to-r from-dark-100 to stroke-white-500 fill-white-900 dark:border-white-900 dark:text-white-800"
+          mobileClassName=""
+        />
+      </HoverBorderGradient>
     </header>
   );
 }

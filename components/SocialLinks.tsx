@@ -39,7 +39,7 @@ const SocialLinks = () => {
   return (
     <FloatingDock
       items={socialArray}
-      desktopClassName="sticky bottom-2 "
+      desktopClassName="sticky "
       mobileClassName="sticky bottom-0 w-full "
     />
   );

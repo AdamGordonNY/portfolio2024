@@ -43,7 +43,7 @@ const FloatingDockMobile = ({
 }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={cn("relative block md:hidden", className)}>
+    <div className={cn("relative flex md:hidden", className)}>
       <AnimatePresence>
         {open && (
           <motion.div
@@ -70,7 +70,7 @@ const FloatingDockMobile = ({
                 <Link
                   href={item.href}
                   key={item.title}
-                  className="flex size-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
+                  className="flex size-10 items-center justify-center rounded-full  dark:bg-neutral-900"
                 >
                   <div className="size-4">{item.icon}</div>
                 </Link>
@@ -81,9 +81,9 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="flex size-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800"
+        className="bg-gray-50 flex size-10 items-center justify-center rounded-full border-white-900 dark:bg-neutral-800"
       >
-        <IconLayoutNavbarCollapse className="size-5 text-neutral-500 dark:text-neutral-400" />
+        <IconLayoutNavbarCollapse className="size-5 dark:text-white-500" />
       </button>
     </div>
   );
@@ -102,7 +102,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
+        "mx-auto hidden md:flex h-16 gap-8 items-end  rounded-2xl  dark:bg-transparent px-4 pb-3",
         className
       )}
     >
@@ -177,20 +177,24 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="aspect-square relative flex items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800"
+        className="aspect-square relative flex items-center justify-center rounded-full border  bg-inherit dark:border-white-900 "
       >
+        {/* The text (title) that appears above the icon on hover */}
         <AnimatePresence>
           {hovered && (
             <motion.div
-              initial={{ opacity: 0, y: 10, x: "-50%" }}
-              animate={{ opacity: 1, y: 0, x: "-50%" }}
-              exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="dark:text-white absolute -top-8 left-1/2 w-fit -translate-x-1/2 whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800"
+              initial={{ opacity: 0, y: -2, x: "0" }}
+              animate={{ opacity: 1, y: -10, x: "0" }}
+              exit={{ opacity: 0, y: -2, x: "0" }}
+              className="small-bold absolute bottom-full mb-2 text-center text-white-500 dark:text-white-900"
+              style={{ transform: "translateX(-100%)" }}
             >
               {title}
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* The icon that remains centered */}
         <motion.div
           style={{ width: widthIcon, height: heightIcon }}
           className="flex items-center justify-center"

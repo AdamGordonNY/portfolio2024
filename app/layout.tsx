@@ -4,8 +4,6 @@ import React from "react";
 import "./globals.css";
 import ThemeContextProvider from "@/providers/ThemeContextProvider";
 import { Navbar } from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,14 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${figtree.className} ${poppins.className}`}
+        className={`${inter.className} ${figtree.className} ${poppins.className} dark:bg-dot-white/[0.2] flex min-h-screen w-full flex-1 grow flex-col items-center justify-center bg-white-900 dark:bg-dark-200`}
       >
         <ThemeContextProvider>
-          <BackgroundBeamsWithCollision className="flex min-h-screen min-w-full flex-1  flex-col items-center justify-center">
-            <Navbar />
-            {children}
-            <Footer />
-          </BackgroundBeamsWithCollision>
+          <Navbar />
+          {children}
         </ThemeContextProvider>
       </body>
     </html>

@@ -7,7 +7,7 @@ interface TemplateProps {
 }
 const Template = ({ caseStudy }: TemplateProps) => {
   return (
-    <WobbleCard containerClassName="">
+    <WobbleCard containerClassName="border-darkslategray mq450:gap-[18px] box-border flex w-[602px] max-w-full flex-col items-start justify-start gap-9 overflow-hidden break-inside-avoid-column rounded-[23px] border border-solid px-6 py-9 leading-[normal] tracking-[normal] [background:linear-gradient(103.4deg,_#04071d,_#0c0e23)]">
       {" "}
       <div className="flex w-full flex-col ">
         <Image

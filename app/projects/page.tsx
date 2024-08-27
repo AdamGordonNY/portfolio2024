@@ -1,7 +1,12 @@
+import ProjectOverview from "@/components/Projects/ProjectOverview";
 import React from "react";
 
 const Page = () => {
-  return <div>Page</div>;
+  return (
+    <div>
+      <ProjectOverview />
+    </div>
+  );
 };
 
 export default Page;
