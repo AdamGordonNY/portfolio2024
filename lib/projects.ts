@@ -28,7 +28,7 @@ export const projectList: CaseStudy[] = [
     features: [{ id: 1, title: "", purpose: "" }],
     summary: "",
     mission: "",
-    process: [],
+    process: [{ id: 1, title: "Planning", description: "" }],
     result: {
       learning:
         "We had a very good working chemistry as a team, and despite real life interruptions such as illness, vacation, and general distractions, we got about 95 % done with our tasks on our Asana board.  Our Project manager was impressed with the Audio API implementation and our use of framer motion in certain spots, especially the animation on the group card.  Key takeaways for me personally were using Audio API with the context provider, Seamlessly integrating filtering using searchParams and query strings to filter content appropriately.  Using framer motion added just enough flare to the project to polish the look.  It would have been great to have completed the socket.io portion of the site and done an SEO optimization scan on the project, we ran out of time for that though.  Since the project ended I was able to fix a few minor bugs, get our view like and follow metrics to work well across different parts of the site, and feel comfortable using all these tools again in any context. I look forward to putting the finishing touches on the socket.io portion.",
@@ -40,7 +40,7 @@ export const projectList: CaseStudy[] = [
     title: "Overflow GPT",
     description:
       "A StackOverflow clone that uses the power of Generative AI to answer questions",
-    cardImage: "images/devoverflowslanted.svg",
+    cardImage: "images/doSlanted.svg",
     images: ["images/doSlanted.svg"],
     links: {
       repo: "https://github.com/adamgordonny/devoverflow",
