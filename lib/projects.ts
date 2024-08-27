@@ -9,12 +9,13 @@ import { CaseStudy } from "./types";
 //     IconBrandTailwind,
 //     // Add other icons as needed
 //   ];
+
 export const projectList: CaseStudy[] = [
   {
     title: "DevToday",
 
     description:
-      "A platform for developers to share their knowledge and experiences",
+      "A Social Media platform for developers to share their knowledge and organize gatherings",
     cardImage: "images/devtodayslanted.svg",
     images: ["images/devtodayslanted.svg"],
 
@@ -64,7 +65,7 @@ export const projectList: CaseStudy[] = [
     },
   },
   {
-    title: "GitNote - A note-taking app for developers",
+    title: "GitNote",
     description: "A note-taking app for developers that integrates with Github",
     images: ["/images/gitnote.svg"],
     features: [{ id: 1, title: "", purpose: "" }],
@@ -74,7 +75,7 @@ export const projectList: CaseStudy[] = [
       portfolioPath: "/projects/gitnote",
     },
     cardImage: "/images/gitnoteslanted.svg",
-    tech: ["nextjs", "tailwind", "prisma", "supabase", "typescript"],
+    tech: ["nextjs", "tailwind", "", "supabase", "typescript"],
     summary: "",
     mission: "",
     process: [],
@@ -93,4 +94,5 @@ export const contactDetails: { [key: string]: string } = {
   medium: "",
   location: "New York, NY",
   resume: "/resume.pdf",
+  discord: "ID: 588407310976679940 Username: _adam_g",
 };

@@ -12,9 +12,10 @@ import {
   IconBrandXbox,
   IconBrandPrisma,
   IconArrowRight,
+  IconBrandVue,
+  IconBrandDiscordFilled,
 } from "@tabler/icons-react";
 import ChatGPT from "../ui/icons/ChatGPT";
-import ReactIcon from "../ui/icons/ReactIcon";
 import Tailwind from "../ui/icons/Tailwind";
 import NextJS from "../ui/icons/NextJS";
 import Typescript from "../ui/icons/Typescript";
@@ -28,49 +29,53 @@ const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
   const renderIcon = (icon: string) => {
     switch (icon) {
       case "react":
-        return <IconBrandReact size={24} />;
+        return <IconBrandReact size={48} />;
       case "nextjs":
-        return <NextJS size={24} />;
+        return <NextJS size={48} />;
       case "tailwind":
-        return <Tailwind size={24} />;
+        return <Tailwind size={48} />;
       case "typescript":
-        return <Typescript size={24} />;
+        return <Typescript size={48} />;
       case "laravel":
-        return <IconBrandLaravel size={24} />;
+        return <IconBrandLaravel size={48} />;
       case "figma":
-        return <IconBrandFigma size={24} />;
+        return <IconBrandFigma size={48} />;
       case "vsCode":
-        return <IconBrandVscode size={24} />;
+        return <IconBrandVscode size={48} />;
       case "xbox":
-        return <IconBrandXbox size={24} />;
+        return <IconBrandXbox size={48} />;
       case "prisma":
         return (
-          <IconBrandPrisma size={24} className="fill-#4DB6AC stroke-#4DB6AC" />
+          <IconBrandPrisma size={48} className="fill-#4DB6AC stroke-#4DB6AC" />
         );
       case "chatgpt":
-        return <ChatGPT size={24} />;
+        return <ChatGPT size={48} />;
       case "mongo":
-        return <MongoDB size={24} />;
+        return <MongoDB size={48} />;
+      case "stripe":
+        return <FaStripeS size={48} />;
+      case "vue":
+        return <IconBrandVue size={48} />;
     }
   };
   return (
-    <div className="mq450:gap-[18px] box-border flex max-w-full  break-inside-avoid-column flex-col items-start justify-start gap-9 overflow-hidden rounded-[23px] border border-solid border-darkslategray px-6 py-9 leading-[normal] tracking-[normal] [background:linear-gradient(103.4deg,_#04071d,_#0c0e23)] md:w-[600px]">
-      <section className="relative flex h-[330px] shrink-0 flex-row items-start justify-start self-stretch overflow-hidden rounded-[14px] bg-gray">
-        <div className="absolute !m-0 h-[394.1px] w-full items-center">
+    <div className="mq450:gap-[18px] flex max-w-full  flex-col items-start justify-start gap-6 overflow-hidden rounded-[23px] border border-solid border-darkslategray px-6 pb-5 pt-9  [background:linear-gradient(103.4deg,_#04071d,_#0c0e23)] md:box-border md:size-[600px]">
+      <section className="relative flex  shrink-0 flex-row items-start justify-start self-stretch overflow-hidden rounded-[14px]">
+        <div className="!m-0 h-[330px]  w-full items-center">
           <Link href={caseStudy.links?.portfolioPath!}>
             <Image
-              className="absolute top-0  object-cover"
+              className="absolute object-cover p-0.5 max-md:w-full md:h-[330px]"
               alt={caseStudy.title}
               src={caseStudy.cardImage}
               width={600}
-              height={310}
+              height={300}
             />
           </Link>
         </div>
       </section>
       <section className="flex max-w-full flex-col items-start justify-start gap-6 self-stretch text-left font-sans text-[32px] text-white-900">
         <div className="flex max-w-full flex-col items-start justify-center gap-[18px] self-stretch">
-          <h2 className="modern-h2 relative m-0 inline-block max-w-full font-sans leading-[36px] tracking-[-0.02em]  text-white-900">
+          <h2 className="modern-h3 relative m-0 inline-block max-w-full text-center font-sans  text-white-900">
             {caseStudy.title}
           </h2>
           <div className="mq450:text-base mq450:leading-[21px] relative self-stretch text-xl leading-[130%] text-lightsteelblue">
@@ -86,12 +91,12 @@ const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
             <div className="relative z-[4] ml-[-4px] h-[50px] flex-1 shrink-0"></div>
           </div>
 
-          <div className="mq450:text-base mq450:leading-[19px] relative flex flex-row">
+          <div className="mq450:text-base  relative flex flex-row">
             <Link
-              href={caseStudy.links.liveSite}
-              className="inline-flex align-middle"
+              href={caseStudy.links?.liveSite!}
+              className="inline-flex items-center justify-center align-middle"
             >
-              <span className="body-regular dark:text-white-900">
+              <span className="base-semibold dark:text-white-900">
                 {" "}
                 Live Website{" "}
               </span>
