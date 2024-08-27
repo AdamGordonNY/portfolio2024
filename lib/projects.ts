@@ -41,7 +41,7 @@ export const projectList: CaseStudy[] = [
     description:
       "A StackOverflow clone that uses the power of Generative AI to answer questions",
     cardImage: "images/devoverflowslanted.svg",
-    images: ["images/devoverflowslanted.svg"],
+    images: ["images/devOverflowSlanted.svg"],
     links: {
       repo: "https://github.com/adamgordonny/devoverflow",
       liveSite: "https://devoverflow.adam-gordon.info",
