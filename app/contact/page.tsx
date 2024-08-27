@@ -3,9 +3,9 @@ import React from "react";
 
 const Page = () => {
   return (
-    <main className="flex w-full flex-1 items-center justify-normal">
+    <div className="flex w-full flex-1 items-center justify-normal bg-transparent">
       <Contact />
-    </main>
+    </div>
   );
 };
 

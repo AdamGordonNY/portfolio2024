@@ -28,6 +28,13 @@ const config = {
         mq450: {
           raw: "screen and (max-width: 450px)",
         },
+        xl: "1200px",
+        lg: "1024px",
+        md: "768px",
+        sm: "640px",
+        mq800: {
+          raw: "screen and (max-width: 800px)",
+        },
       },
     },
     extend: {

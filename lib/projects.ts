@@ -40,7 +40,7 @@ export const projectList: CaseStudy[] = [
     title: "Overflow GPT",
     description:
       "A StackOverflow clone that uses the power of Generative AI to answer questions",
-    cardImage: "images/doSlanted.svg",
+    cardImage: "images/docard.svg",
     images: ["images/doSlanted.svg"],
     links: {
       repo: "https://github.com/adamgordonny/devoverflow",
