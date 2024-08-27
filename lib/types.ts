@@ -1,8 +1,6 @@
-import { links } from "./data";
-
-export type SectionName = (typeof links)[number]["name"];
 export type CaseStudy = {
   title: string;
+  subtitle?: string;
   description: string;
   images: string[];
   cardImage: string;
@@ -14,7 +12,11 @@ export type CaseStudy = {
   tech: string[];
   summary: string;
   mission: string;
-
+  features: {
+    id: number;
+    title: string;
+    purpose: string;
+  }[];
   process: {
     id: number;
     title: string;
@@ -22,8 +24,12 @@ export type CaseStudy = {
   }[];
 
   result: {
-    learning: string[];
-    challenges: string[];
+    learning: string;
+    challenges: string;
     nextSteps: string[];
+  };
+  teaamMembers?: {
+    name: string;
+    role: string;
   };
 };
