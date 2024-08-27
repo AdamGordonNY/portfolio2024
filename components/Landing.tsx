@@ -1,29 +1,38 @@
 "use client";
 import React from "react";
+
+import Image from "next/image";
 import { GradientButton } from "./TailwindCssButtons";
-import { WavyBackground } from "./ui/wavy-background";
-import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const Landing = () => {
   return (
-    <WavyBackground className="flex w-full flex-col  items-center justify-center px-10">
-      {" "}
-      <header>
-        <TextGenerateEffect
-          words="Under Construction! Coming 8/2024 "
-          className="text-red-500"
-        />
-      </header>
-      <div className="flex w-full flex-col items-center align-top">
-        <h1 className="heading-1-bold z-10 flex w-full items-center justify-center text-center text-white-900  ">
-          Hi! I&apos;m Adam Gordon , <br />a Next.JS developer from New York.
-        </h1>
-        <p className="modern-paragraph-regular z-10 text-white-800">
-          Specializing in Full Stack NextJS projects, you draw it, I build it.
+    <section className="z-10 flex min-w-full  flex-col items-center justify-between place-self-center bg-transparent ">
+      <div className="my-20">
+        {" "}
+        <p className="heading-1-bold items-center justify-center text-center text-white-800 ">
+          Hi! I&apos;m{" "}
+          <span className="heading-1-bold z-10  items-center justify-center bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-center text-transparent">
+            {" "}
+            Adam Gordon!
+          </span>
         </p>
-        <GradientButton className="z-20 mx-auto my-4" text="See My Work" />
-      </div>
-    </WavyBackground>
+        <p className="heading-1-bold z-10  items-center justify-center text-center text-white-800 ">
+          Fullstack Software Engineer from New York.
+        </p>
+        <p className="modern-paragraph-regular z-10 items-center justify-center text-center text-white-800">
+          Specializing in Next.JS, React, and TailwindCSS, with similar
+          experience working with Laravel, Nuxt.JS, and Vue.
+        </p>
+      </div>{" "}
+      <GradientButton text="View My Work" className="place-self-center px-5" />
+      <Image
+        src="/images/splash.png"
+        alt="hero"
+        width={800}
+        height={600}
+        className="place-self-center"
+      />{" "}
+    </section>
   );
 };
 

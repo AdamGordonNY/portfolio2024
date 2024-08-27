@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 const svgToDataUri = require("mini-svg-data-uri");
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -16,7 +17,7 @@ const config = {
     fontFamily: {
       sans: ["Inter", "sans-serif"],
       figtree: ["Figtree", "sans"],
-      poppins: ["Poppins", "sans"],
+      poppins: ["Poppins", "serif"],
     },
 
     container: {
@@ -24,6 +25,9 @@ const config = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        mq450: {
+          raw: "screen and (max-width: 450px)",
+        },
       },
     },
     extend: {
@@ -40,6 +44,12 @@ const config = {
             dark: "#428DFF",
           },
         },
+        darkslategray: "rgba(54, 55, 73, 0.43)",
+        plum: "#cbacf9",
+        steelblue: "rgba(102, 105, 156, 0.43)",
+        lightsteelblue: "#bec1dd",
+
+        gray: "#13162d",
         black: {
           200: "#151E2C",
           300: "#192333",
@@ -49,7 +59,10 @@ const config = {
           200: "#191939",
           100: "#08080F",
         },
-
+        darkGradient: {
+          start: "#04071D",
+          end: "#0C0E23",
+        },
         white: {
           900: "#FFFFFF",
           800: "#F3F8FF",
@@ -126,6 +139,7 @@ const config = {
     },
   },
   plugins: [
+    require("@tailwindcss/aspect-ratio"),
     require("tailwindcss-animate"),
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
@@ -152,6 +166,28 @@ const config = {
       };
 
       addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+    function ({ matchUtilities, theme }: any) {
+      matchUtilities(
+        {
+          "bg-grid": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+            )}")`,
+          }),
+          "bg-grid-small": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+            )}")`,
+          }),
+          "bg-dot": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
+            )}")`,
+          }),
+        },
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+      );
     },
   ],
 } satisfies Config;

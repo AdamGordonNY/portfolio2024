@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Figtree, Poppins } from "next/font/google";
 import React from "react";
 import "./globals.css";
+import ThemeContextProvider from "@/providers/ThemeContextProvider";
+import { Navbar } from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${figtree.className} ${poppins.className}`}
+        className={`${inter.className} ${figtree.className} ${poppins.className} dark:bg-dot-white/[0.2] flex min-h-screen w-full flex-1 grow flex-col items-center justify-center bg-white-900 dark:bg-dark-200`}
       >
-        {children}
+        <ThemeContextProvider>
+          <Navbar />
+          {children}
+        </ThemeContextProvider>
       </body>
     </html>
   );

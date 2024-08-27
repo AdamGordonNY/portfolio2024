@@ -20,12 +20,12 @@ export const GradientButton = ({
   };
   return (
     <div
-      className={`${className} inline-flex  w-[225px] h-16 items-center gap-x-[10px] justify-center rounded-full bg-gradient-to-b from-gradient-start to-gradient-end px-8 py-1 text-center text-white-900 transition duration-200 hover:shadow-xl focus:ring-2 focus:ring-blue-400`}
+      className={`${className} inline-flex  h-16 w-[225px] items-center justify-center gap-x-[10px] rounded-full bg-gradient-to-b from-gradient-start to-gradient-end px-8 py-1 text-center text-white-900 transition duration-200 hover:shadow-xl focus:ring-2 focus:ring-blue-400`}
     >
       <button
         type="button"
         onClick={handleNavigate}
-        className="inline-flex justify-between items-center max-h-full "
+        className="inline-flex max-h-full items-center justify-between "
       >
         <span className="mr-2">{text}</span>
         <Image
