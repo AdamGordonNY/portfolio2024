@@ -4,60 +4,12 @@ import Image from "next/image";
 
 import Link from "next/link";
 import { CaseStudy } from "@/lib/types";
-import {
-  IconBrandReact,
-  IconBrandLaravel,
-  IconBrandFigma,
-  IconBrandVscode,
-  IconBrandXbox,
-  IconBrandPrisma,
-  IconArrowRight,
-  IconBrandVue,
-  IconBrandDiscordFilled,
-} from "@tabler/icons-react";
-import ChatGPT from "../ui/icons/ChatGPT";
-import Tailwind from "../ui/icons/Tailwind";
-import NextJS from "../ui/icons/NextJS";
-import Typescript from "../ui/icons/Typescript";
-import { FaStripeS } from "react-icons/fa";
-import MongoDB from "../ui/icons/MongoDB";
-
+import { IconArrowRight } from "@tabler/icons-react";
+import { renderIcon } from "@/lib/utils";
 interface ProjectCardProps {
   caseStudy: CaseStudy;
 }
 const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
-  const renderIcon = (icon: string) => {
-    switch (icon) {
-      case "react":
-        return <IconBrandReact size={48} />;
-      case "nextjs":
-        return <NextJS size={48} />;
-      case "tailwind":
-        return <Tailwind size={48} />;
-      case "typescript":
-        return <Typescript size={48} />;
-      case "laravel":
-        return <IconBrandLaravel size={48} />;
-      case "figma":
-        return <IconBrandFigma size={48} />;
-      case "vsCode":
-        return <IconBrandVscode size={48} />;
-      case "xbox":
-        return <IconBrandXbox size={48} />;
-      case "prisma":
-        return (
-          <IconBrandPrisma size={48} className="fill-#4DB6AC stroke-#4DB6AC" />
-        );
-      case "chatgpt":
-        return <ChatGPT size={48} />;
-      case "mongo":
-        return <MongoDB size={48} />;
-      case "stripe":
-        return <FaStripeS size={48} />;
-      case "vue":
-        return <IconBrandVue size={48} />;
-    }
-  };
   return (
     <div className="mq450:gap-[18px] flex max-w-full  flex-col items-start justify-start gap-6 overflow-hidden rounded-[23px] border border-solid border-darkslategray px-6 pb-5 pt-9  [background:linear-gradient(103.4deg,_#04071d,_#0c0e23)] md:box-border md:size-[600px]">
       <section className="relative flex  shrink-0 flex-row items-start justify-start self-stretch overflow-hidden rounded-[14px]">
