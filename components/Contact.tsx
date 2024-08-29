@@ -23,7 +23,7 @@ const Contact = () => {
         words={words}
         className="flex w-full items-center justify-center bg-gradient-to-l from-gradient-start to-gradient-end bg-clip-text text-center text-transparent "
       />
-      <h2 className="modern-h2 flex items-center gap-x-4">
+      <h2 className="modern-h3 flex items-center gap-x-4">
         {" "}
         Take my{" "}
         <span
