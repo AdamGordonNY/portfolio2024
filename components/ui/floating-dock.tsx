@@ -83,7 +83,7 @@ const FloatingDockMobile = ({
         onClick={() => setOpen(!open)}
         className="bg-gray-50 flex size-10 items-center justify-center rounded-full border-white-900 dark:bg-neutral-800"
       >
-        <IconLayoutNavbarCollapse className="size-5 dark:text-white-500" />
+        <IconLayoutNavbarCollapse className="size-5 dark:fill-white-900" />
       </button>
     </div>
   );

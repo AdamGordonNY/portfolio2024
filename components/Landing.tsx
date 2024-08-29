@@ -3,8 +3,13 @@ import React from "react";
 
 import Image from "next/image";
 import { GradientButton } from "./TailwindCssButtons";
+import { useRouter } from "next/navigation";
 
 const Landing = () => {
+  const router = useRouter();
+  const handleNavigate = async () => {
+    router.push("/projects");
+  };
   return (
     <section className="z-10 flex min-w-full translate-y-10 flex-col items-center justify-between  bg-transparent px-0">
       <div className="flex min-w-full flex-col px-0 pt-[200px]">
@@ -27,13 +32,14 @@ const Landing = () => {
         <GradientButton
           text="View My Work"
           className="place-self-center px-5"
+          handleNavigate={handleNavigate}
         />
         <Image
           src="/images/splash.png"
           alt="hero"
           width={800}
           height={600}
-          className="translate-y-10 place-self-center"
+          className="place-self-center md:translate-y-10"
         />{" "}
       </div>
     </section>

@@ -58,11 +58,11 @@ export function Navbar({ className }: { className?: string }) {
     >
       <HoverBorderGradient
         as="div"
-        className="flex w-full items-center justify-center"
+        className="flex w-full items-center justify-center "
       >
         <FloatingDock
           items={tabs}
-          desktopClassName="items-center justify-center bg-gradient-to-r from-dark-100 to stroke-white-500 fill-white-900 dark:border-white-900 dark:text-white-800"
+          desktopClassName="items-center justify-center bg-gradient-to-r from-dark-100 rounded-full  stroke-white-500 fill-white-900 dark:border-white-900 dark:text-white-800"
           mobileClassName=""
         />
       </HoverBorderGradient>

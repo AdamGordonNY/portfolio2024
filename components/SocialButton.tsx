@@ -1,16 +1,34 @@
 import React from "react";
-import github from "@/public/github.svg";
+
 import Image from "next/image";
 import Link from "next/link";
-const SocialButton = ({ social, url }: { social: string; url: string }) => {
+import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconMail,
+} from "@tabler/icons-react";
+import { motion } from "framer-motion";
+import { SocialMediaButton } from "./SocialLinks";
+const SocialButton = ({ social }: { social: SocialMediaButton }) => {
+  const router = useRouter();
+
   return (
-    <Link
-      className="flex items-center justify-center gap-x-2.5 px-5 py-2.5"
-      href={url}
+    <motion.button
+      className="p-[3px] relative inline-flex py-2 px-2 my-2 items-center justify-center h-14 hover:scale-120"
+      type="button"
+      animate={{}}
     >
-      <Image src={github} alt="github" width={24} height={34} />
-      <span className="paragraph-regular">{social}</span>
-    </Link>
+      {" "}
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl h-14" />{" "}
+      <Link href={social.href} className="flex flex-col">
+        <div className="px-8 py-2 items-center justify-center flex  rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+          {social.icon}
+          <span className="modern-paragraph-regular">{social.title}</span>
+        </div>{" "}
+      </Link>
+    </motion.button>
   );
 };
 

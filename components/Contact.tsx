@@ -5,23 +5,46 @@ import React from "react";
 import { GradientButton } from "./TailwindCssButtons";
 
 import { HeartIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import ContactForm from "./ContactForm";
+import SocialLinks from "./SocialLinks";
 const Contact = () => {
+  const router = useRouter();
+  const words = [
+    { text: "Thanks", className: "" },
+    { text: "for" },
+    { text: "stopping" },
+    { text: "by!" },
+  ];
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center bg-white-900 pt-10 dark:bg-inherit dark:text-white-800">
-      <h1 className="modern-h1 mb-6 ">Thanks for stopping by!.</h1>
-      <h2 className="modern-h2"> Let&apos;s get in touch!</h2>
-      <GradientButton text="Contact" className="z-20 mx-auto my-4" />
-      <div className="mb-6 flex flex-row justify-center space-x-6">
-        <p className="modern-body-regular text-white-900">
-          <Link
-            href={`mailto:adam@adam-gordon.info`}
-            className="medium-paragraph-regular"
-          >
-            adam@adam-gordon.info
-          </Link>
-          <HeartIcon size={20} className="fill-red-500 stroke-white-900" />
-        </p>
+    <div className="flex min-h-screen w-full flex-col items-center justify-center bg-white-900 pt-10 dark:bg-dark-200 gap-y-2 dark:text-white-800">
+      <TypewriterEffectSmooth
+        words={words}
+        className="flex w-full items-center justify-center bg-gradient-to-l from-gradient-start to-gradient-end bg-clip-text text-center text-transparent "
+      />
+      <h2 className="modern-h2 flex items-center gap-x-4">
+        {" "}
+        Take my{" "}
+        <span
+          onClick={() => router.push(`/resume.pdf`)}
+          className=" bg-gradient-to-l from-gradient-start to-gradient-end bg-clip-text text-transparent cursor-pointer"
+        >
+          Resume
+        </span>
+        or{" "}
+        <Link href={`mailto:adam@adam-gordon.info`}>
+          <GradientButton
+            text="Email Me"
+            className="z-20 mx-auto modern-body-medium"
+          />
+        </Link>{" "}
+        directly!
+      </h2>{" "}
+      <div className="flex min-w-[375px] w-[60%] mb-10">
+        <ContactForm />
       </div>
+      <SocialLinks />
     </div>
   );
 };

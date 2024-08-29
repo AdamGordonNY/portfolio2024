@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { FloatingDock } from "./ui/floating-dock";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
@@ -8,7 +7,16 @@ import {
   IconBrandXbox,
   IconMail,
 } from "@tabler/icons-react";
-const socialArray = [
+import { HiOutlineDownload } from "react-icons/hi";
+
+import SocialButton from "./SocialButton";
+export type SocialMediaButton = {
+  title: string;
+  icon: JSX.Element;
+  href: string;
+};
+
+export const socialArray: SocialMediaButton[] = [
   {
     title: "Email",
     icon: <IconMail />,
@@ -34,14 +42,19 @@ const socialArray = [
     icon: <IconBrandXbox />,
     href: "https://account.xbox.com/en-us/profile?gamertag=bingpot789",
   },
+  {
+    title: "Resume",
+    icon: <HiOutlineDownload />,
+    href: "/resume.pdf",
+  },
 ];
 const SocialLinks = () => {
   return (
-    <FloatingDock
-      items={socialArray}
-      desktopClassName="sticky "
-      mobileClassName="sticky bottom-0 w-full "
-    />
+    <div className="flex w-full items-center justify-center gap-x-4 rounded-full py-3">
+      {socialArray.map((social) => (
+        <SocialButton key={social.title} social={social} />
+      ))}
+    </div>
   );
 };
 
