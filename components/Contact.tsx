@@ -1,8 +1,6 @@
 "use client";
-import Link from "next/link";
-import React from "react";
 
-import { GradientButton } from "./TailwindCssButtons";
+import React from "react";
 
 import { useRouter } from "next/navigation";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
