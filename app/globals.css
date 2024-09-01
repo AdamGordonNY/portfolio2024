@@ -4,7 +4,6 @@
 @import "../styles/theme.css";
 @layer base {
   :root {
-    --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -60,19 +59,31 @@
 }
 
 @layer base {
-  * {
-    .no-visible-scrollbar {
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .no-visible-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    @apply border-border;
+  .no-visible-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
   }
+
+  .no-visible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   body {
+    font-family: "Satoshi", sans-serif;
     @apply bg-background text-foreground;
   }
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/satoshi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi-Italic";
+  src: url("/fonts/satoshi-italic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
 }

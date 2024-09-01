@@ -3,7 +3,6 @@ import { Inter, Figtree, Poppins } from "next/font/google";
 import React from "react";
 import "./globals.css";
 import ThemeContextProvider from "@/providers/ThemeContextProvider";
-import { Navbar } from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,13 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${figtree.className} ${poppins.className} flex min-h-screen w-full flex-1 grow flex-col items-center justify-center bg-white-900 dark:bg-dark-200`}
+        className={`${inter.className} ${figtree.className} ${poppins.className}   `}
       >
         <ThemeContextProvider>
-          <main className="z-60 flex flex-1 flex-col items-center justify-center px-0">
-            <Navbar className="fixed left-0 z-50 h-10 w-full lg:top-20" />
+          <main className="min-h-screen min-w-full dark:bg-dark-200 flex">
             {children}
-            <footer className="bg-white-100 dark:bg-dark-800 fixed bottom-0 z-20 flex h-20 w-full items-center justify-between px-8 md:hidden"></footer>
           </main>
         </ThemeContextProvider>
       </body>

@@ -3,13 +3,13 @@ import React from "react";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
-  IconBrandX,
-  IconBrandXbox,
   IconMail,
 } from "@tabler/icons-react";
 import { HiOutlineDownload } from "react-icons/hi";
 
 import SocialButton from "./SocialButton";
+import { usePathname } from "next/navigation";
+import NextArrow from "./ui/icons/NextArrow";
 export type SocialMediaButton = {
   title: string;
   icon: JSX.Element;
@@ -19,40 +19,42 @@ export type SocialMediaButton = {
 export const socialArray: SocialMediaButton[] = [
   {
     title: "Email",
-    icon: <IconMail />,
+    icon: <IconMail className="max-lg:size-5 lg:size-14" />,
     href: "mailto:adam@adam-gordon.info",
   },
   {
     title: "Github",
-    icon: <IconBrandGithub />,
+    icon: <IconBrandGithub className="max-lg:size-5 lg:size-14" />,
     href: "https://github.com/adamgordonny",
   },
   {
-    title: "Twitter",
-    icon: <IconBrandX />,
-    href: "https://x.ai/realadamgordon1985",
-  },
-  {
     title: "LinkedIn",
-    icon: <IconBrandLinkedin />,
+    icon: <IconBrandLinkedin className="max-lg:size-5 lg:size-14" />,
     href: "https://www.linkedin.com/in/adam-gordon119",
   },
+
   {
-    title: "Xbox",
-    icon: <IconBrandXbox />,
-    href: "https://account.xbox.com/en-us/profile?gamertag=bingpot789",
-  },
-  {
-    title: "Resume",
-    icon: <HiOutlineDownload />,
+    title: "My Resume",
+    icon: <HiOutlineDownload className="max-lg:size-5 lg:size-14" />,
     href: "/resume.pdf",
   },
 ];
-const SocialLinks = () => {
+
+const SocialLinks = ({ type }: { type: string }) => {
+  const pathname = usePathname();
+  if (type === "home") {
+    return (
+      <div className="flex  items-center content-center justify-center gap-x-4 rounded-full py-3 flex-1">
+        {socialArray.map((social) => (
+          <SocialButton key={social.title} social={social} type="nav" />
+        ))}
+      </div>
+    );
+  }
   return (
-    <div className="flex w-full items-center justify-center gap-x-4 rounded-full py-3">
+    <div className="flex  items-center content-center justify-center gap-x-4 rounded-full py-3 flex-1">
       {socialArray.map((social) => (
-        <SocialButton key={social.title} social={social} />
+        <SocialButton key={social.title} social={social} type="social" />
       ))}
     </div>
   );

@@ -6,66 +6,25 @@ import { FloatingDock } from "./ui/floating-dock";
 import { IconHome, IconMail } from "@tabler/icons-react";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
-export function Navbar({ className }: { className?: string }) {
-  const tabs = [
-    {
-      title: "Home",
-      icon: <IconHome size={50} className="dark:stroke-white-500" />,
-      href: "/",
-    },
-    {
-      title: "Projects",
-      icon: (
-        <BsPersonWorkspace
-          size={50}
-          className="dark:fill-white-500 dark:stroke-white-500"
-        />
-      ),
-      href: "/projects",
-    },
-    {
-      title: "Background",
-      icon: (
-        <MdWorkHistory
-          size={50}
-          className="dark:fill-white-500 dark:stroke-white-500"
-        />
-      ),
-      href: "/background",
-    },
-    {
-      title: "Skills",
-      icon: (
-        <GiSkills
-          size={50}
-          className="dark:fill-white-500 dark:stroke-white-500"
-        />
-      ),
-      href: "/skills",
-    },
-    {
-      title: "Contact",
-      icon: <IconMail size={50} className="dark:stroke-white-500" />,
-      href: "/contact",
-    },
-  ];
+import A from "./ui/icons/A";
+import D from "./ui/icons/D";
+import M from "./ui/icons/M";
+import R from "./ui/icons/R";
+import G from "./ui/icons/G";
+import { BackgroundGradient } from "./ui/background-gradient";
+import NavButton from "./NavButton";
+import { usePathname } from "next/navigation";
+const buttons = ["about", "projects", "skills", "experience", "contact"];
+export function Navbar({ type }: { type: string }) {
+  const pathname = usePathname();
   return (
-    <header
-      className={cn(
-        "fixed top-10 inset-x-0 w-full mx-auto font-sans z-50 flex items-center justify-center",
-        className
-      )}
-    >
-      <HoverBorderGradient
-        as="div"
-        className="flex w-full items-center justify-center "
-      >
-        <FloatingDock
-          items={tabs}
-          desktopClassName="items-center justify-center bg-gradient-to-r from-dark-100 rounded-full  stroke-white-500 fill-white-900 dark:border-white-900 dark:text-white-800"
-          mobileClassName=""
-        />
-      </HoverBorderGradient>
+    <header className="flex min-w-full flex-1 h-16">
+      <BackgroundGradient containerClassName="flex w-full bg-dark-200/ bg-opacity-80">
+        <nav
+          className="flex z-50 top-0 justify-between items-center md:w-[500px] max-md:w-full h-16"
+          {...buttons.map((btn) => <NavButton key={btn} text={btn} />)}
+        ></nav>
+      </BackgroundGradient>
     </header>
   );
 }

@@ -15,9 +15,10 @@ const config = {
   prefix: "",
   theme: {
     fontFamily: {
-      sans: ["Inter", "sans-serif"],
+      inter: ["Inter", "sans-serif"],
       figtree: ["Figtree", "sans"],
       poppins: ["Poppins", "serif"],
+      satoshi: ["Satoshi", "sans-serif"],
     },
 
     container: {

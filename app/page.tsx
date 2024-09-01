@@ -1,9 +1,13 @@
 import Landing from "@/components/Landing";
+import Heading from "@/components/Landing/Heading";
+import { Navbar } from "@/components/Navbar";
+import SocialButton from "@/components/SocialButton";
+import SocialLinks from "@/components/SocialLinks";
 
 export default function Home() {
   return (
-    <div className="flex  min-w-full flex-col items-center  justify-center bg-dark-200 lg:px-10 ">
-      <Landing />
+    <div className="flex min-w-full font-satoshi flex-col">
+      <Heading />
     </div>
   );
 }

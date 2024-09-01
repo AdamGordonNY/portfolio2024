@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import Image from "next/image";
@@ -11,26 +12,66 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { SocialMediaButton } from "./SocialLinks";
-const SocialButton = ({ social }: { social: SocialMediaButton }) => {
-  const router = useRouter();
-
+import { BackgroundGradient } from "./ui/background-gradient";
+import NextArrow from "./ui/icons/NextArrow";
+const otherButtons: SocialMediaButton[] = [
+  {
+    title: "Projects",
+    icon: <NextArrow className="max-lg:size-5 lg:size-14 stroke-black-200" />,
+    href: "/projects",
+  },
+];
+const SocialButton = ({
+  social,
+  type,
+}: {
+  social?: SocialMediaButton;
+  type: string;
+}) => {
+  if (type === "nav") {
+    return (
+      <BackgroundGradient containerClassName="flex  lg:h-14 h-7 lg:py-2 lg:px-8 lg:px-4 relative my-1 max-lg:px-4 max-lg:py-1  items-center justify-center">
+        <Link href={otherButtons[0].href!}>
+          <motion.button
+            className=" hover:scale-120 "
+            type="button"
+            animate={{
+              scale: [1, 1.1, 1],
+            }}
+          >
+            {" "}
+            <div className="lg:px-8 lg:py-2 items-center justify-center flex  gap-x-3 align-middle rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+              <span className="lg:modern-paragraph-regular max-lg:body-regular  items-center align-middle">
+                {otherButtons[0].title}
+              </span>
+              {otherButtons[0].icon}
+            </div>
+          </motion.button>
+        </Link>
+      </BackgroundGradient>
+    );
+  }
   return (
-    <motion.button
-      className="p-[3px] relative inline-flex py-2 px-2 my-2 items-centerjustify-center h-14 hover:scale-120"
-      type="button"
-      animate={{}}
-    >
-      {" "}
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl h-14" />{" "}
-      <Link href={social.href} className="flex flex-col">
-        <div className="px-8 py-2 items-center justify-center flex  gap-x-3 align-middle rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-          {social.icon}
-          <span className="modern-paragraph-regula items-center align-middle">
-            {social.title}
-          </span>
-        </div>{" "}
+    <BackgroundGradient containerClassName="flex  lg:h-14 h-7 lg:py-2 lg:px-8 lg:px-4 relative my-1 max-lg:px-4 max-lg:py-1  items-center justify-center">
+      <Link href={social?.href!}>
+        <motion.button
+          className=" hover:scale-120 "
+          type="button"
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+        >
+          {" "}
+          <div className="lg:px-8 lg:py-2 items-center justify-center flex  gap-x-3 align-middle rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+            {social?.title !== "See My Projects" && social?.icon}
+            <span className="lg:modern-paragraph-regular max-lg:body-regular  items-center align-middle">
+              {social?.title}
+            </span>
+            {social?.title === "See My Projects" && social?.icon}
+          </div>
+        </motion.button>
       </Link>
-    </motion.button>
+    </BackgroundGradient>
   );
 };
 
