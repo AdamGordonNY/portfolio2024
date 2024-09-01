@@ -10,7 +10,7 @@ import SocialButton from "./SocialButton";
 const Contact = () => {
   const router = useRouter();
   const words = [
-    { text: "Thanks", className: "" },
+    { text: "Thanks" },
     { text: "for" },
     { text: "stopping" },
     { text: "by!" },
