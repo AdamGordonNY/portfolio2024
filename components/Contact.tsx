@@ -25,14 +25,15 @@ const Contact = () => {
       />
       <h2 className="modern-base-regular flex items-center gap-x-4">
         {" "}
-        Take my <SocialButton social={socialArray[5]}></SocialButton> or
-        <SocialButton social={socialArray[0]} />
+        Take my{" "}
+        <SocialButton type="social" social={socialArray[5]}></SocialButton> or
+        <SocialButton type="social" social={socialArray[0]} />
         me directly!
       </h2>{" "}
       <div className="flex min-w-[375px] w-[60%] mb-10">
         <ContactForm />
       </div>
-      <SocialLinks />
+      <SocialLinks type="social" />
     </div>
   );
 };
