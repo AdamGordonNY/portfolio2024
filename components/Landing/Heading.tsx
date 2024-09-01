@@ -28,13 +28,13 @@ const Heading = () => {
       <p className="lg:modern-h1  items-center justify-center text-center text-white-800 ">
         Software Engineer from New York.
       </p>
-      <SocialLinks />{" "}
+      <SocialLinks type="social" />{" "}
       <p className="lg:paragraph-regular z-10 items-center justify-center text-center text-white-800">
         Specializing in Next.JS, React, and TailwindCSS, with similar experience
         working with Laravel, Nuxt.JS, and Vue.
       </p>{" "}
       <div className="flex items-center justify-center p-3 gap-x-4">
-        <SocialButton social={buttons[0]} />
+        <SocialButton type="social" social={buttons[0]} />
         <Compare
           firstImage="/images/devtodayslanted.svg"
           secondImage="/images/gitnoteslanted.svg"
