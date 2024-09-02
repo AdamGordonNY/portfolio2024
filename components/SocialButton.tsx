@@ -17,7 +17,9 @@ import NextArrow from "./ui/icons/NextArrow";
 const otherButtons: SocialMediaButton[] = [
   {
     title: "Projects",
-    icon: <NextArrow className="max-lg:size-5 lg:size-14 stroke-black-200" />,
+    icon: (
+      <NextArrow className="max-lg:size-5 lg:size-14 stroke-black-200 fill-dark-100" />
+    ),
     href: "/projects",
   },
 ];
