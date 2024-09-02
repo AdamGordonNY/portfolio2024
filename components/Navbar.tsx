@@ -1,19 +1,16 @@
 "use client";
 
 import NavButton from "./NavButton";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 const buttons = [
-  { text: "home", route: "/" },
   { text: "projects", route: "/projects" },
   { text: "skills", route: "/skills" },
-  { text: "experience", route: "/experience" },
+  { text: "blog", route: "/posts" },
   { text: "contact", route: "/contact" },
 ];
-export function Navbar({ page }: { page?: string }) {
+export function Navbar() {
   return (
-    <header className="justify-center flex  top-2 z-50 flex-1">
-      <nav className="flex z-50  justify-between items-center md:w-[500px] max-md:w-full h-16 capitalize">
+    <header className=" z-50 flex min-w-[400px] flex-1 justify-center">
+      <nav className="z-50 flex  h-16 items-center justify-between capitalize text-white-900 max-md:w-full md:w-[500px] ">
         {buttons.map((btn) => (
           <NavButton key={btn.text} text={btn.text} route={btn.route} />
         ))}

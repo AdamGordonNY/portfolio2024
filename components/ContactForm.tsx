@@ -18,7 +18,7 @@ import { Tailwind } from "@react-email/tailwind";
 import { sendEmail } from "@/lib/actions/actions";
 import { toast } from "sonner";
 import SubmitButton from "./SubmitButton";
-import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/form";
+import { Form, FormControl, FormField, FormItem } from "./ui/form";
 import { useForm } from "react-hook-form";
 import { Textarea } from "./ui/textarea";
 
@@ -63,7 +63,7 @@ const ContactForm = () => {
   return (
     <Form {...form}>
       <form
-        className="mt-10 flex flex-col dark:text-dark-100 min-w-full  gap-y-2  "
+        className="mt-10 flex min-w-full flex-col gap-y-2  dark:text-dark-100  "
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -85,9 +85,9 @@ const ContactForm = () => {
                   <Input
                     {...field}
                     name="senderEmail"
-                    placeholder="Your Name"
+                    placeholder="Your Name and Contact Info"
                     required
-                    className="w-full flex flex-1 rounded-lg"
+                    className="flex w-full flex-1 rounded-lg text-white-900"
                   />
                 </FormControl>
               </FormItem>
@@ -107,7 +107,7 @@ const ContactForm = () => {
                     required
                     rows={10}
                     maxLength={5000}
-                    className="w-full flex flex-1 rounded-lg resize-none"
+                    className="flex w-full flex-1 resize-none rounded-lg text-white-900"
                   />
                 </FormControl>
               </FormItem>

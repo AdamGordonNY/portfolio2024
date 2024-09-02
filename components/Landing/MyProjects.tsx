@@ -1,25 +1,26 @@
 import React from "react";
 import SocialButton from "../SocialButton";
 import { Compare } from "../ui/compare";
-import NextArrow from "../ui/icons/NextArrow";
+
+import { IoIosArrowForward } from "react-icons/io";
 const buttons = [
   {
     title: "Projects",
     href: "/projects",
     icon: (
-      <NextArrow className="fill-dark-100 stroke-dark-100 place-self-center" />
+      <IoIosArrowForward className="place-self-center fill-dark-100 stroke-dark-100" />
     ),
   },
 ];
 const MyProjects = () => {
   return (
-    <div className="flex items-center justify-center p-3 gap-x-4">
+    <div className="flex items-center justify-center gap-x-5 p-3">
       <SocialButton type="nav" social={buttons[0]} />
       <Compare
         firstImage="/images/devtodayslanted.svg"
         secondImage="/images/gitnoteslanted.svg"
-        firstImageClassName="object-cover "
-        secondImageClassname="object-cover"
+        firstImageClassName="object-cover max-md:size-[300px]"
+        secondImageClassname="object-cover  max-md:size-[300px]"
         slideMode="hover"
         autoplay
         autoplayDuration={6000}

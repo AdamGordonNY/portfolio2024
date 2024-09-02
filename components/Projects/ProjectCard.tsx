@@ -25,9 +25,9 @@ const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
           </Link>
         </div>
       </section>
-      <section className="flex max-w-full flex-col items-start justify-start gap-6 self-stretch text-left font-sans text-[32px] text-white-900">
+      <section className="font-sans flex max-w-full flex-col items-start justify-start gap-6 self-stretch text-left text-[32px] text-white-900">
         <div className="flex max-w-full flex-col items-start justify-center gap-[18px] self-stretch">
-          <h2 className="modern-h3 relative m-0 inline-block max-w-full text-center font-sans  text-white-900">
+          <h2 className="modern-h3 font-sans relative m-0 inline-block max-w-full text-center  text-white-900">
             {caseStudy.title}
           </h2>
           <div className="mq450:text-base mq450:leading-[21px] relative self-stretch text-xl leading-[130%] text-lightsteelblue">

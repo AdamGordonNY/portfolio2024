@@ -2,13 +2,11 @@
 
 import React from "react";
 
-import { useRouter } from "next/navigation";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import ContactForm from "./ContactForm";
 import SocialLinks, { socialArray } from "./SocialLinks";
 import SocialButton from "./SocialButton";
 const Contact = () => {
-  const router = useRouter();
   const words = [
     { text: "Thanks" },
     { text: "for" },
@@ -16,19 +14,21 @@ const Contact = () => {
     { text: "by!" },
   ];
   return (
-    <div className="flex flex-1 font-sans   min-h-screen w-full flex-col items-center justify-center bg-white-900 pt-10 dark:bg-dark-200 gap-y-2 dark:text-white-800">
+    <div className="flex min-h-screen   w-full flex-1 flex-col items-center justify-center gap-y-2  bg-dark-200 pt-10 text-white-800">
       <TypewriterEffectSmooth
         words={words}
-        className="flex w-full  items-center justify-center bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-center text-transparent "
+        className="paragraph-semibold flex  w-full items-center justify-center bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-center text-transparent "
       />
-      <h2 className="modern-base-regular flex items-center gap-x-4">
-        {" "}
-        Take my{" "}
-        <SocialButton type="social" social={socialArray[5]}></SocialButton> or
-        <SocialButton type="social" social={socialArray[0]} />
-        me directly!
-      </h2>{" "}
-      <div className="flex min-w-[375px] w-[60%] mb-10">
+      <div>
+        <span className="base-regular md:small-regular flex items-center gap-x-1">
+          {" "}
+          Take my <SocialButton type="social" social={socialArray[3]} />
+          or
+          <SocialButton type="social" social={socialArray[0]} />
+          me directly!
+        </span>{" "}
+      </div>
+      <div className="paragraph-semibold mb-10 flex w-3/5 min-w-[375px] font-satoshi max-md:w-full">
         <ContactForm />
       </div>
       <SocialLinks type="social" />
