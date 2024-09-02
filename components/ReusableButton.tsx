@@ -15,7 +15,7 @@ const otherButtons: SocialMediaButton[] = [
     href: "/projects",
   },
 ];
-const SocialButton = ({
+const ReusableButton = ({
   social,
   type,
 }: {
@@ -24,7 +24,7 @@ const SocialButton = ({
 }) => {
   if (type === "nav") {
     return (
-      <BackgroundGradient containerClassName="flex  lg:h-14 h-7 lg:py-2 lg:px-8 lg:px-4 relative my-1 max-lg:px-4 max-lg:py-1  items-center justify-center">
+      <BackgroundGradient containerClassName="flex max-md:min-w-[100px] lg:h-14 h-7 lg:py-2 lg:px-8 lg:px-4 relative my-1 max-lg:px-4 max-lg:py-1  items-center justify-center">
         <Link href={otherButtons[0].href!}>
           <motion.button
             className=" hover:scale-120 max-md:body-regular "
@@ -69,4 +69,4 @@ const SocialButton = ({
   );
 };
 
-export default SocialButton;
+export default ReusableButton;

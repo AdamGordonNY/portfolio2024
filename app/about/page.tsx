@@ -1,8 +1,17 @@
-import { Navbar } from "@/components/Navbar";
-import React from "react";
+import Contact from "@/components/Contact";
+import Heading from "@/components/Landing/Heading";
+import MyProjects from "@/components/Landing/MyProjects";
 
-const Page = () => {
-  return <div> </div>;
-};
+export default function Home() {
+  return (
+    <div className="flex min-w-full flex-col font-satoshi font-medium">
+      <Heading />
+      <MyProjects />
+      <div className="">
+        <span></span>
+      </div>
 
-export default Page;
+      <Contact />
+    </div>
+  );
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import SocialButton from "../SocialButton";
+import SocialButton from "../ReusableButton";
 import { Compare } from "../ui/compare";
 
 import { IoIosArrowForward } from "react-icons/io";
@@ -14,7 +14,7 @@ const buttons = [
 ];
 const MyProjects = () => {
   return (
-    <div className="flex items-center justify-center gap-x-5 p-3">
+    <div className="flex items-center justify-center gap-x-10  p-3">
       <SocialButton type="nav" social={buttons[0]} />
       <Compare
         firstImage="/images/devtodayslanted.svg"

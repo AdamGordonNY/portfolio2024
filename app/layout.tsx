@@ -4,6 +4,7 @@ import React from "react";
 import "./globals.css";
 import ThemeContextProvider from "@/providers/ThemeContextProvider";
 import { Navbar } from "@/components/Navbar";
+import Footer from "@/components/Landing/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           <main className="flex min-h-screen min-w-full flex-col bg-dark-200">
             <Navbar />
             {children}
+            <Footer />
           </main>
         </ThemeContextProvider>
       </body>

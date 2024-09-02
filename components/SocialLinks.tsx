@@ -7,7 +7,7 @@ import {
 } from "@tabler/icons-react";
 import { HiOutlineDownload } from "react-icons/hi";
 
-import SocialButton from "./SocialButton";
+import ReusableButton from "./ReusableButton";
 export type SocialMediaButton = {
   title: string;
   icon: React.JSX.Element;
@@ -43,7 +43,7 @@ const SocialLinks = ({ type }: { type: string }) => {
     return (
       <div className="flex  flex-1 content-center items-center justify-center gap-x-4 rounded-full py-3">
         {socialArray.map((social) => (
-          <SocialButton key={social.title} social={social} type="nav" />
+          <ReusableButton key={social.title} social={social} type="nav" />
         ))}
       </div>
     );
@@ -51,7 +51,7 @@ const SocialLinks = ({ type }: { type: string }) => {
   return (
     <div className="flex flex-1  content-center items-center justify-center gap-x-4 rounded-full py-3 max-md:flex-col">
       {socialArray.map((social) => (
-        <SocialButton key={social.title} social={social} type="social" />
+        <ReusableButton key={social.title} social={social} type="social" />
       ))}
     </div>
   );
