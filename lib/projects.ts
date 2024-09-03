@@ -75,7 +75,7 @@ export const projectList: CaseStudy[] = [
       portfolioPath: "/projects/gitnote",
     },
     cardImage: "/images/gitnoteslanted.svg",
-    tech: ["nextjs", "tailwind", "", "supabase", "typescript"],
+    tech: ["nextjs", "tailwind", "mongo", "supabase", "typescript"],
     summary: "",
     mission: "",
     process: [],

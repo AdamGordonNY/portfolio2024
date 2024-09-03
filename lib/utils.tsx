@@ -22,33 +22,33 @@ export function cn(...inputs: ClassValue[]) {
 export const renderIcon = (icon: string) => {
   switch (icon) {
     case "react":
-      return <IconBrandReact size={48} />;
+      return <IconBrandReact className="mq450:size-6  md:size-12" />;
     case "nextjs":
-      return <NextJS size={48} />;
+      return <NextJS className="mq450:size-6  md:size-12" />;
     case "tailwind":
-      return <Tailwind size={48} />;
+      return <Tailwind className="mq450:size-6  md:size-12" />;
     case "typescript":
-      return <Typescript size={48} />;
+      return <Typescript className="mq450:size-6  md:size-12" />;
     case "laravel":
-      return <IconBrandLaravel size={48} />;
+      return <IconBrandLaravel className="mq450:size-6  md:size-12" />;
     case "figma":
-      return <IconBrandFigma size={48} />;
+      return <IconBrandFigma className="mq450:size-6  md:size-12" />;
     case "vsCode":
-      return <IconBrandVscode size={48} />;
+      return <IconBrandVscode className="mq450:size-6  md:size-12" />;
     case "xbox":
-      return <IconBrandXbox size={48} />;
+      return <IconBrandXbox className="mq450:size-6  md:size-12" />;
     case "prisma":
       return (
-        <IconBrandPrisma size={48} className="fill-#4DB6AC stroke-#4DB6AC" />
+        <IconBrandPrisma className="mq450:size-6 place-self-center text-white-800 md:size-12" />
       );
     case "chatgpt":
-      return <ChatGPT size={48} />;
+      return <ChatGPT className="mq450:size-6  md:size-12" />;
     case "mongo":
-      return <MongoDB size={48} />;
+      return <MongoDB className="mq450:size-6  md:size-12" />;
     case "stripe":
-      return <FaStripeS size={48} />;
+      return <FaStripeS className="mq450:size-6  md:size-12" />;
     case "vue":
-      return <IconBrandVue size={48} />;
+      return <IconBrandVue className="mq450:size-6  md:size-12" />;
   }
 };
 export const validateString = (

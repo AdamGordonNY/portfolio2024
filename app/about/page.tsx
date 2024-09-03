@@ -7,9 +7,6 @@ export default function Home() {
     <div className="flex min-w-full flex-col font-satoshi font-medium">
       <Heading />
       <MyProjects />
-      <div className="">
-        <span></span>
-      </div>
 
       <Contact />
     </div>
