@@ -13,7 +13,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
   return (
-    <div className="mq450:gap-[18px] flex flex-col items-start justify-start gap-6 overflow-hidden rounded-[23px] border border-solid border-darkslategray p-6 [background:linear-gradient(103.4deg,_#04071d,_#0c0e23)] md:w-full">
+    <div className="mq450:gap-[18px] flex flex-col items-start justify-start gap-6 overflow-hidden rounded-[23px] border border-solid border-darkslategray p-2 [background:linear-gradient(103.4deg,_#04071d,_#0c0e23)] md:w-[600px]">
       <section className="relative flex w-full flex-row items-start justify-start overflow-hidden rounded-[14px]">
         <div className="h-[330px] w-full">
           <Link href={caseStudy.links?.portfolioPath!}>
@@ -22,7 +22,6 @@ const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
               alt={caseStudy.title}
               src={caseStudy.cardImage}
               layout="fill"
-              objectFit="cover"
             />
           </Link>
         </div>
@@ -36,7 +35,7 @@ const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
             {caseStudy.description}
           </div>
         </div>
-        <div className="flex w-full flex-row max-mq450:justify-center justify-between gap-5">
+        <div className="flex w-full flex-row max-mq450:justify-center justify-between gap-5 font-satoshi">
           <div className="flex flex-row items-center md:paragraph-regular small-regular justify-start gap-x-4">
             <IconBrandGithub />
             <Link href={caseStudy.links.repo!}> Github Repo</Link>
