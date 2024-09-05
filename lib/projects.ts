@@ -13,16 +13,26 @@ import { CaseStudy } from "./types";
 export const projectList: CaseStudy[] = [
   {
     title: "DevToday",
+    subtitle: "Where Developers Connect",
 
     description:
       "A Social Media platform for developers to share their knowledge and organize gatherings",
     cardImage: "images/devtodayslanted.svg",
-    images: ["images/devtodayslanted.svg"],
+    images: ["/images/devtoday-wide.svg", "/images/devtoday.svg"],
 
-    tech: ["nextjs", "tailwind", "prisma", "supabase", "typescript"],
+    tech: [
+      "nextjs",
+      "tailwind",
+      "prisma",
+      "supabase",
+      "typescript",
+      "uploadthingy",
+      "socket.io",
+      "framer-motion",
+    ],
     links: {
       repo: "https://github.com/AdamGordonNY/DevTodayAdamsVersion",
-      liveSite: "https://devtoday.vercel.app",
+      liveSite: "https://adam-gordon.info",
       portfolioPath: "/projects/devtoday",
     },
     features: [

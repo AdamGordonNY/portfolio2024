@@ -1,12 +1,11 @@
 import React from "react";
 import { projectList } from "@/lib/projects";
+import Template from "@/components/CaseStudies/Template";
 const Page = () => {
-  const project = projectList.find((project) => project.title === "DevToday");
+  const project = projectList[0];
   return (
     <div className="flex w-full flex-col bg-inherit ">
-      <h1 className="font-satoshi md:modern-h1 modern-h2 text-center px-5 pt-2  ">
-        {project?.title}
-      </h1>
+      <Template caseStudy={project!} />
     </div>
   );
 };

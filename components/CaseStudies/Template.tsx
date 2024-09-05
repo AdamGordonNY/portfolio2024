@@ -1,27 +1,44 @@
 import { CaseStudy } from "@/lib/types";
 import React from "react";
-import { WobbleCard } from "../ui/wobble-card";
-import Image from "next/image";
+import ContainedImage from "../ContainedImage";
 interface TemplateProps {
   caseStudy: CaseStudy;
 }
-const Template = ({ caseStudy }: TemplateProps) => {
+const Template = async ({ caseStudy }: TemplateProps) => {
   return (
-    <WobbleCard containerClassName="border-darkslategray mq450:gap-[18px] box-border flex w-[602px] max-w-full flex-col items-start justify-start gap-9 overflow-hidden break-inside-avoid-column rounded-[23px] border border-solid px-6 py-9 leading-[normal] tracking-[normal] [background:linear-gradient(103.4deg,_#04071d,_#0c0e23)]">
+    <div className="flex flex-col items-center justify-center  px-10 ">
       {" "}
-      <div className="flex w-full flex-col ">
-        <Image
-          src={caseStudy.cardImage}
-          alt={caseStudy.title}
-          width={600}
-          height={400}
-        />
-        <div className="max-md:modern-heading-1 flex flex-1 items-center justify-center bg-clip-text ">
+      <div className="flex flex-col items-center gap-5 text-center">
+        <span className="md:modern-h1 paragraph-regular   bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-center text-transparent underline ">
+          {caseStudy.title} <br />
+        </span>
+        <span className="md:modern-h3 paragraph-regular text-center  italic text-white-900">
+          {caseStudy.subtitle}
+        </span>{" "}
+        <span className="mq450:body-regular md:paragraph-regular text-center font-satoshi text-white-900">
+          {caseStudy.description}
+        </span>{" "}
+      </div>{" "}
+      <ContainedImage
+        src={caseStudy.images[0]}
+        alt={caseStudy.title}
+        width={900}
+        height={500}
+        className="xs:size-[400px] my-5 sm:size-[500px] md:size-[600px] lg:size-[700px]"
+      />
+      <div className="md:paragraph-regular body-regular flex w-full flex-1 items-center justify-center font-satoshi  text-white-900">
+        <div className="my-10 flex">
           {" "}
-          {caseStudy.title}
+          <span className="base-regular max-mq450:body-regular basis-1/2 justify-start align-top text-white-900">
+            {" "}
+            Overview
+          </span>
+          <p className="body-regular flex flex-col gap-y-4">
+            {caseStudy.summary}
+          </p>
         </div>
       </div>
-    </WobbleCard>
+    </div>
   );
 };
 

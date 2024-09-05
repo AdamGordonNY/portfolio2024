@@ -1,13 +1,11 @@
-"use server";
-
-import React from "react";
+import { ContactFormEmail } from "@/components/email-template";
+import { getErrorMessage, validateString } from "@/lib/utils";
 import { Resend } from "resend";
-import { validateString, getErrorMessage } from "@/lib/utils";
-import { ContactFormEmail } from "@/components/ContactForm";
+import React from "react";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-// server action using Resend.com , to send email from contact form.
-export const sendEmail = async (formData: FormData) => {
+
+export async function POST(formData: FormData) {
   const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
 
@@ -32,13 +30,15 @@ export const sendEmail = async (formData: FormData) => {
       replyTo: senderEmail,
       react: ContactFormEmail({ message, senderEmail }) as React.ReactElement,
     });
+
+    try {
+      return Response.json(data);
+    } catch (error) {
+      return Response.json({ error }, { status: 500 });
+    }
   } catch (error: unknown) {
     return {
       error: getErrorMessage(error),
     };
   }
-
-  return {
-    data,
-  };
-};
+}

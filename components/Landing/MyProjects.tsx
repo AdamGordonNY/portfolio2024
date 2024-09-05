@@ -1,7 +1,7 @@
 import React from "react";
 import SocialButton from "../ReusableButton";
 import { Compare } from "../ui/compare";
-
+import Image from "next/image";
 import { IoIosArrowForward } from "react-icons/io";
 const buttons = [
   {
@@ -14,17 +14,23 @@ const buttons = [
 ];
 const MyProjects = () => {
   return (
-    <div className="flex items-center justify-center gap-x-10  p-3 mb-2 md:mb-1">
-      <SocialButton type="nav" social={buttons[0]} />
-      <Compare
-        firstImage="/images/devtodayslanted.svg"
-        secondImage="/images/gitnoteslanted.svg"
-        firstImageClassName="object-cover max-md:size-[300px]"
-        secondImageClassname="object-cover  max-md:size-[300px]"
-        slideMode="hover"
-        autoplay
-        autoplayDuration={6000}
-      />
+    <div className="mq450:w-[390px] mq450:justify-center  flex items-center justify-center py-5 flex-col-reverse">
+      <div className="mq450:w-3/4 flex flex-col text-center justify-center">
+        <span className="text-white-900 basis-1/4">See my latest Work!</span>
+        <SocialButton type="nav" social={buttons[0]} />
+      </div>
+
+      <div className="mq450:place-self-center relative flex w-full justify-center">
+        <Compare
+          firstImage="/images/devtodayslanted.svg"
+          secondImage="/images/gitnoteslanted.svg"
+          firstImageClassName="object-cover mq450:size-[300px] absolute mq450:hidden"
+          secondImageClassname="object-cover mq450:hidden absolute  mq450:size-[300px]"
+          slideMode="hover"
+          autoplay
+          autoplayDuration={6000}
+        />
+      </div>
     </div>
   );
 };

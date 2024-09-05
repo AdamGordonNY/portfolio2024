@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <div className="flex my-2   w-full flex-1 flex-col items-center justify-center  bg-dark-200  text-white-800">
       <div>
-        <span className="base-regular md:paragraph-regular flex items-center gap-x-1 text-center">
+        <span className="base-regular md:paragraph-regular flex items-center gap-x-1 text-center text-gradient-highlight">
           Contact me <BsArrowDown />
         </span>
         <br />
@@ -26,7 +26,7 @@ const Contact = () => {
       </div>
       <TypewriterEffectSmooth
         words={words}
-        className="modern-paragraph-regular flex  w-full items-center justify-center bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-center text-transparent "
+        className="modern-paragraph-regular flex  w-full items-center justify-center text-gradient-highlight"
       />
     </div>
   );
