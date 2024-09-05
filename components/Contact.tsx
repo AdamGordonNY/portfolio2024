@@ -13,9 +13,9 @@ const Contact = () => {
     { text: "by!" },
   ];
   return (
-    <div className="flex min-h-screen   w-full flex-1 flex-col items-center justify-center gap-y-2  bg-dark-200 pt-10 text-white-800">
+    <div className="flex my-2   w-full flex-1 flex-col items-center justify-center  bg-dark-200  text-white-800">
       <div>
-        <span className="base-regular md:small-regular flex items-center gap-x-1 text-center">
+        <span className="base-regular md:paragraph-regular flex items-center gap-x-1 text-center">
           Contact me <BsArrowDown />
         </span>
         <br />

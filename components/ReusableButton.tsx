@@ -57,7 +57,7 @@ const ReusableButton = ({
         >
           {" "}
           <div className="text-white group relative flex items-center  justify-center gap-x-3 rounded-[6px]  align-middle transition duration-200 hover:bg-transparent lg:px-4 lg:py-2">
-            {social?.title !== "Projects" && social?.icon}
+            {social?.title !== "My Projects" && social?.icon}
             <span className="lg:modern-paragraph-regular max-lg:body-regular  items-center align-middle font-satoshi">
               {social?.title}
             </span>

@@ -200,5 +200,19 @@ export const skillsData = [
   "REST API",
   "VPS Configuration/Linux",
 ] as const;
+export const certs = [
+  {
+    title: "NextJS 14 Pro Mastery Certified - JavaScript Mastery",
+    issuer: "JavaScript Mastery",
+    image:
+      "https://my.certifyme.online/static/fileStore/img/926/10546/221644_badge_1200A2.png",
+  },
+  {
+    title: "Javascript Mastery Masterclass",
+    issuer: "JavaScript Mastery",
+    image:
+      "https://my.certifyme.online/static/fileStore/img/926/6408/315427_badge_06DF5C.png",
+  },
+] as const;
 
 export const SecondarySkillsData = [] as const;

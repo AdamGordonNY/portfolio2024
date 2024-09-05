@@ -2,7 +2,7 @@
 import React from "react";
 const Heading = () => {
   return (
-    <section className="max-mq450:justify-center max-lg:base-regular mt-5 flex min-w-full flex-col px-0  ">
+    <section className="max-mq450:justify-center max-lg:base-regular mt-5 flex min-w-full flex-col px-0 mb-2  ">
       <p className="lg:modern-h2 items-center justify-center text-center text-white-800 ">
         Hi! I&apos;m{" "}
         <span className="lg:heading-1-bold max-lg: z-10  items-center justify-center bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-center text-transparent">

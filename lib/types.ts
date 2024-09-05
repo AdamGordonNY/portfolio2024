@@ -24,12 +24,14 @@ export type CaseStudy = {
   }[];
 
   result: {
+    outcome: string;
+    goals?: string;
     learning: string;
     challenges: string;
     nextSteps: string[];
   };
-  teaamMembers?: {
+  teamMembers: {
     name: string;
     role: string;
-  };
+  }[];
 };

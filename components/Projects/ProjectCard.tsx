@@ -3,8 +3,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CaseStudy } from "@/lib/types";
-import { IconArrowRight } from "@tabler/icons-react";
+import { IconArrowRight, IconBrandGithub } from "@tabler/icons-react";
 import { renderIcon } from "@/lib/utils";
+import CaseStudyButton from "./CaseStudyButton";
 
 interface ProjectCardProps {
   caseStudy: CaseStudy;
@@ -26,7 +27,7 @@ const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
           </Link>
         </div>
       </section>
-      <section className="flex w-full flex-col items-start justify-start gap-6 text-left text-[32px] text-white-900">
+      <section className="flex w-full flex-col items-start justify-start gap-6 text-center text-[32px] text-white-900">
         <div className="flex w-full flex-col items-start justify-center gap-[18px]">
           <h2 className="modern-h3 w-full text-center text-white-900">
             {caseStudy.title}
@@ -35,22 +36,21 @@ const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
             {caseStudy.description}
           </div>
         </div>
-        <div className="mq450:flex-wrap t flex w-full flex-row justify-between gap-5">
-          <div className="flex flex-row items-center justify-start gap-x-4">
-            {caseStudy.tech.map(
-              (item, idx) => idx < 5 && renderIcon(item.toLowerCase())
-            )}
+        <div className="flex w-full flex-row max-mq450:justify-center justify-between gap-5">
+          <div className="flex flex-row items-center md:paragraph-regular small-regular justify-start gap-x-4">
+            <IconBrandGithub />
+            <Link href={caseStudy.links.repo!}> Github Repo</Link>
           </div>
-          <div className="mq450:text-base flex flex-row items-center">
-            <Link
-              href={caseStudy.links?.liveSite!}
-              className="inline-flex items-center gap-x-2"
-            >
-              <span className="base-semibold md:small-bold text-white-900">
-                Live Website
-              </span>
-              <IconArrowRight className="mq450:size-6 text-white-500 md:size-12" />
-            </Link>
+          <div className="flex flex-row bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-center text-transparent items-center md:paragraph-regular small-regular justify-start gap-x-4">
+            {" "}
+            <Link href={caseStudy.links?.liveSite!}>Live Website</Link>
+          </div>
+          <div className="flex flex-row items-center md:paragraph-regular small-regular justify-start gap-x-4">
+            {" "}
+            <CaseStudyButton
+              href={caseStudy.links?.portfolioPath!}
+              title={"Case Study"}
+            />
           </div>
         </div>
       </section>

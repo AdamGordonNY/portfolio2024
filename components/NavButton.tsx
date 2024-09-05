@@ -11,18 +11,18 @@ const NavButton = ({ text, route }: { text: string; route: string }) => {
 
   useEffect(() => {
     if (text === "home" && pathname === "/") setActive(true);
-    if (text === "blog") setActive(pathname === "/posts");
+    if (text === "social") setActive(pathname === "/social");
     else setActive(pathname === `/${text}`);
   }, [pathname, text]);
 
-  const className = `hover:text-white-900 focus:text-white-900 font-satoshi rounded-2xl capitalize text-2xl text-white-800 small-regular md:body-regular text-center`;
+  const className = `hover:text-white-900 focus:text-white-900 font-satoshi max-md:body-regular  rounded-2xl capitalize md:text-2xl text-white-800 paragraph-regular items-center max-md:w-1/4 text-center`;
 
   return (
     <>
       {active ? (
         <BackgroundGradient
-          containerClassName="flex items-center justify-center md:w-[80px] flex-1"
-          animate={false}
+          containerClassName="flex items-center text-center  justify-center max-md:body-regular max-md:w-1/4 md:w-[80px] max-md:w-fit flex-1"
+          animate
         >
           <Button
             onClick={() => router.push(route)}
@@ -34,7 +34,7 @@ const NavButton = ({ text, route }: { text: string; route: string }) => {
       ) : (
         <Button
           onClick={() => router.push(route)}
-          className={cn(className + `flex flex-col`)}
+          className={cn(className + `items-center mx-auto flex flex-col`)}
         >
           {text}
         </Button>

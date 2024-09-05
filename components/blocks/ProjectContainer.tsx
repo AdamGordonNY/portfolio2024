@@ -4,13 +4,29 @@ import React, { useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { GoCopilot } from "react-icons/go";
 
-export default function CardDemo() {
+export default function ProjectContainer({
+  containerClassName,
+  className,
+  children,
+  skeletonContainerClassName,
+  skeletonClassName,
+  cardTitle,
+  cardDescription,
+}: {
+  containerClassName?: string;
+  className?: string;
+  children?: React.ReactNode;
+  skeletonContainerClassName?: string;
+  skeletonClassName?: string;
+  cardTitle?: string;
+  cardDescription?: string;
+}) {
   return (
-    <Card>
-      <CardSkeletonContainer>
+    <Card className={containerClassName}>
+      <CardSkeletonContainer className={skeletonContainerClassName}>
         <Skeleton />
       </CardSkeletonContainer>
-      <CardTitle>Damn good card</CardTitle>
+      <CardTitle className={className}>Damn good card</CardTitle>
       <CardDescription>
         A card that showcases a set of tools that you use to create your
         product.

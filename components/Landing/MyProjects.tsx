@@ -14,7 +14,7 @@ const buttons = [
 ];
 const MyProjects = () => {
   return (
-    <div className="flex items-center justify-center gap-x-10  p-3">
+    <div className="flex items-center justify-center gap-x-10  p-3 mb-2 md:mb-1">
       <SocialButton type="nav" social={buttons[0]} />
       <Compare
         firstImage="/images/devtodayslanted.svg"

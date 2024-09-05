@@ -26,9 +26,7 @@ const config = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
-        mq450: {
-          raw: "screen and (max-width: 450px)",
-        },
+        mq450: { max: "450px" },
         xl: "1200px",
         lg: "1024px",
         md: "768px",

@@ -22,33 +22,38 @@ export function cn(...inputs: ClassValue[]) {
 export const renderIcon = (icon: string) => {
   switch (icon) {
     case "react":
-      return <IconBrandReact className="mq450:size-6  md:size-12" />;
+      return <IconBrandReact size={24} className="mq450:size-6  md:size-12" />;
     case "nextjs":
-      return <NextJS className="mq450:size-6  md:size-12" />;
+      return <NextJS size={24} className="mq450:size-6  md:size-12" />;
     case "tailwind":
-      return <Tailwind className="mq450:size-6  md:size-12" />;
+      return <Tailwind size={24} className="mq450:size-6  md:size-12" />;
     case "typescript":
-      return <Typescript className="mq450:size-6  md:size-12" />;
+      return <Typescript size={24} className="mq450:size-6  md:size-12" />;
     case "laravel":
-      return <IconBrandLaravel className="mq450:size-6  md:size-12" />;
+      return (
+        <IconBrandLaravel size={24} className="mq450:size-6  md:size-12" />
+      );
     case "figma":
-      return <IconBrandFigma className="mq450:size-6  md:size-12" />;
+      return <IconBrandFigma size={24} className="mq450:size-6  md:size-12" />;
     case "vsCode":
-      return <IconBrandVscode className="mq450:size-6  md:size-12" />;
+      return <IconBrandVscode size={24} className="mq450:size-6  md:size-12" />;
     case "xbox":
-      return <IconBrandXbox className="mq450:size-6  md:size-12" />;
+      return <IconBrandXbox size={24} className="mq450:size-6  md:size-12" />;
     case "prisma":
       return (
-        <IconBrandPrisma className="mq450:size-6 place-self-center text-white-800 md:size-12" />
+        <IconBrandPrisma
+          size={24}
+          className="mq450:size-6 place-self-center text-white-800 md:size-12"
+        />
       );
     case "chatgpt":
-      return <ChatGPT className="mq450:size-6  md:size-12" />;
+      return <ChatGPT size={24} className="mq450:size-6  md:size-12" />;
     case "mongo":
-      return <MongoDB className="mq450:size-6  md:size-12" />;
+      return <MongoDB size={24} className="mq450:size-6  md:size-12" />;
     case "stripe":
-      return <FaStripeS className="mq450:size-6  md:size-12" />;
+      return <FaStripeS size={24} className="mq450:size-6  md:size-12" />;
     case "vue":
-      return <IconBrandVue className="mq450:size-6  md:size-12" />;
+      return <IconBrandVue size={24} className="mq450:size-6  md:size-12" />;
   }
 };
 export const validateString = (

@@ -3,14 +3,9 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className="md:modern-h1 base-regular flex w-full flex-col font-satoshi">
+    <div className="md:modern-h2 base-regular flex w-full flex-col font-satoshi">
       <div className="flex flex-col px-10 ">
-        <span className="text-center text-white-900">
-          A Few Recent Projects
-          <br />
-          w/
-          <br /> NextJS14 and TailwindCSS...
-        </span>
+        <span className="text-center text-white-900">My Projects</span>
       </div>
       <ProjectOverview />
     </div>
