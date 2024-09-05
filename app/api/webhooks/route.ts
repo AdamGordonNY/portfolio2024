@@ -2,11 +2,6 @@ import { headers } from "next/headers";
 import { WebhookEvent } from "@/lib/types";
 import { Webhook } from "svix";
 import type { NextApiRequest } from "next";
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
 
 export default async function POST(req: NextApiRequest) {
   const secret = process.env.WEBHOOK_SECRET;
