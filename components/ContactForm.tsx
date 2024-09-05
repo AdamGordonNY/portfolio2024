@@ -25,7 +25,7 @@ const ContactForm = () => {
         className="mt-10 flex min-w-full flex-col gap-y-2  dark:text-dark-100  "
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
-
+          console.log(data);
           if (error) {
             console.log(data);
             toast.error(error);

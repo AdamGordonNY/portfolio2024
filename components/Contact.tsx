@@ -13,20 +13,25 @@ const Contact = () => {
     { text: "by!" },
   ];
   return (
-    <div className="flex my-2   w-full flex-1 flex-col items-center justify-center  bg-dark-200  text-white-800">
-      <div>
-        <span className="base-regular md:paragraph-regular flex items-center gap-x-1 text-center text-gradient-highlight">
-          Contact me <BsArrowDown />
+    <div className="my-2 flex   w-full flex-1 flex-col content-center items-center justify-center bg-dark-200  text-white-800">
+      <div className="flex flex-col content-center items-center justify-center">
+        <span className="md:modern-h3 body-regular text-gradient-highlight flex items-center gap-x-1  uppercase">
+          Contact me
         </span>
-        <br />
-        <span className="small-regular italic"> Social Links In Footer</span>
+
+        <BsArrowDown className="size-10 stroke-gradient-end" />
+
+        <span className="mq450:small-regular min-[450px]:body-regular text-center italic">
+          {" "}
+          Social Links In Footer
+        </span>
       </div>
       <div className="paragraph-semibold mb-10 flex w-3/5 min-w-[375px] font-satoshi max-md:w-full">
         <ContactForm />
       </div>
       <TypewriterEffectSmooth
         words={words}
-        className="modern-paragraph-regular flex  w-full items-center justify-center text-gradient-highlight"
+        className="modern-paragraph-regular text-gradient-highlight  flex w-full items-center justify-center"
       />
     </div>
   );
