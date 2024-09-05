@@ -1,4 +1,4 @@
-import { ContactFormEmail } from "@/components/email-template";
+import { ContactFormEmail } from "@/components/ContactEmailTemplate";
 import { getErrorMessage, validateString } from "@/lib/utils";
 import { Resend } from "resend";
 import React from "react";
