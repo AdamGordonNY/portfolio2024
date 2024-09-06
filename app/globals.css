@@ -73,6 +73,15 @@
     font-family: "Satoshi", sans-serif;
     @apply bg-background text-foreground;
   }
+  /* styles/globals.css */
+
+  /* Custom class for responsive width */
+
+  @media (max-width: 450px) {
+    .custom-responsive-width {
+      max-width: 390px; /* Adjust width for screens smaller than 450px */
+    }
+  }
 }
 @font-face {
   font-family: "Satoshi";

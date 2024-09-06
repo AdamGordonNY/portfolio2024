@@ -12,12 +12,12 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
   return (
-    <div className="max-mq450:gap-[18px] flex flex-col items-start justify-start gap-6 overflow-hidden rounded-[23px] border border-solid border-darkslategray px-1  py-2 [background:linear-gradient(103.4deg,_#04071d,_#0c0e23)] md:w-[600px] md:p-4">
-      <section className="relative flex w-full flex-row items-start justify-start overflow-hidden rounded-[14px]">
+    <div className="max-mq450:gap-[18px] custom-responsive-width flex flex-col items-start justify-start gap-6 overflow-hidden rounded-[23px] border border-solid border-darkslategray px-1  py-2 [background:linear-gradient(103.4deg,_#04071d,_#0c0e23)] md:w-[600px] md:p-4">
+      <section className="custom-responsive-width relative flex w-full flex-row items-start justify-start overflow-hidden rounded-[14px]">
         <div className="h-[330px] w-full">
           <Link href={caseStudy.links?.portfolioPath!}>
             <Image
-              className="mq450:size-6 absolute size-full object-cover p-2.5 text-white-500 md:size-12"
+              className="mq450:size-6 custom-responsive-width absolute size-full object-cover p-2.5 text-white-500 md:size-12"
               alt={caseStudy.title}
               src={caseStudy.cardImage}
               layout="fill"

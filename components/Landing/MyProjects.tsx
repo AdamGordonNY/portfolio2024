@@ -1,8 +1,12 @@
 import React from "react";
-import SocialButton from "../ReusableButton";
+
 import { Compare } from "../ui/compare";
-import Image from "next/image";
+
 import { IoIosArrowForward } from "react-icons/io";
+import ReusableButton from "../ReusableButton";
+import Link from "next/link";
+import { CardContainer } from "../ui/3d-card";
+import Image from "next/image";
 const buttons = [
   {
     title: "Projects",
@@ -14,11 +18,22 @@ const buttons = [
 ];
 const MyProjects = () => {
   return (
-    <div className="mq450:w-[390px] mq450:justify-center  flex items-center justify-center py-5 flex-col-reverse">
-      <div className="mq450:w-3/4 flex flex-col text-center justify-center">
-        <span className="text-white-900 basis-1/4">See my latest Work!</span>
-        <SocialButton type="nav" social={buttons[0]} />
-      </div>
+    <div className="mq450:w-[390px] mq450:justify-center  flex flex-col-reverse items-center justify-center py-5">
+      <span className="text-white-900">See My Achievements and Skills!</span>
+      <ReusableButton text="Background" link="/skills" />
+      <Link href="/skills">
+        <CardContainer className="relative flex p-1">
+          <Image
+            src={`/images/jsmcert.png`}
+            alt="masterclass certification"
+            height={400}
+            width={600}
+            className="mq450:w-[390px] rounded-lg object-contain drop-shadow-xl"
+          />{" "}
+        </CardContainer>
+      </Link>
+      <span className="basis-1/4 text-white-900">See my latest Work!</span>
+      <ReusableButton type="nav" social={buttons[0]} />
 
       <div className="mq450:place-self-center relative flex w-full justify-center">
         <Compare
