@@ -36,8 +36,10 @@ const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
         </div>
         <div className="max-mq450:justify-center flex w-full flex-row justify-between gap-5 font-satoshi">
           <div className="md:paragraph-regular small-regular flex flex-row items-center justify-start gap-x-4">
-            <IconBrandGithub className="mq450:size-6 max-mq450:size-12" />
-            <Link href={caseStudy.links.repo!}> Github</Link>
+            <Link href={caseStudy.links.repo!}>
+              <IconBrandGithub className="mq450:size-10 max-mq450:size-12" />
+              <span className="max-sm:hidden"> Github</span>
+            </Link>
           </div>
           <div className="md:paragraph-regular small-regular flex flex-row items-center justify-start gap-x-4 bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-center text-transparent underline">
             {" "}
