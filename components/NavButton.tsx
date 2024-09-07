@@ -34,7 +34,9 @@ const NavButton = ({ text, route }: { text: string; route: string }) => {
       ) : (
         <Button
           onClick={() => router.push(route)}
-          className={cn(className + `items-center mx-auto flex flex-col`)}
+          className={cn(
+            className + `items-center mx-auto flex text-white-500 flex-col`
+          )}
         >
           {text}
         </Button>

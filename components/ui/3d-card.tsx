@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-return */
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -49,7 +50,7 @@ export const CardContainer = ({
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
         className={cn(
-          "py-20 flex items-center justify-center",
+          "py-5 flex items-center justify-center",
           containerClassName
         )}
         style={{

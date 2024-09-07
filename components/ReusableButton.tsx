@@ -5,13 +5,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { SocialMediaButton } from "./SocialLinks";
 import { BackgroundGradient } from "./ui/background-gradient";
-import NextArrow from "./ui/icons/NextArrow";
 const otherButtons: SocialMediaButton[] = [
   {
     title: "Projects",
-    icon: (
-      <NextArrow className="fill-dark-100 stroke-black-200 max-lg:size-5 lg:size-14" />
-    ),
+    icon: null,
     href: "/projects",
   },
 ];
@@ -20,11 +17,13 @@ const ReusableButton = ({
   type,
   text,
   link,
+  className,
 }: {
   social?: SocialMediaButton;
   type?: string;
   text?: string;
   link?: string;
+  className?: string;
 }) => {
   if (type === "nav") {
     return (
@@ -38,7 +37,7 @@ const ReusableButton = ({
             }}
           >
             {" "}
-            <div className="text-white group relative flex items-center  justify-center gap-x-3 rounded-[6px]  align-middle transition duration-200 hover:bg-transparent lg:px-8 lg:py-2">
+            <div className="text-white-900 group relative flex items-center  justify-center gap-x-3 rounded-[6px]  align-middle transition duration-200 hover:bg-transparent lg:px-8 lg:py-2">
               <span className="lg:paragraph-regular max-lg:body-regular  items-center align-middle font-satoshi">
                 {otherButtons[0].title}
               </span>
@@ -51,20 +50,17 @@ const ReusableButton = ({
   }
   if ((text && type === "social") || (text && type === "background"))
     link = "/skills";
+  else if (type === "live") {
+    text = "Live Site";
+  }
   return (
-    <BackgroundGradient containerClassName="flex  lg:h-14 h-7 lg:py-2 lg:px-8 lg:px-4 relative my-1 max-lg:px-4 max-lg:py-1  items-center justify-center">
+    <BackgroundGradient containerClassName="flex items-center justify-center lg:h-14 h-7 lg:py-2 lg:px-8 relative my-1 max-lg:px-4 max-lg:py-1">
       <Link href={social?.href! || link!}>
-        <button
-          className="  max-md:body-regular text-center align-middle "
-          type="button"
-        >
-          {" "}
-          <div className="text-white group relative flex items-center  justify-center gap-x-3 rounded-[6px]  align-middle transition duration-200 hover:bg-transparent lg:px-4 lg:py-2">
-            {social?.title !== "My Projects" && social?.icon}
-            <span className="lg:paragraph-regular max-lg:body-regular  items-center align-middle font-satoshi">
-              {social?.title}
+        <button className="text-center" type="button">
+          <div className="text-white-900 mq450:min-w-full flex items-center justify-center gap-x-3 rounded-[6px] transition duration-200 hover:bg-transparent lg:px-4 lg:py-2">
+            <span className="lg:paragraph-regular max-lg:body-regular font-satoshi text-white-900">
+              {social?.title} {text === "live" ? "Live Site" : text}
             </span>
-            {(social?.title === "Projects" && social?.icon) || text}
           </div>
         </button>
       </Link>

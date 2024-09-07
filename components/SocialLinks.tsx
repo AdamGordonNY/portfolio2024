@@ -10,7 +10,7 @@ import { HiOutlineDownload } from "react-icons/hi";
 import ReusableButton from "./ReusableButton";
 export type SocialMediaButton = {
   title: string;
-  icon: React.JSX.Element | null;
+  icon?: React.JSX.Element | null;
   href: string;
 };
 

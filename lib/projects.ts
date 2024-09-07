@@ -142,7 +142,8 @@ export const projectList: CaseStudy[] = [
   },
   {
     title: "GitNote",
-    description: "A note-taking app for developers that integrates with Github",
+    description:
+      "A Learning Journal and Knowledge Repository that can act as a logbook and a container for a developers thoughts, processes, and ideas.",
     images: ["/images/gitnote.svg"],
     features: [{ id: 1, title: "", purpose: "" }],
     links: {

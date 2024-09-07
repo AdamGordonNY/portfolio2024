@@ -44,7 +44,7 @@ const ContactForm = () => {
                   <Input
                     {...field}
                     name="senderEmail"
-                    placeholder="Your Name and Contact Info"
+                    placeholder="Your Email Address (Required)"
                     required
                     className="flex w-full flex-1 rounded-lg text-white-900"
                   />
@@ -62,7 +62,7 @@ const ContactForm = () => {
                   <Textarea
                     {...field}
                     name="message"
-                    placeholder="Your message"
+                    placeholder="Your message (up to 5000 characters) Be Sure to include your contact information and any other relevant details!"
                     required
                     rows={10}
                     maxLength={5000}

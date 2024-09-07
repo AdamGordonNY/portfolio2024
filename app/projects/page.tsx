@@ -9,8 +9,9 @@ const Page = () => {
           My Projects
         </span>
         <span className="body-regular mt-2 text-center text-white-900">
-          Check out the live site, look over the code on Github, or read my case
-          studies to get inside my head!
+          Check out the live site, look over the code on Github,
+          <br />
+          or read my case studies to get inside my head!
         </span>
       </div>
       <ProjectOverview />
