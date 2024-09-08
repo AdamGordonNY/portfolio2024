@@ -37,30 +37,30 @@ const ReusableButton = ({
             }}
           >
             {" "}
-            <div className="text-white-900 group relative flex items-center  justify-center gap-x-3 rounded-[6px]  align-middle transition duration-200 hover:bg-transparent lg:px-8 lg:py-2">
+            <div className="group relative flex items-center justify-center  gap-x-3 rounded-[6px] align-middle  text-white-900 transition duration-200 hover:bg-transparent lg:px-8 lg:py-2">
               <span className="lg:paragraph-regular max-lg:body-regular  items-center align-middle font-satoshi">
                 {otherButtons[0].title}
               </span>
-              {otherButtons[0].icon}
+              {otherButtons[0]?.icon!}
             </div>
           </motion.button>
         </Link>
       </BackgroundGradient>
     );
   }
-  if ((text && type === "social") || (text && type === "background"))
-    link = "/skills";
+  if (type === "social" || (text && type === "background")) link = "/skills";
   else if (type === "live") {
     text = "Live Site";
   }
   return (
-    <BackgroundGradient containerClassName="flex items-center justify-center lg:h-14 h-7 lg:py-2 lg:px-8 relative my-1 max-lg:px-4 max-lg:py-1">
+    <BackgroundGradient containerClassName="flex items-center justify-center lg:h-14 h-7 lg:py-2 lg:px-8 relative my-1 max-lg:px-4 max-lg:py-1 mq450:w-full">
       <Link href={social?.href! || link!}>
         <button className="text-center" type="button">
-          <div className="text-white-900 mq450:min-w-full flex items-center justify-center gap-x-3 rounded-[6px] transition duration-200 hover:bg-transparent lg:px-4 lg:py-2">
+          <div className="mq450:min-w-full flex items-center justify-center gap-x-3 rounded-[6px] text-white-900 transition duration-200 hover:bg-transparent lg:px-4 lg:py-2">
             <span className="lg:paragraph-regular max-lg:body-regular font-satoshi text-white-900">
               {social?.title} {text === "live" ? "Live Site" : text}
-            </span>
+            </span>{" "}
+            {social?.icon! && social.icon}
           </div>
         </button>
       </Link>
