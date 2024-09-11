@@ -18,13 +18,13 @@ const buttons = [
 ];
 const MyProjects = () => {
   return (
-    <div className="mq450:w-full flex flex-col items-center justify-center space-y-5 mq450:px-0">
-      <div className="relative my-5 flex w-full flex-col items-center justify-center gap-y-3">
+    <div className="custom-responsive-width mq450:min-w-[375px] flex flex-col items-center justify-center gap-y-5">
+      <div className="custom-responsive-width container relative mx-auto my-5 flex w-full flex-col items-center justify-center gap-y-3">
         <Compare
           firstImage="/images/devtodayslanted.svg"
           secondImage="/images/gitnoteslanted.svg"
-          firstImageClassName="object-cover mq450:size-[300px] absolute "
-          secondImageClassname="object-cover  absolute  mq450:size-[300px]"
+          firstImageClassName="object-cover custom-responsive-width absolute object-center "
+          secondImageClassname="object-cover  absolute  custom-responsive-width"
           slideMode="hover"
           autoplay
           autoplayDuration={6000}
@@ -33,14 +33,14 @@ const MyProjects = () => {
         <span className="text-white-900">See my latest Work!</span>
       </div>
 
-      <CardContainer className="relative w-full items-center justify-center flex px-0">
+      <CardContainer className="mq450:min-w-full relative mx-auto flex w-full items-center justify-center place-self-center">
         <Link href="/skills">
           <Image
             src={`/images/jsmcert.png`}
             alt="masterclass certification"
             height={400}
             width={600}
-            className="mq450:w-full rounded-lg object-contain drop-shadow-xl"
+            className="rounded-lg object-contain drop-shadow-xl"
           />{" "}
         </Link>
       </CardContainer>

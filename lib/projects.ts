@@ -29,6 +29,8 @@ export const projectList: CaseStudy[] = [
       "uploadthingy",
       "socket.io",
       "framer-motion",
+      "postgres",
+      "clerk",
     ],
     links: {
       repo: "https://github.com/AdamGordonNY/DevTodayAdamsVersion",
@@ -36,11 +38,35 @@ export const projectList: CaseStudy[] = [
       portfolioPath: "/projects/devtoday",
     },
     features: [
-      { id: 1, title: "ClerkJS", purpose: "Authentication" },
+      {
+        id: 1,
+        title: "ClerkJS",
+        purpose:
+          "We wanted a reliable, secure authenticaiton system that worked with Prisma",
+      },
       {
         id: 2,
-        title: "",
-        purpose: "",
+        title: "Server Side Rendering",
+        purpose:
+          "NextJS 14 with the relatively new App router, allows for fast page loads and a smooth user experience.  Suspense boundaries signal to the user that the site is loading on client components.",
+      },
+      {
+        id: 3,
+        title: "Prisma",
+        purpose:
+          "Prisma is a powerful ORM that integrates well with Supabase's PostgreSQL database.  It's querying system allows for fairly intuitive searches for most things, and the ability to use Raw SQL queries for more complicated fetches.",
+      },
+      {
+        id: 4,
+        title: "Framer Motion",
+        purpose:
+          "Framer Motion adds just enough flare to the project to polish the look.  The animation on the group card is a standout feature.",
+      },
+      {
+        id: 5,
+        title: "Audio Player",
+        purpose:
+          "The Audio Player can be used even when navigating to other parts of the site, and uses the <audio /> browser API.",
       },
     ],
     summary:
@@ -123,7 +149,7 @@ export const projectList: CaseStudy[] = [
         purpose: "",
       },
     ],
-    tech: ["nextjs", "tailwind", "mongo", "typescript", "chatgpt"],
+    tech: ["nextjs", "tailwind", "mongo", "typescript", "chatgpt", "clerk"],
     summary: "",
     mission: "",
     process: [],

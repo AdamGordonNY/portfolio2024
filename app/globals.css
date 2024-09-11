@@ -79,7 +79,8 @@
 
   @media (max-width: 450px) {
     .custom-responsive-width {
-      max-width: 350px; /* Adjust width for screens smaller than 450px */
+      min-width: 375px; /* Minimum width for screens smaller than 450px */
+      max-width: 100%; /* Max width set to full */
     }
   }
 }

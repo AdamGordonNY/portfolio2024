@@ -5,15 +5,12 @@ import Link from "next/link";
 import { CaseStudy } from "@/lib/types";
 import { IconBrandGithub } from "@tabler/icons-react";
 import CaseStudyButton from "./CaseStudyButton";
-import ReusableButton from "../ReusableButton";
-import { useRouter } from "next/navigation";
 
 interface ProjectCardProps {
   caseStudy: CaseStudy;
 }
 
 const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
-  const router = useRouter();
   return (
     <div className="max-mq450:gap-[18px] custom-responsive-width flex flex-col items-start justify-start gap-6 overflow-hidden rounded-[23px] border border-solid border-darkslategray px-1  py-2 [background:linear-gradient(103.4deg,_#04071d,_#0c0e23)] md:w-[600px] md:p-4">
       <section className="custom-responsive-width relative flex w-full flex-row items-start justify-start overflow-hidden rounded-[14px]">
@@ -33,7 +30,7 @@ const ProjectCard = ({ caseStudy }: ProjectCardProps) => {
           <h2 className="modern-h3 w-full text-center text-white-900">
             {caseStudy.title}
           </h2>
-          <div className="mq450:text-base mq450:leading-[21px] text-xl leading-[130%] text-lightsteelblue font-satoshi">
+          <div className="mq450:text-base mq450:leading-[21px] font-satoshi text-xl leading-[130%] text-lightsteelblue">
             {caseStudy.description}
           </div>
         </div>

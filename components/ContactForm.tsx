@@ -9,10 +9,17 @@ import SubmitButton from "./SubmitButton";
 import { Form, FormControl, FormField, FormItem } from "./ui/form";
 import { useForm } from "react-hook-form";
 import { Textarea } from "./ui/textarea";
-import { ContactFormEmail } from "./ContactEmailTemplate";
+
+import z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+const formSchema = z.object({
+  senderEmail: z.string().email(),
+  message: z.string().min(1).max(5000),
+});
 
 const ContactForm = () => {
-  const form = useForm<typeof ContactFormEmail>({
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
     defaultValues: {
       message: "",
       senderEmail: "",
@@ -25,13 +32,12 @@ const ContactForm = () => {
         className="mt-10 flex min-w-full flex-col gap-y-2  dark:text-dark-100  "
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
-          console.log(data);
+
           if (error) {
-            console.log(data);
             toast.error(error);
             return;
           }
-
+          console.log(data);
           toast.success("Email sent successfully!");
         }}
       >

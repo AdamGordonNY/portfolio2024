@@ -27,7 +27,7 @@ export default function RootLayout({
         className={`${inter.className} ${figtree.className} ${poppins.className}   `}
       >
         <ThemeContextProvider>
-          <main className="custom-responsive-width  flex min-h-screen min-w-full flex-col items-center justify-center bg-dark-200">
+          <main className="custom-responsive-width  flex min-h-screen min-w-full flex-col  justify-center bg-dark-200">
             <Navbar />
             {children}
             <Footer />

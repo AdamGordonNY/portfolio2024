@@ -14,38 +14,41 @@ import {
   IconBrandPrisma,
   IconBrandStripe,
   IconBrandStackoverflow,
+  IconBrandFramerMotion,
 } from "@tabler/icons-react";
 export const TechStack = async ({ tech }: { tech: string }) => {
   const techCheck = () => {
     switch (tech) {
-      case "NodeJS":
-        return <NodeJS className="size-6 md:size-12" />;
-      case "HTML5":
-        return <IconBrandHtml5 className="size-6 md:size-12" />;
-      case "Git":
-        return <IconBrandGit className="size-6 md:size-12" />;
-      case "GitHub":
-        return <IconBrandGithub className="size-6 md:size-12" />;
-      case "GitHub Copilot":
-        return <IconBrandGithubCopilot className="size-6 md:size-12" />;
-      case "NextJS":
-        return <IconBrandNextjs className="size-6 md:size-12" />;
-      case "Amazon":
-        return <IconBrandAmazon className="size-6 md:size-12" />;
-      case "TypeScript":
-        return <IconBrandTypescript className="size-6 md:size-12" />;
-      case "Tailwind":
-        return <IconBrandTailwind className="size-6 md:size-12" />;
-      case "Laravel":
-        return <IconBrandLaravel className="size-6 md:size-12" />;
-      case "React":
-        return <IconBrandReact className="size-6 md:size-12" />;
-      case "Prisma":
-        return <IconBrandPrisma className="size-6 md:size-12" />;
-      case "Stripe":
-        return <IconBrandStripe className="size-6 md:size-12" />;
-      case "StackOverflow":
-        return <IconBrandStackoverflow className="size-6 md:size-12" />;
+      case "nodejs":
+        return <NodeJS className="size-5 md:size-11" />;
+      case "html":
+        return <IconBrandHtml5 className="size-5 md:size-11" />;
+      case "git":
+        return <IconBrandGit className="size-5 md:size-11" />;
+      case "gitHub":
+        return <IconBrandGithub className="size-5 md:size-11" />;
+      case "copilot":
+        return <IconBrandGithubCopilot className="size-5 md:size-11" />;
+      case "nextjs":
+        return <IconBrandNextjs className="size-5 md:size-11" />;
+      case "amazon":
+        return <IconBrandAmazon className="size-5 md:size-11" />;
+      case "typescript":
+        return <IconBrandTypescript className="size-5 md:size-11" />;
+      case "tailwind":
+        return <IconBrandTailwind className="size-5 md:size-11" />;
+      case "laravel":
+        return <IconBrandLaravel className="size-5 md:size-11" />;
+      case "react":
+        return <IconBrandReact className="size-5 md:size-11" />;
+      case "prisma":
+        return <IconBrandPrisma className="size-5 md:size-11" />;
+      case "stripe":
+        return <IconBrandStripe className="size-5 md:size-11" />;
+      case "stackoverflow":
+        return <IconBrandStackoverflow className="size-5 md:size-11" />;
+      case "framer":
+        return <IconBrandFramerMotion className="size-5 md:size-11" />;
       default:
         return (
           <div className="size-[50px] items-center justify-center rounded-full md:size-[100px]">
@@ -63,7 +66,15 @@ export const TechStack = async ({ tech }: { tech: string }) => {
   );
 };
 const TechStacks = ({ tech }: { tech: string[] }) => {
-  return <div>TechStacks</div>;
+  return (
+    <div className="flex flex-col bg-dark-100">
+      <div className="flex flex-row justify-between">
+        {tech.map((tek) => (
+          <TechStack key={tek} tech={tek} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default TechStacks;
