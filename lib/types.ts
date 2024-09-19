@@ -9,18 +9,18 @@ export type CaseStudy = {
     liveSite: string;
     portfolioPath?: string;
   };
-  tech: string[];
-  summary: string;
-  mission: string;
-  features: {
-    id: number;
-    title: string;
-    purpose: string;
-  }[];
+  tech: string[]; // tech stack
+  summary: string; // retrospective on the project
+  mission: string; // What was the goal of the project?
   process: {
     id: number;
     title: string;
-    description: string;
+    purpose: string;
+    steps: {
+      step: number;
+
+      description: string;
+    }[];
   }[];
 
   result: {
