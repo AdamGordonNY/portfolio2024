@@ -39,7 +39,7 @@ export const projectList: CaseStudy[] = [
       liveSite: "https://adam-gordon.info",
       portfolioPath: "/projects/devtoday",
     },
-    process: [
+    procedure: [
       {
         id: 1,
         title: "Planning",
@@ -63,7 +63,8 @@ export const projectList: CaseStudy[] = [
           },
           {
             step: 4,
-            description: "      ",
+            description:
+              "After the initial steps, we delegated responsibilities and got to work. I took care of, respectively and chronologically, the Auth/Onboarding System first, then moved to the profile pages, both editing and viewing them and functionalities associated like follows.  After completing the profile page work, I made our front facing landing page which also functions as the main page to browse content.  Unique, complex sql queries with extremely fast retrieval were used to grab the data needed for the metrics, and the data was then passed to the front end to be displayed. My last task during our 9 week period of teamwork, was to do the Audio content pages. I'm proud of the how this turned out, which can be used even when navigating to other parts of the site, and uses the <audio /> browser API.  Using the Audio API with the context provider, we were able to create a seamless experience for users to listen to podcasts while also browsing through posts and other areas of the site.",
           },
         ],
       },
@@ -124,23 +125,22 @@ export const projectList: CaseStudy[] = [
           {
             step: 4,
             description:
-              "Created an onboarding context to manage the onboarding flow, and set up the metadata flags to make sure the onboarding flow was followed as we designed it to be. The step was modeled as part of our User schema and was set up to be a number that would increment as the user completed each step of the onboarding process. When complete, the metadata flag would be set to true, and the user would be redirected to the home page.",
+              "Created an onboarding context to manage the onboarding flow, and set up the metadata flags to make sure the onboarding flow was followed as we designed it to be. The step was modeled as part of our User schema and was set up to be a number that would increment as the user completed each step of the onboarding process. When complete, the metadata flag would be set to true, and the user would be redirected to the home page. Middleware needed to be configured to check if the user was onboarding, and if so, redirect them to the next step in the onboarding process, if not send them to the home page.  ",
           },
         ],
       },
-
-      {
-        id: 3,
-        title: "Prisma",
-        purpose: "",
-        steps: [],
-      },
       {
         id: 4,
-        title: "Framer Motion",
+        title: "Profile Pages",
         purpose:
-          "Framer Motion adds just enough flare to the project to polish the look.  We used it to animate certain areas of the site, such as the group card, and the profile card.  The animation on the group card was especially impressive, and the ability to edit these components at their roots to adhere to the design was efficient and integrates well with framer motion to create modern, visually stunning but not distracting components.",
-        steps: [],
+          "Every Social Media site needs users, and users need profile pages to identify themselves, and to be able to see what they've done on the site.  The profile pages needed to be able to be edited by the user, and to be able to be viewed by other users.  The profile pages needed to be able to show the user's posts, podcasts, and groups they are in, and to show the user's followers and who they are following.",
+        steps: [
+          {
+            step: 1,
+            description:
+              "Using NPM, installing the @clerk/nextjs package, and follow the instructions to set up the ClerkJS project. This involved creating a seperate route group (auth) inside the app folder, where I creaed a catchall sign-in and sign-up route signifying the intent with double brackets '[[...catchall]]'.",
+          },
+        ],
       },
       {
         id: 5,
@@ -159,12 +159,19 @@ export const projectList: CaseStudy[] = [
       outcome:
         "The project was successfully done to about 95 % completion in the target time frame, with only a few features not implemented.  The most impressive parts of the application as it stands are the ultra fast queries done in raw sql, the Audio Player which can be used even when navigating to other parts of the site, and our Google Maps integration.  When our socket.io server launches, and we optimize for SEO, the project will have met our target goals.",
       goals:
-        "Despite being on a tight deadline and various real-life interruptions, we were able to complete almost every feature in the requirements document by the end of our 9 week allotment.",
+        "After the initial steps, we delegated responsibilities and got to work - 9 weeks was a relatively short deadline for a project of this size, and we made a strong effort to deliver in time. I took care of, respectively and chronologically, the Auth/Onboarding System first, then moved to the profile pages, both editing and viewing them and functionalities associated like follows.  After completing the profile page work, I made our front facing landing page which also functions as the main page to browse content.  Unique, complex sql queries with extremely fast retrieval were used to grab the data needed for the metrics, and the data was then passed to the front end to be displayed. My last task during our 9 week period of teamwork, was to do the Audio content pages. I'm proud of the how this turned out, which can be used even when navigating to other parts of the site, and uses the <audio /> browser API.  Using the Audio API with the context provider, we were able to create a seamless experience for users to listen to podcasts while also browsing through posts and other areas of the site.",
       learning:
-        "We had a very good working chemistry as a team, and despite real life interruptions such as illness, vacation, and general distractions, we got about 95 % done with our tasks on our Asana board.  Our Project manager was impressed with the Audio API implementation and our use of framer motion in certain spots, especially the animation on the group card.  Key takeaways for me personally were using Audio API with the context provider, Seamlessly integrating filtering using searchParams and query strings to filter content appropriately.  Using framer motion added just enough flare to the project to polish the look.  It would have been great to have completed the socket.io portion of the site and done an SEO optimization scan on the project, we ran out of time for that though.  Since the project ended I was able to fix a few minor bugs, get our view like and follow metrics to work well across different parts of the site, and feel comfortable using all these tools again in any context. I look forward to putting the finishing touches on the socket.io portion.",
+        "We had a very good working chemistry as a team, and despite real life interruptions such as illness, vacation, and general distractions, we got about 95 % done with our tasks on our Asana board.  Our Project manager was impressed with the Audio API implementation and our use of framer motion in certain spots, especially the animation on the group card.  Key takeaways for me personally were using Audio API with the context provider, Seamlessly integrating filtering using searchParams and query strings to filter content appropriately.  Using framer motion added just enough flare to the project to polish the look.  It would have been great to have completed the socket.io portion of the site and done an SEO optimization scan on the project, we ran out of time for that though. I also learned alot about how framer motion works and what you can do with it, and finding a balance in being fancy and being functional.  The animations added are fairly subtle, but effective.  I especially like how the users unfurl on the Group Card. This project was a great experience to work with another talented, motivated developer on a complex project with a supervisor who was very supportive and helpful in explaining some lesser practiced areas of the project.  I gained alot of knowledge and most importantly, confidence in my ability to work on a team and deliver a complex NextJS project.",
       challenges:
-        "Some challenges were setting up webhooks to synchronize users and their profiles with the database and make sure authentication and authorization flows worked as intended.  Another challenge was being able to use our Podcast feature while browsing the site, and another challenge was how to notify users when their content is liked/shared/viewed. ",
-      nextSteps: ["1. Finish the socket.io server", "2. Optimize for SEO"],
+        "Some challenges were setting up webhooks to synchronize users and their profiles with the database and make sure authentication and authorization flows worked as intended.  Another challenge was being able to use our Podcast feature while browsing the site, and another challenge was how to notify users when their content is liked/shared/viewed, in which we set up a demo socket.io server that needs to be reconstituted in order to work with the extended version I've continued to work on.  The biggest challenge was the time constraint, as we had to get the project done in 9 weeks, and we were about 95 % done with the project when the time was up.  We also had to make sure that the site was responsive and looked good on all devices, and that the site was accessible to all users.  We also had to make sure that the site was secure, and that the site was optimized for SEO.  We also had to make sure that the site was fast, and that the site was easy to use.",
+      nextSteps: [
+        { step: 1, description: "Reconstitute the socket.io server" },
+        {
+          step: 2,
+          description:
+            "Optimize for SEO and use analytical tools to assist in doing so.",
+        },
+      ],
     },
     teamMembers: [
       {
@@ -192,7 +199,7 @@ export const projectList: CaseStudy[] = [
       liveSite: "https://devoverflow.adam-gordon.info",
       portfolioPath: "/projects/devoverflow",
     },
-    process: [
+    procedure: [
       {
         id: 1,
         title: "AI Powered Answering",
@@ -223,7 +230,7 @@ export const projectList: CaseStudy[] = [
       outcome: "",
       learning: "",
       challenges: "",
-      nextSteps: [""],
+      nextSteps: [],
     },
     teamMembers: [
       {
@@ -237,7 +244,7 @@ export const projectList: CaseStudy[] = [
     description:
       "A Learning Journal and Knowledge Repository that can act as a logbook and a container for a developers thoughts, processes, and ideas.",
     images: ["/images/gitnote.svg"],
-    process: [{ id: 1, title: "", purpose: "", steps: [] }],
+    procedure: [{ id: 1, title: "", purpose: "", steps: [] }],
     links: {
       repo: "https://github.com/AdamGordonNY/git_note",
       liveSite: "https://gitnote.adam-gordon.info",
@@ -252,7 +259,7 @@ export const projectList: CaseStudy[] = [
       outcome: "",
       learning: "",
       challenges: "",
-      nextSteps: [""],
+      nextSteps: [],
     },
     teamMembers: [
       {

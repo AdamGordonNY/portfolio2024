@@ -1,11 +1,14 @@
 import React from "react";
+import { Process } from "@/lib/types";
 
 const SectionTemplate = ({
   topic,
   content,
+  procedure,
 }: {
   topic: string;
-  content: string;
+  content?: string;
+  procedure?: Process[];
 }) => {
   return (
     <section className="md:paragraph-regular body-regular mq450:w-full flex w-4/5 flex-1 items-center justify-center font-satoshi  text-white-900">

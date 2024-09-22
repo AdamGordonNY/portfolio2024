@@ -2,34 +2,99 @@ import { CaseStudy } from "@/lib/types";
 import React from "react";
 import Image from "next/image";
 import SectionTemplate from "./SectionTemplate";
+import ItemizedTemplate from "./ItemizedTemplate";
 
 interface TemplateProps {
   caseStudy: CaseStudy;
 }
+
 const Template = async ({ caseStudy }: TemplateProps) => {
+  const procedure = caseStudy.procedure.map((p) => ({
+    id: p.id,
+    purpose: p.purpose,
+    steps: p.steps,
+    title: p.title,
+  }));
+
   return (
-    <div className="custom-responsive-width flex flex-col  items-center ">
-      {" "}
-      <div className="flex flex-col items-center justify-center gap-y-3 text-center ">
-        <span className="md:modern-h1 base-regular   justify-center bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-center text-transparent underline  ">
+    <div className="custom-responsive-width flex flex-col items-center gap-y-8">
+      {/* Title and Description Section */}
+      <div className="flex flex-col items-center justify-center gap-y-3 text-center">
+        <span className="gradient-heading">
           {caseStudy.title} <br />
         </span>
-        <span className="md:modern-h3 paragraph-regular text-center  italic text-white-900">
+        <h3 className="md:modern-h3 paragraph-regular text-center italic text-white-900">
           {caseStudy.subtitle}
-        </span>{" "}
+        </h3>
         <span className="mq450:body-regular md:paragraph-regular text-center font-satoshi text-white-900">
           {caseStudy.description}
-        </span>{" "}
-      </div>{" "}
+        </span>
+      </div>
+
+      {/* Case Study Image */}
       <Image
         src={caseStudy.images[0]}
         alt={caseStudy.title}
         width={900}
         height={500}
-        className="mq450:size-[375px] my-0 sm:size-[500px] md:size-[600px] lg:size-[800px]"
+        className="mq450:w-[375px] sm:w-[500px] md:w-[600px] lg:w-[800px]"
       />
+
+      {/* Overview Section */}
       <SectionTemplate content={caseStudy.summary} topic="Overview" />
+
+      {/* Mission Section */}
       <SectionTemplate content={caseStudy.mission} topic="Mission" />
+
+      {/* Procedure (Itemized Steps) */}
+      {procedure.map((proc, index) => (
+        <ItemizedTemplate key={proc.id} process={proc} />
+      ))}
+
+      {/* Tech Stack */}
+      <div className="flex flex-col items-center gap-y-2 text-center">
+        <h3 className="md:modern-h3 paragraph-regular text-white-900">
+          Tech Stack
+        </h3>
+        <ul className="list-inside list-disc">
+          {caseStudy.tech.map((tech, index) => (
+            <li key={index} className="font-satoshi text-white-900">
+              {tech}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Team Members */}
+      <div className="flex flex-col items-center gap-y-2 text-center">
+        <h3 className="md:modern-h3 paragraph-regular text-white-900">
+          Team Members
+        </h3>
+        <ul className="list-inside list-disc">
+          {caseStudy.teamMembers.map((member, index) => (
+            <li key={index} className="font-satoshi text-white-900">
+              {member.name} - {member.role}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Result Section */}
+      <SectionTemplate content={caseStudy.result.outcome} topic="Outcome" />
+
+      {/* Next Steps */}
+      <div className="flex flex-col items-center gap-y-2 text-center">
+        <h3 className="md:modern-h3 paragraph-regular text-white-900">
+          Next Steps
+        </h3>
+        <ul className="list-inside list-disc">
+          {caseStudy.result.nextSteps.map((step, index) => (
+            <li key={index} className="font-satoshi text-white-900">
+              Step {step.step}: {step.description}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

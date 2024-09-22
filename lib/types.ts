@@ -1,3 +1,13 @@
+export type Process = {
+  id: number;
+  title: string;
+  purpose: string;
+  steps: {
+    step: number;
+
+    description: string;
+  }[];
+};
 export type CaseStudy = {
   title: string;
   subtitle?: string;
@@ -12,23 +22,16 @@ export type CaseStudy = {
   tech: string[]; // tech stack
   summary: string; // retrospective on the project
   mission: string; // What was the goal of the project?
-  process: {
-    id: number;
-    title: string;
-    purpose: string;
-    steps: {
-      step: number;
-
-      description: string;
-    }[];
-  }[];
-
+  procedure: Process[];
   result: {
     outcome: string;
     goals?: string;
     learning: string;
     challenges: string;
-    nextSteps: string[];
+    nextSteps: {
+      step: number;
+      description: string;
+    }[];
   };
   teamMembers: {
     name: string;

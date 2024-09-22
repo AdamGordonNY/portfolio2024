@@ -64,6 +64,9 @@
   .text-gradient-highlight {
     @apply bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-center text-transparent;
   }
+  .gradient-heading {
+    @apply md:modern-h1 base-regular justify-center bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-center text-transparent underline;
+  }
 }
 .no-visible-scrollbar {
   scrollbar-width: none;
