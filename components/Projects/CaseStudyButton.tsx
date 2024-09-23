@@ -2,11 +2,19 @@ import React from "react";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 
-const CaseStudyButton = ({ title, href }: { title: string; href: string }) => {
+const CaseStudyButton = ({
+  title,
+  href,
+  className,
+}: {
+  title: string;
+  href: string;
+  className?: string;
+}) => {
   const router = useRouter();
   return (
     <Button
-      className="relative p-[3px] font-satoshi"
+      className={`relative p-[3px] font-satoshi ${className}`}
       onClick={() => router.push(`${href}`)}
     >
       <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500  " />

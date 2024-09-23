@@ -5,11 +5,11 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectOverview = () => {
   return (
-    <div className="bg-dark-gradient  mq-450:max-w-[390px] flex w-full flex-col flex-wrap items-center justify-center gap-7 pt-[50px] text-center font-inter">
+    <div className="bg-dark-gradient  mq450:max-w-[375px] custom-responsive-width  flex w-full flex-col  items-center justify-center gap-7 pt-[50px] text-center font-inter">
       {projectList.map((project, index) => (
         <div
           key={project.title}
-          className={` mq-450:max-w-[390px]  flex items-center justify-center gap-x-4  md:w-full md:px-10 ${
+          className={` mq-450:max-w-[375px] custom-responsive-width  flex items-center justify-center gap-x-4  md:w-full md:px-10 ${
             index % 2 === 0 ? "md:order-1" : "md:order-2"
           }`}
         >
