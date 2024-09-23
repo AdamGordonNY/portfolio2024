@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${figtree.className} ${poppins.className}   `}
+        className={`${inter.className} ${figtree.className} ${poppins.className}  `}
       >
         <ThemeContextProvider>
           <main className="custom-responsive-width  flex min-h-screen min-w-full flex-col justify-between bg-dark-200">

@@ -79,8 +79,9 @@
 
   @media (max-width: 450px) {
     .custom-responsive-width {
-      min-width: 375px; /* Minimum width for screens smaller than 450px */
-      max-width: 100%; /* Max width set to full */
+      min-width: 375px; /* Set the max width to 375px on small screens */
+      width: 100%; /* Make sure the width is 100% of the parent container */
+      max-width: 450px;
     }
   }
 }
