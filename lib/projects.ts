@@ -30,7 +30,6 @@ export const projectList: CaseStudy[] = [
       "framer",
       "postgres",
       "clerkjs",
-      "shadcn-ui",
       "react",
     ],
     links: {

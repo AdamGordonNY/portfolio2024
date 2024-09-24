@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import SectionTemplate from "./SectionTemplate";
 import ItemizedTemplate from "./ItemizedTemplate";
-import TechStacks, { TechStack } from "./TechStacks";
+import TechStacks from "./TechStacks";
 
 interface TemplateProps {
   caseStudy: CaseStudy;
@@ -18,7 +18,7 @@ const Template = async ({ caseStudy }: TemplateProps) => {
   }));
 
   return (
-    <div className="custom-responsive-width flex flex-col items-center gap-y-8">
+    <div className="custom-responsive-width flex flex-col items-center gap-x-4 gap-y-8">
       {/* Title and Description Section */}
       <div className="flex flex-col items-center justify-center gap-y-3 text-center">
         <span className="gradient-heading">
@@ -47,15 +47,16 @@ const Template = async ({ caseStudy }: TemplateProps) => {
       {/* Mission Section */}
       <SectionTemplate content={caseStudy.mission} topic="Mission" />
       {/* Tech Stack */}
-      <div className="flex w-full items-center gap-y-2 text-center">
-        <h3 className="md:modern-h3 paragraph-regular text-white-900">
+      <div className="col-span-full flex w-full  items-center justify-between  ">
+        <h3 className="md:modern-h3 paragraph-regular items-center justify-center place-self-center text-white-900">
           Tech Stack
         </h3>
-        <ul className="list-inside list-disc">
-          <TechStacks tech={caseStudy.tech}></TechStacks>
-        </ul>
+
+        <TechStacks tech={caseStudy.tech}></TechStacks>
       </div>
-      <h1 className="md:modern-h1 text-white-900">The Process</h1>
+      <h1 className="md:modern-h1 justify-between text-white-900">
+        The Process
+      </h1>
       {/* Procedure (Itemized Steps) */}
       {procedure.map((proc, index) => (
         <ItemizedTemplate key={proc.id} process={proc} />

@@ -21,7 +21,7 @@ const ItemizedTemplate = ({ process }: ItemizedTemplateProps) => {
 
         {/* Steps */}
 
-        <div className="body-regular mq450:small-regular flex flex-col gap-y-4 text-center">
+        <div className="body-regular mq450:small-regular flex flex-col gap-y-4 text-left">
           <span className="body-regular">Steps</span>
           <ul className="body-regular mq450:small-regular flex list-inside list-decimal flex-col gap-y-4 text-left">
             {process.steps.map((step) => (
