@@ -47,14 +47,16 @@ const Template = async ({ caseStudy }: TemplateProps) => {
       {/* Mission Section */}
       <SectionTemplate content={caseStudy.mission} topic="Mission" />
       {/* Tech Stack */}
-      <div className="col-span-full flex w-full  items-center justify-between  ">
-        <h3 className="md:modern-h3 paragraph-regular items-center justify-center place-self-center text-white-900">
+      <div className="col-span-full flex w-full flex-col items-center justify-between gap-y-5 md:flex-row md:gap-y-0">
+        {/* Heading */}
+        <h3 className="md:modern-h3 paragraph-regular modern-h3 text-center font-inter text-white-900 md:w-1/5 md:text-left">
           Tech Stack
         </h3>
 
+        {/* TechStacks Component */}
         <TechStacks tech={caseStudy.tech}></TechStacks>
       </div>
-      <h1 className="md:modern-h1 justify-between text-white-900">
+      <h1 className="md:modern-h1 modern-h3 justify-between font-inter text-white-900">
         The Process
       </h1>
       {/* Procedure (Itemized Steps) */}

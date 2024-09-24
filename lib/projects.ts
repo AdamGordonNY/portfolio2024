@@ -16,7 +16,7 @@ export const projectList: CaseStudy[] = [
     subtitle: "Where Developers Connect",
 
     description:
-      "A Social Media platform for developers to share their knowledge, organize meetups, and share audio content. Incorporates CMDK for searching, Prisma as an ORM, NextJS server actions for fast queries and data fetching, Shadcn-UI and Framer Motion for a crisp UI with just enough animations so that it adds something to the site without going overboard, the Google Maps API for location based meetups, and ClerkJS for authentication.  The site is ",
+      "A Social Media platform for developers to share their knowledge, organize meetups, and share audio content. Incorporates CMDK for searching, Prisma as an ORM, NextJS server actions for fast queries and data fetching, Shadcn-UI and Framer Motion for a crisp UI with just enough animations so that it adds something to the site without going overboard, the Google Maps API for location based meetups, and ClerkJS for authentication. ",
     cardImage: "images/devtodayslanted.svg",
     images: ["/images/devtoday-wide.svg", "/images/devtoday.svg"],
 

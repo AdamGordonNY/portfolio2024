@@ -171,7 +171,7 @@ export const TechStack = async ({ tech }: { tech: string }) => {
 
 const TechStacks = ({ tech }: { tech: string[] }) => {
   return (
-    <div className="flex w-full flex-wrap items-center  gap-6 rounded-full">
+    <div className="flex w-full flex-wrap items-center  gap-6 rounded-full max-md:justify-center md:w-4/5">
       {tech.map((tek) => (
         <div key={tek} className="flex  rounded-full">
           <TechStack tech={tek} />
