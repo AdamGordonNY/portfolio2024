@@ -15,14 +15,14 @@ const ItemizedTemplate = ({ process }: ItemizedTemplateProps) => {
         </h3>
 
         {/* Purpose of the Process */}
-        <p className="body-regular mq450:base-regular flex flex-col gap-y-4 text-center">
+        <p className="body-regular mq450:base-regular mq450:text-left flex flex-col gap-y-4 text-left">
           {process.purpose}
         </p>
 
         {/* Steps */}
 
         <div className="body-regular  flex flex-col gap-y-4 text-left">
-          <span className="body-regula mq450:small-regular">Steps</span>
+          <span className="body-regular mq450:base-regular">Steps</span>
           <ul className="body-regular mq450:small-regular flex list-inside list-decimal flex-col gap-y-4 text-left">
             {process.steps.map((step) => (
               <li key={step.step} className="px-2 text-start">

@@ -31,7 +31,6 @@ const Template = async ({ caseStudy }: TemplateProps) => {
           {caseStudy.description}
         </span>
       </div>
-
       {/* Case Study Image */}
       <Image
         src={caseStudy.images[0]}
@@ -40,12 +39,12 @@ const Template = async ({ caseStudy }: TemplateProps) => {
         height={500}
         className="mq450:w-[375px] sm:w-[500px] md:w-[600px] lg:w-[800px]"
       />
-
       {/* Overview Section */}
       <SectionTemplate content={caseStudy.summary} topic="Overview" />
-
       {/* Mission Section */}
-      <SectionTemplate content={caseStudy.mission} topic="Mission" />
+      <SectionTemplate content={caseStudy.mission} topic="Mission" />{" "}
+      {/* Result Section */}
+      <SectionTemplate content={caseStudy.result.outcome} topic="Outcome" />
       {/* Tech Stack */}
       <div className="col-span-full flex w-full flex-col items-center justify-between gap-y-5 md:flex-row md:gap-y-0">
         {/* Heading */}
@@ -63,7 +62,6 @@ const Template = async ({ caseStudy }: TemplateProps) => {
       {procedure.map((proc, index) => (
         <ItemizedTemplate key={proc.id} process={proc} />
       ))}
-
       {/* Team Members */}
       <div className="flex flex-col items-center gap-y-2 text-center">
         <h3 className="md:modern-h3 paragraph-regular text-white-900">
@@ -77,10 +75,6 @@ const Template = async ({ caseStudy }: TemplateProps) => {
           ))}
         </ul>
       </div>
-
-      {/* Result Section */}
-      <SectionTemplate content={caseStudy.result.outcome} topic="Outcome" />
-
       {/* Next Steps */}
       <div className="flex flex-col items-center gap-y-2 text-center">
         <h3 className="md:modern-h3 paragraph-regular text-white-900">
