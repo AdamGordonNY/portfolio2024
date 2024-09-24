@@ -15,21 +15,21 @@ const ItemizedTemplate = ({ process }: ItemizedTemplateProps) => {
         </h3>
 
         {/* Purpose of the Process */}
-        <p className="body-regular mq450:small-regular flex flex-col gap-y-4 text-center">
+        <p className="body-regular mq450:base-regular flex flex-col gap-y-4 text-center">
           {process.purpose}
         </p>
 
         {/* Steps */}
+
         <div className="body-regular mq450:small-regular flex flex-col gap-y-4 text-center">
-          <p className="body-regular mq450:small-regular flex flex-col gap-y-4 text-center">
-            <ol className="list-inside list-decimal body-regular mq450:small-regular flex flex-col gap-y-4 text-center">
-              {process.steps.map((step) => (
-                <li key={step.step} className="text-center">
-                  {step.description}
-                </li>
-              ))}
-            </ol>
-          </p>
+          <span className="body-regular">Steps</span>
+          <ul className="body-regular mq450:small-regular flex list-inside list-decimal flex-col gap-y-4 text-left">
+            {process.steps.map((step) => (
+              <li key={step.step} className="px-2 text-start">
+                {step.description}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

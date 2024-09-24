@@ -6,6 +6,7 @@ export type Process = {
     step: number;
 
     description: string;
+    image?: string;
   }[];
 };
 export type CaseStudy = {

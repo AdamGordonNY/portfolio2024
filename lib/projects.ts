@@ -16,7 +16,7 @@ export const projectList: CaseStudy[] = [
     subtitle: "Where Developers Connect",
 
     description:
-      "A Social Media platform for developers to share their knowledge, organize meetups, and share audio content.",
+      "A Social Media platform for developers to share their knowledge, organize meetups, and share audio content. Incorporates CMDK for searching, Prisma as an ORM, NextJS server actions for fast queries and data fetching, Shadcn-UI and Framer Motion for a crisp UI with just enough animations so that it adds something to the site without going overboard, the Google Maps API for location based meetups, and ClerkJS for authentication.  The site is ",
     cardImage: "images/devtodayslanted.svg",
     images: ["/images/devtoday-wide.svg", "/images/devtoday.svg"],
 
@@ -27,8 +27,7 @@ export const projectList: CaseStudy[] = [
       "supabase",
       "typescript",
       "uploadthing",
-      "socket.io",
-      "framer-motion",
+      "framer",
       "postgres",
       "clerkjs",
       "shadcn-ui",
@@ -49,7 +48,7 @@ export const projectList: CaseStudy[] = [
           {
             step: 1,
             description:
-              "we set up an Asana board in order to make sure the requirements for each ticket were defined, and that our work didn't overlap.",
+              "We set up an Asana board in order to make sure the requirements for each ticket were defined, and that our work didn't overlap.",
           },
           {
             step: 2,
@@ -72,7 +71,7 @@ export const projectList: CaseStudy[] = [
         id: 2,
         title: "Tech Stack Choice",
         purpose:
-          "To start the project, We needed to decide what packages made sense to add to our project, and how to best leverage NextJS14 to make our idea work as well as possible.  We had to prioritize what the logical order to build our project in, and how we can get what we needed to do done between the 2 of us within about 9 weeks.",
+          "We needed to decide what packages made sense to add to our project, and how to best leverage NextJS14 to make our idea work as well as possible.  We had to prioritize what the logical order to build our project in, and how we can get what we needed to do done between the 2 of us within about 9 weeks.",
         steps: [
           {
             step: 1,
@@ -147,7 +146,18 @@ export const projectList: CaseStudy[] = [
         title: "Audio Player",
         purpose:
           "The Audio Player can be used even when navigating to other parts of the site, and uses the <audio /> browser API. Using the Audio API with the context provider, we were able to create a seamless experience for users to listen to podcasts while also browsing through posts and other areas of the site.  The Audio Player is a key feature of the site, and it was important to get it right.",
-        steps: [],
+        steps: [
+          {
+            step: 1,
+            description:
+              "The Audio player integrates the current standard HTML <audio> API, so the first step was to look over the documentation regarding how to use this.  ",
+          },
+          {
+            step: 2,
+            description: "",
+          },
+          { step: 3, description: "" },
+        ],
       },
     ],
     summary:

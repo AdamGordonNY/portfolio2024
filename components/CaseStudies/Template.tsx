@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import SectionTemplate from "./SectionTemplate";
 import ItemizedTemplate from "./ItemizedTemplate";
+import TechStacks, { TechStack } from "./TechStacks";
 
 interface TemplateProps {
   caseStudy: CaseStudy;
@@ -45,25 +46,20 @@ const Template = async ({ caseStudy }: TemplateProps) => {
 
       {/* Mission Section */}
       <SectionTemplate content={caseStudy.mission} topic="Mission" />
-
-      {/* Procedure (Itemized Steps) */}
-      {procedure.map((proc, index) => (
-        <ItemizedTemplate key={proc.id} process={proc} />
-      ))}
-
       {/* Tech Stack */}
-      <div className="flex flex-col items-center gap-y-2 text-center">
+      <div className="flex w-full items-center gap-y-2 text-center">
         <h3 className="md:modern-h3 paragraph-regular text-white-900">
           Tech Stack
         </h3>
         <ul className="list-inside list-disc">
-          {caseStudy.tech.map((tech, index) => (
-            <li key={index} className="font-satoshi text-white-900">
-              {tech}
-            </li>
-          ))}
+          <TechStacks tech={caseStudy.tech}></TechStacks>
         </ul>
       </div>
+      <h1 className="md:modern-h1 text-white-900">The Process</h1>
+      {/* Procedure (Itemized Steps) */}
+      {procedure.map((proc, index) => (
+        <ItemizedTemplate key={proc.id} process={proc} />
+      ))}
 
       {/* Team Members */}
       <div className="flex flex-col items-center gap-y-2 text-center">
