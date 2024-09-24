@@ -20,7 +20,7 @@ const Template = async ({ caseStudy }: TemplateProps) => {
   return (
     <div className="custom-responsive-width flex flex-col items-center gap-x-4 gap-y-8">
       {/* Title and Description Section */}
-      <div className="flex flex-col items-center justify-center gap-y-3 text-center">
+      <div className="custom-responsive-width mx-auto flex min-w-[375px] max-w-[390px] flex-col items-center justify-center gap-y-3 text-center">
         <span className="gradient-heading">
           {caseStudy.title} <br />
         </span>
@@ -48,14 +48,14 @@ const Template = async ({ caseStudy }: TemplateProps) => {
       {/* Tech Stack */}
       <div className="col-span-full flex w-full flex-col items-center justify-between gap-y-5 md:flex-row md:gap-y-0">
         {/* Heading */}
-        <h3 className="md:modern-h3 paragraph-regular modern-h3 text-center font-inter text-white-900 md:w-1/5 md:text-left">
+        <h3 className="md:modern-h3 paragraph-regular modern-h3 text-center font-inter text-gradient md:w-1/5 md:text-left">
           Tech Stack
         </h3>
 
         {/* TechStacks Component */}
         <TechStacks tech={caseStudy.tech}></TechStacks>
       </div>
-      <h1 className="md:modern-h1 modern-h3 justify-between font-inter text-white-900">
+      <h1 className="modern-h2  my-10 font-inter text-white-900 text-gradient">
         The Process
       </h1>
       {/* Procedure (Itemized Steps) */}
@@ -64,7 +64,7 @@ const Template = async ({ caseStudy }: TemplateProps) => {
       ))}
       {/* Team Members */}
       <div className="flex flex-col items-center gap-y-2 text-center">
-        <h3 className="md:modern-h3 paragraph-regular text-white-900">
+        <h3 className="md:modern-h3 paragraph-regular text-gradient">
           Team Members
         </h3>
         <ul className="list-inside list-disc">
@@ -77,10 +77,10 @@ const Template = async ({ caseStudy }: TemplateProps) => {
       </div>
       {/* Next Steps */}
       <div className="flex flex-col items-center gap-y-2 text-center">
-        <h3 className="md:modern-h3 paragraph-regular text-white-900">
+        <h3 className="md:modern-h3 paragraph-regular text-gradient">
           Next Steps
         </h3>
-        <ul className="list-inside list-disc">
+        <ul className="list-inside list-disc px-2">
           {caseStudy.result.nextSteps.map((step, index) => (
             <li key={index} className="font-satoshi text-white-900">
               Step {step.step}: {step.description}

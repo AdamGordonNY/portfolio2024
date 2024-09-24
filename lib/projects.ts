@@ -57,12 +57,12 @@ export const projectList: CaseStudy[] = [
           {
             step: 3,
             description:
-              "We needed to choose where and what kind of DB to use/host, uploaded files, what authentication system to use , Clerk or NextAuth.",
+              "We needed to choose where and what kind of DB to use/host, uploaded files, what authentication system to use , basically a lot of decisions on what packages make sense in this project.  ",
           },
           {
             step: 4,
             description:
-              "After the initial steps, we delegated responsibilities and got to work. I took care of, respectively and chronologically, the Auth/Onboarding System first, then moved to the profile pages, both editing and viewing them and functionalities associated like follows.  After completing the profile page work, I made our front facing landing page which also functions as the main page to browse content.  Unique, complex sql queries with extremely fast retrieval were used to grab the data needed for the metrics, and the data was then passed to the front end to be displayed. My last task during our 9 week period of teamwork, was to do the Audio content pages. I'm proud of the how this turned out, which can be used even when navigating to other parts of the site, and uses the <audio /> browser API.  Using the Audio API with the context provider, we were able to create a seamless experience for users to listen to podcasts while also browsing through posts and other areas of the site.",
+              "A minor but important step was to set up eslint and prettier to make sure our code was clean and consistent as we worked asynchronously.",
           },
         ],
       },

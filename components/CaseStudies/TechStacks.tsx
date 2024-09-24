@@ -43,7 +43,7 @@ export const TechStack = async ({ tech }: { tech: string }) => {
             width={50}
             height={50}
             alt="react"
-            className="object-cover"
+            className="size-5 object-cover md:size-12"
           />
         );
       case "nodejs":
@@ -158,8 +158,8 @@ export const TechStack = async ({ tech }: { tech: string }) => {
         );
       default:
         return (
-          <div className="flex   rounded-full ">
-            <div className="flex size-16 w-full items-center justify-between ">
+          <div className="flex items-center justify-center rounded-full ">
+            <div className="flex size-16 w-full items-center justify-center place-self-center">
               {tech}
             </div>
           </div>
@@ -173,7 +173,10 @@ const TechStacks = ({ tech }: { tech: string[] }) => {
   return (
     <div className="flex w-full flex-wrap items-center  gap-6 rounded-full max-md:justify-center md:w-4/5">
       {tech.map((tek) => (
-        <div key={tek} className="flex  rounded-full">
+        <div
+          key={tek}
+          className="mq450:size-5  flex size-12 items-center rounded-full"
+        >
           <TechStack tech={tek} />
         </div>
       ))}

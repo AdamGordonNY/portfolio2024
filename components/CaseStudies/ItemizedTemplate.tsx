@@ -7,25 +7,28 @@ interface ItemizedTemplateProps {
 
 const ItemizedTemplate = ({ process }: ItemizedTemplateProps) => {
   return (
-    <section className="md:paragraph-regular body-regular mq450:w-full mq450:text-left flex w-4/5 flex-1 items-center justify-center font-satoshi text-white-900">
-      <div className="custom-responsive-width my-10 flex flex-col items-center justify-center gap-y-5 max-md:px-3 md:px-5">
-        {/* Title of the Process */}
-        <h3 className="modern-h3 max-mq450:body-regular basis-1/2 align-top font-inter text-white-900">
-          {process.title}
-        </h3>
+    <section className="md:paragraph-regular body-regular mq450:w-full mq450:text-left flex flex-1 items-center justify-center font-satoshi text-white-900 md:w-full">
+      <div className="custom-responsive-width my-10 flex flex-col items-center justify-center gap-y-5 max-md:px-3 ">
+        <div className="flex w-full items-center gap-y-3 max-md:flex-col">
+          {/* Title of the Process */}
+          <h3 className="modern-h3 max-mq450:body-regular align-text-top  font-inter text-gradient md:w-1/5">
+            {process.title}
+          </h3>
 
-        {/* Purpose of the Process */}
-        <p className="body-regular mq450:base-regular mq450:text-left flex flex-col gap-y-4 text-left">
-          {process.purpose}
-        </p>
+          {/* Purpose of the Process */}
+          <p className="body-regular mq450:base-regular mq450:text-left flex flex-col gap-y-4 text-left md:w-4/5">
+            {process.purpose}
+          </p>
 
-        {/* Steps */}
-
-        <div className="body-regular  flex flex-col gap-y-4 text-left">
-          <span className="body-regular mq450:base-regular">Steps</span>
-          <ul className="body-regular mq450:small-regular flex list-inside list-decimal flex-col gap-y-4 text-left">
+          {/* Steps */}
+        </div>
+        <div className="body-regular  mq450:text-center flex flex-col gap-y-4 md:flex-row md:text-left">
+          <span className="mq450:text-center md:modern-h3 gradient-heading-backward w-1/5">
+            Steps
+          </span>
+          <ul className="body-regular mq450:small-regular flex list-inside list-decimal flex-col gap-y-4 md:w-4/5 ">
             {process.steps.map((step) => (
-              <li key={step.step} className="px-2 text-start">
+              <li key={step.step} className="w-4/5 px-2">
                 {step.description}
               </li>
             ))}
