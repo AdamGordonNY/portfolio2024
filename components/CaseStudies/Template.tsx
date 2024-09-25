@@ -67,22 +67,22 @@ const Template = async ({ caseStudy }: TemplateProps) => {
         <h3 className="md:modern-h3 paragraph-regular mq450:flex-row text-gradient">
           Team Members
         </h3>
-        <ul className="list-inside list-disc">
+        <ul className="list-inside list-disc px-2 text-left max-md:gap-y-4">
           {caseStudy.teamMembers.map((member, index) => (
             <li key={index} className="font-satoshi text-white-900">
-              {member.name} - {member.role}
+              {member.name} <br /> {member.role}
             </li>
           ))}
         </ul>
       </div>
       {/* Next Steps */}
       <div className="mq450:flex-row mq450:text-left flex flex-col items-center gap-y-2 text-center">
-        <h3 className="lg:modern-h3 paragraph-regular text-gradient-highlight">
+        <h3 className="lg:modern-h3 paragraph-regular text-gradient-highlight text-left">
           Next Steps
         </h3>
         <ul className="list-inside list-disc px-2">
           {caseStudy.result.nextSteps.map((step, index) => (
-            <li key={index} className="font-satoshi text-white-900">
+            <li key={index} className="text-left font-satoshi text-white-900">
               {step.description}
             </li>
           ))}

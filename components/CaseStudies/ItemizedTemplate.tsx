@@ -26,7 +26,7 @@ const ItemizedTemplate = ({ process }: ItemizedTemplateProps) => {
           <h3 className="mq450:text-center md:modern-h3 gradient-heading-backward w-1/5 text-left font-inter">
             Steps
           </h3>
-          <ul className="body-regular mq450:small-regular flex w-full list-inside list-decimal flex-col gap-y-4 md:w-4/5 ">
+          <ul className="body-regular mq450:small-regular flex w-full list-inside  list-disc flex-col gap-y-4 md:w-4/5 ">
             {process.steps.map((step) => (
               <li key={step.step} className="px-2 md:w-4/5">
                 {step.description}

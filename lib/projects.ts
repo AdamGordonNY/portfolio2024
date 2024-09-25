@@ -108,7 +108,7 @@ export const projectList: CaseStudy[] = [
           {
             step: 1,
             description:
-              "Using NPM, installing the @clerk/nextjs package, and follow the instructions to set up the ClerkJS project. This involved creating a seperate route group (auth) inside the app folder, where I creaed a catchall sign-in and sign-up route signifying the intent with double brackets '[[...catchall]]'.",
+              "Using NPM, installing the @clerk/nextjs package, and follow the instructions to set up the ClerkJS project. This involved creating a seperate route group (auth) inside the app folder, where I creaed a catchall sign-in and sign-up route signifying the intent with double brackets '[[...catchall]]' routes that are a feature of NextJS14.",
           },
           {
             step: 2,
@@ -123,7 +123,17 @@ export const projectList: CaseStudy[] = [
           {
             step: 4,
             description:
-              "Created an onboarding context to manage the onboarding flow, and set up the metadata flags to make sure the onboarding flow was followed as we designed it to be. The step was modeled as part of our User schema and was set up to be a number that would increment as the user completed each step of the onboarding process. When complete, the metadata flag would be set to true, and the user would be redirected to the home page. Middleware needed to be configured to check if the user was onboarding, and if so, redirect them to the next step in the onboarding process, if not send them to the home page.  ",
+              "I created an onboarding context to manage the onboarding flow, and set up the metadata flags to make sure the onboarding flow was followed as we designed it to be.  ",
+          },
+          {
+            step: 5,
+            description:
+              " Middleware needed to be configured to check if the user was onboarding, and if so, redirect them to the next step in the onboarding process, if not send them to the home page. ",
+          },
+          {
+            step: 4,
+            description:
+              "I created an onboarding context to manage the onboarding flow, and set up the metadata flags to make sure the onboarding flow was followed as we designed it to be. The step was modeled as part of our User schema and was set up to be a number that would increment as the user completed each step of the onboarding process. When complete, the metadata flag would be set to true, and the user would be redirected to the home page. ",
           },
         ],
       },
@@ -131,12 +141,18 @@ export const projectList: CaseStudy[] = [
         id: 4,
         title: "Profile Pages",
         purpose:
-          "Every Social Media site needs users, and users need profile pages to identify themselves, and to be able to see what they've done on the site.  The profile pages needed to be able to be edited by the user, and to be able to be viewed by other users.  The profile pages needed to be able to show the user's posts, podcasts, and groups they are in, and to show the user's followers and who they are following.",
+          "Every Social Media site needs users, and users need profile pages to identify themselves, and to be able to see what they've done on the site.  The profile pages needed to be able to be edited by the user, and to be able to be viewed by other users.  The profile pages needed to be able to show the user's posts, podcasts, and groups they are in, and to show the user's followers and who they are following. This gives people a good idea of what kind of things the user tends to post about, as well as links to where they can find their content elsewhere.",
         steps: [
           {
             step: 1,
             description:
-              "Using NPM, installing the @clerk/nextjs package, and follow the instructions to set up the ClerkJS project. This involved creating a seperate route group (auth) inside the app folder, where I creaed a catchall sign-in and sign-up route signifying the intent with double brackets '[[...catchall]]'.",
+              "The profile pages were dependent on a user in our postgres DB defined in our Prisma schema, so the first order of business was to define a User model.  The user had a one to many relationship with posts, podcasts, and groups, and a many to many relationship with followers and following. This is the final version of the user model, where you can see the complexity of the relationships and the fields that are associated with the user.",
+            image: "/images/usermodel.png",
+          },
+          {
+            step: 2,
+            description:
+              "One tricky part of the profile view page was the profile image area, which needed to scale and was a bit tricky to get right.  Using relative and absolute positioning, I was able to get the image to scale properly and look good on all devices.",
           },
         ],
       },
@@ -153,7 +169,8 @@ export const projectList: CaseStudy[] = [
           },
           {
             step: 2,
-            description: "",
+            description:
+              "Using a context provider, we were able to create a seamless experience for users to listen to podcasts while also browsing through posts and other areas of the site.  ",
           },
           { step: 3, description: "" },
         ],
@@ -179,6 +196,11 @@ export const projectList: CaseStudy[] = [
           step: 2,
           description:
             "Optimize for SEO and use analytical tools to assist in doing so.",
+        },
+        {
+          step: 3,
+          description:
+            "Integrate the site with my portfolio, using it as a running blog of sorts, documenting my career journey and the projects I've worked on.",
         },
       ],
     },
