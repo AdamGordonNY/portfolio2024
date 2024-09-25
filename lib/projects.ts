@@ -42,98 +42,81 @@ export const projectList: CaseStudy[] = [
         id: 1,
         title: "Planning",
         purpose:
-          "To start the project, We needed to decide what packages made sense to add to our project, and how to best leverage NextJS14 to make our idea work as well as possible.  We had to prioritize what the logical order to build our project in, and how we can get what we needed to do done between the 2 of us within about 9 weeks.  ",
+          "We outlined the tech stack, project structure, and established priorities for the 9-week development timeline.",
         steps: [
           {
             step: 1,
             description:
-              "We set up an Asana board in order to make sure the requirements for each ticket were defined, and that our work didn't overlap.",
+              "Set up an Asana board to define requirements and prevent overlapping work.",
           },
           {
             step: 2,
             description:
-              "We met once a day for about an hour, 5 days a week to check in on our progress, discuss what we did and what we planned to do next, and how we solved certain problems. ",
+              "Held daily check-ins to discuss progress, solve problems, and plan next steps.",
           },
           {
             step: 3,
             description:
-              "We needed to choose where and what kind of DB to use/host, uploaded files, what authentication system to use , basically a lot of decisions on what packages make sense in this project.  ",
+              "Chose the database, hosting solution, and authentication system.",
           },
           {
             step: 4,
-            description:
-              "A minor but important step was to set up eslint and prettier to make sure our code was clean and consistent as we worked asynchronously.",
+            description: "Set up ESLint and Prettier for code consistency.",
           },
         ],
       },
       {
         id: 2,
-        title: "Tech Stack Choice",
+        title: "Tech Stack Selection",
         purpose:
-          "We needed to decide what packages made sense to add to our project, and how to best leverage NextJS14 to make our idea work as well as possible.  We had to prioritize what the logical order to build our project in, and how we can get what we needed to do done between the 2 of us within about 9 weeks.",
+          "We selected the tools and technologies to best leverage Next.js for our project.",
         steps: [
           {
             step: 1,
             description:
-              "For Authentication, we chose ClerkJS over NextAuth.  ClerkJS offers premade components that can be customized and themed to the developer's desire, offers integrations with most social login platforms and many options for customization where necessary.  It's session management and user metadata is both scalable, practical, and enables proper onboarding with the ability to set metadata flags.",
+              "Chose ClerkJS for authentication due to its customizability and scalability.",
           },
           {
             step: 2,
-            description:
-              "We decided to use Shadcn-UI for some components, and customized some of our own as well.  The ability to edit these components at their roots to adhere to the design was efficient and integrates well with framer motion to create modern, visually stunning but not distracting components.",
+            description: "Integrated Shadcn-UI for customizable components.",
           },
           {
             step: 3,
             description:
-              "We used the CMDK package to searching, set up a seperate socket.io server for notifications, and we used Prisma as an ORM that is integrated with Supabase's PostgreSQL database.  React Hook Form with Zod Validations were agreed upon, which also integrate well with Prisma's ORM and Server Actions that perform CRUD operations server side.  Prisma's querying system allows for fairly intuitive searches for most things, and the ability to use Raw SQL queries for more complicated fetches.",
+              "Used CMDK for search, Socket.io for notifications, and Prisma with Supabase PostgreSQL for the database.",
           },
           {
             step: 4,
             description:
-              "In order to take full advantage of NextJS's SSR capabilities, we decided to set up server actions with Prisma's ORM in order for faster loading times, with the data being fetched quickly on the server and taken in by client components, if there were any.  Cacheing and Suspense boundaries are used to reduce the amount of data needed to be fetched, and Suspense boundaries signal to the user that the site is loading on client components.",
-          },
-          {
-            step: 5,
-            description:
-              "Prisma is a powerful ORM that integrates well with Supabase's PostgreSQL database.  It's querying system allows for fairly intuitive searches for most things, and the ability to use Raw SQL queries for more complicated fetches. The DB could be seeded with data easily, and it integrates with Zod validations and React Hook Form well.  Prisma's server actions perform CRUD operations server side, and the ORM is very easy to use and understand.",
+              "Leveraged server actions for faster data fetching using Prisma’s ORM and Next.js SSR capabilities.",
           },
         ],
       },
       {
-        id: 2,
-        title: "ClerkJS Authentication",
+        id: 3,
+        title: "Feature - ClerkJS Authentication",
         purpose:
-          "We wanted a reliable, secure authentication system that could be adapted to work with Prisma, required little setup, and could be customized to our needs.  ClerkJS was the best choice for this because it offers premade components that can be customized and themed to the developer's desire, offers integrations with most social login platforms and many options for customization where necessary.  It's session management and user metadata is both scalable, practical, and enables proper onboarding with the ability to set metadata flags to make sure our onboarding flow was followed as we designed it to be.",
+          "We wanted a secure and customizable authentication system that integrates well with Prisma.  ClerkJS is a great solution for authentication, as it integrates with most if not all the current identity platforms, is very customizable, and has both a great experience for the user and the developer.",
         steps: [
           {
             step: 1,
             description:
-              "Using NPM, installing the @clerk/nextjs package, and follow the instructions to set up the ClerkJS project. This involved creating a seperate route group (auth) inside the app folder, where I creaed a catchall sign-in and sign-up route signifying the intent with double brackets '[[...catchall]]' routes that are a feature of NextJS14.",
+              "Set up ClerkJS and created sign-in and sign-up routes using Next.js' route groups.",
           },
           {
             step: 2,
             description:
-              "Added the SignIn and SignUp components to the page.tsx files on these routes, as well as wrapping the entire app in the ClerkProvider component.",
+              "Added SignIn and SignUp components to page routes and wrapped the app in ClerkProvider.",
           },
           {
             step: 3,
             description:
-              "Set up a layout for this route, as it's noticeably different and also incorporates the onboarding flow into this route group.",
+              "Created a layout for the authentication flow and configured onboarding context.",
           },
           {
             step: 4,
             description:
-              "I created an onboarding context to manage the onboarding flow, and set up the metadata flags to make sure the onboarding flow was followed as we designed it to be.  ",
-          },
-          {
-            step: 5,
-            description:
-              " Middleware needed to be configured to check if the user was onboarding, and if so, redirect them to the next step in the onboarding process, if not send them to the home page. ",
-          },
-          {
-            step: 4,
-            description:
-              "I created an onboarding context to manage the onboarding flow, and set up the metadata flags to make sure the onboarding flow was followed as we designed it to be. The step was modeled as part of our User schema and was set up to be a number that would increment as the user completed each step of the onboarding process. When complete, the metadata flag would be set to true, and the user would be redirected to the home page. ",
+              "Configured middleware to manage onboarding and ensure proper flow.",
           },
         ],
       },
@@ -141,18 +124,17 @@ export const projectList: CaseStudy[] = [
         id: 4,
         title: "Profile Pages",
         purpose:
-          "Every Social Media site needs users, and users need profile pages to identify themselves, and to be able to see what they've done on the site.  The profile pages needed to be able to be edited by the user, and to be able to be viewed by other users.  The profile pages needed to be able to show the user's posts, podcasts, and groups they are in, and to show the user's followers and who they are following. This gives people a good idea of what kind of things the user tends to post about, as well as links to where they can find their content elsewhere.",
+          "Each user needed a profile page showcasing their posts, podcasts, groups, followers, and followings.",
         steps: [
           {
             step: 1,
             description:
-              "The profile pages were dependent on a user in our postgres DB defined in our Prisma schema, so the first order of business was to define a User model.  The user had a one to many relationship with posts, podcasts, and groups, and a many to many relationship with followers and following. This is the final version of the user model, where you can see the complexity of the relationships and the fields that are associated with the user.",
-            image: "/images/usermodel.png",
+              "Designed the User model with relationships to posts, podcasts, and followers in Prisma.",
           },
           {
             step: 2,
             description:
-              "One tricky part of the profile view page was the profile image area, which needed to scale and was a bit tricky to get right.  Using relative and absolute positioning, I was able to get the image to scale properly and look good on all devices.",
+              "Implemented scalable profile image components using relative and absolute positioning.",
           },
         ],
       },
@@ -160,63 +142,51 @@ export const projectList: CaseStudy[] = [
         id: 5,
         title: "Audio Player",
         purpose:
-          "The Audio Player can be used even when navigating to other parts of the site, and uses the <audio /> browser API. Using the Audio API with the context provider, we were able to create a seamless experience for users to listen to podcasts while also browsing through posts and other areas of the site.  The Audio Player is a key feature of the site, and it was important to get it right.",
+          "The Audio Player allows users to listen to podcasts while navigating the site.",
         steps: [
           {
             step: 1,
             description:
-              "The Audio player integrates the current standard HTML <audio> API, so the first step was to look over the documentation regarding how to use this.  ",
+              "Integrated the HTML <audio> API for podcast playback.",
           },
           {
             step: 2,
             description:
-              "Using a context provider, we were able to create a seamless experience for users to listen to podcasts while also browsing through posts and other areas of the site.  ",
+              "Implemented a context provider for seamless audio playback across the site.",
           },
-          { step: 3, description: "" },
         ],
       },
     ],
     summary:
-      "DevToday is a modern , efficient site for developers to create content to share with each other on.  Users can join or create groups, where they can upload Audio in the form of podcasts, create written posts to share knowledge, and organize real life meetups to network and get offline every now and then. Besides these features, users can easily search for relevant subjects, get notifications when new content is posted, and have a true , low stress social media app in which to share information with each other.",
+      "DevToday is a modern platform for developers to create and share content, organize meetups, and collaborate. It provides a stress-free social media experience tailored to developers.",
     mission:
-      "The mission of the project was to give Developers a space to socialize and network, and share information and connect with each other.  User Profile's and the Follow/Like/Share system and the ability to filter content by specific criteria should give a stress free, personally tailored social media experience that is not as intrusive as typical social media but can be used to enrich your network and skills as a developer.",
-
+      "Our mission was to create a space where developers could socialize, network, and share information through posts, podcasts, and meetups.",
     result: {
       outcome:
-        "The project was successfully done to about 95 % completion in the target time frame, with only a few features not implemented.  The most impressive parts of the application as it stands are the ultra fast queries done in raw sql, the Audio Player which can be used even when navigating to other parts of the site, and our Google Maps integration.  When our socket.io server launches, and we optimize for SEO, the project will have met our target goals.",
+        "The project was completed 95% within the time frame, with a few features left to be finalized. Highlights include ultra-fast SQL queries, the Audio Player, and Google Maps integration.",
       goals:
-        "After the initial steps, we delegated responsibilities and got to work - 9 weeks was a relatively short deadline for a project of this size, and we made a strong effort to deliver in time. I took care of, respectively and chronologically, the Auth/Onboarding System first, then moved to the profile pages, both editing and viewing them and functionalities associated like follows.  After completing the profile page work, I made our front facing landing page which also functions as the main page to browse content.  Unique, complex sql queries with extremely fast retrieval were used to grab the data needed for the metrics, and the data was then passed to the front end to be displayed. My last task during our 9 week period of teamwork, was to do the Audio content pages. I'm proud of the how this turned out, which can be used even when navigating to other parts of the site, and uses the <audio /> browser API.  Using the Audio API with the context provider, we were able to create a seamless experience for users to listen to podcasts while also browsing through posts and other areas of the site.",
+        "We completed core features like authentication, profile pages, and the Audio Player within the 9-week timeline.",
       learning:
-        "We had a very good working chemistry as a team, and despite real life interruptions such as illness, vacation, and general distractions, we got about 95 % done with our tasks on our Asana board.  Our Project manager was impressed with the Audio API implementation and our use of framer motion in certain spots, especially the animation on the group card.  Key takeaways for me personally were using Audio API with the context provider, Seamlessly integrating filtering using searchParams and query strings to filter content appropriately.  Using framer motion added just enough flare to the project to polish the look.  It would have been great to have completed the socket.io portion of the site and done an SEO optimization scan on the project, we ran out of time for that though. I also learned alot about how framer motion works and what you can do with it, and finding a balance in being fancy and being functional.  The animations added are fairly subtle, but effective.  I especially like how the users unfurl on the Group Card. This project was a great experience to work with another talented, motivated developer on a complex project with a supervisor who was very supportive and helpful in explaining some lesser practiced areas of the project.  I gained alot of knowledge and most importantly, confidence in my ability to work on a team and deliver a complex NextJS project.",
+        "We learned to balance functionality and aesthetics, using tools like the Audio API, framer motion, and complex SQL queries.",
       challenges:
-        "Some challenges were setting up webhooks to synchronize users and their profiles with the database and make sure authentication and authorization flows worked as intended.  Another challenge was being able to use our Podcast feature while browsing the site, and another challenge was how to notify users when their content is liked/shared/viewed, in which we set up a demo socket.io server that needs to be reconstituted in order to work with the extended version I've continued to work on.  The biggest challenge was the time constraint, as we had to get the project done in 9 weeks, and we were about 95 % done with the project when the time was up.  We also had to make sure that the site was responsive and looked good on all devices, and that the site was accessible to all users.  We also had to make sure that the site was secure, and that the site was optimized for SEO.  We also had to make sure that the site was fast, and that the site was easy to use.",
+        "The biggest challenges were time constraints, setting up user notifications, and webhooks for syncing users with the database.",
       nextSteps: [
-        { step: 1, description: "Reconstitute the socket.io server" },
-        {
-          step: 2,
-          description:
-            "Optimize for SEO and use analytical tools to assist in doing so.",
-        },
+        { step: 1, description: "Rebuild the socket.io server." },
+        { step: 2, description: "Optimize the site for SEO." },
         {
           step: 3,
           description:
-            "Integrate the site with my portfolio, using it as a running blog of sorts, documenting my career journey and the projects I've worked on.",
+            "Integrate the site with my portfolio as a blog documenting my career journey.",
         },
       ],
     },
     teamMembers: [
       {
         name: "Adam Gordon",
-        role: "Content Overview Pages + Profile Pages + Audio Player",
+        role: "Content Overview Pages, Profile Pages, Audio Player",
       },
-      {
-        name: "Darshin Von Parijs",
-        role: "Theme + Layout + Content Pages",
-      },
-      {
-        name: "Brandon Etter",
-        role: "Project Manager and Code Reviewer",
-      },
+      { name: "Darshin Von Parijs", role: "Theme, Layout, Content Pages" },
+      { name: "Brandon Etter", role: "Project Manager and Code Reviewer" },
     ],
   },
   {

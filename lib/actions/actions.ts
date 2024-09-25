@@ -49,7 +49,11 @@ export const getPostsFromDevTo = async () => {
     const user = await prisma.user.findUnique({
       where: { id: 21 },
       include: {
-        posts: true,
+        posts: {
+          orderBy: {
+            createdAt: "desc",
+          },
+        },
         podcasts: true,
       },
     });
