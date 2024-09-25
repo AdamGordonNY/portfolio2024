@@ -158,7 +158,7 @@ export const TechStack = async ({ tech }: { tech: string }) => {
         );
       default:
         return (
-          <div className="flex items-center justify-center rounded-full ">
+          <div className="flex w-1/6 items-center justify-center rounded-full ">
             <div className="flex size-16 w-full items-center justify-center place-self-center">
               {tech}
             </div>
@@ -171,11 +171,11 @@ export const TechStack = async ({ tech }: { tech: string }) => {
 
 const TechStacks = ({ tech }: { tech: string[] }) => {
   return (
-    <div className="flex w-full flex-wrap items-center  gap-6 rounded-full max-md:justify-center md:w-4/5 md:px-2">
-      {tech.map((tek) => (
+    <div className="grid w-full grid-cols-12 items-center justify-items-center gap-6 max-md:grid-cols-6 md:w-4/5 md:px-2">
+      {tech.map((tek, idx) => (
         <div
           key={tek}
-          className="mq450:size-5  flex size-12 w-full flex-1 flex-wrap items-center justify-evenly rounded-full md:px-2"
+          className="mq450:w-1/6 flex w-full items-center justify-center rounded-full"
         >
           <TechStack tech={tek} />
         </div>

@@ -54,7 +54,6 @@ export const getPostsFromDevTo = async () => {
             createdAt: "desc",
           },
         },
-        podcasts: true,
       },
     });
     return user;

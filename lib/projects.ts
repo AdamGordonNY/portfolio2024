@@ -94,7 +94,7 @@ export const projectList: CaseStudy[] = [
       },
       {
         id: 3,
-        title: "Feature - ClerkJS Authentication",
+        title: "ClerkJS Authentication",
         purpose:
           "We wanted a secure and customizable authentication system that integrates well with Prisma.  ClerkJS is a great solution for authentication, as it integrates with most if not all the current identity platforms, is very customizable, and has both a great experience for the user and the developer.",
         steps: [
@@ -167,7 +167,7 @@ export const projectList: CaseStudy[] = [
       goals:
         "We completed core features like authentication, profile pages, and the Audio Player within the 9-week timeline.",
       learning:
-        "We learned to balance functionality and aesthetics, using tools like the Audio API, framer motion, and complex SQL queries.",
+        "This project ran the gamut of full stack development hurdles and obstacles, and we learned a lot about the importance of planning, communication, and teamwork.  Specific technical aspects that I definitely improved upon and understand more fully now that I've done this project, are Server Actions and dynamically fetching data based on query-strings and filters.  Styling and layout design were also a big part of this project, and I learned a lot about how to use Tailwind CSS to create a responsive and visually appealing site.",
       challenges:
         "The biggest challenges were time constraints, setting up user notifications, and webhooks for syncing users with the database.",
       nextSteps: [

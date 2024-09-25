@@ -15,7 +15,7 @@ const SectionTemplate = ({
           {topic}
         </span>
         {/* Content */}
-        <p className="body-regular mq450:text-center flex w-full flex-col gap-y-4 text-left md:w-4/5">
+        <p className="body-regular md:base-regular flex w-full flex-col gap-y-4 text-left max-md:text-center md:w-4/5 md:text-left">
           {content}
         </p>
       </div>

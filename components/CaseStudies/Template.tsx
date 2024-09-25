@@ -45,6 +45,7 @@ const Template = async ({ caseStudy }: TemplateProps) => {
       <SectionTemplate content={caseStudy.mission} topic="Mission" />{" "}
       {/* Result Section */}
       <SectionTemplate content={caseStudy.result.outcome} topic="Outcome" />
+      <SectionTemplate content={caseStudy.result.learning} topic="Learnings" />
       {/* Tech Stack */}
       <div className="col-span-full flex w-full flex-col items-center justify-between gap-y-5 md:flex-row md:gap-y-0">
         {/* Heading */}
@@ -55,7 +56,7 @@ const Template = async ({ caseStudy }: TemplateProps) => {
         {/* TechStacks Component */}
         <TechStacks tech={caseStudy.tech}></TechStacks>
       </div>
-      <h1 className="modern-h2  my-10 font-inter text-white-900 text-gradient">
+      <h1 className="modern-h2 font-inter text-white-900 text-gradient max-md:my-5 md:my-10">
         The Process
       </h1>
       {/* Procedure (Itemized Steps) */}
@@ -63,26 +64,32 @@ const Template = async ({ caseStudy }: TemplateProps) => {
         <ItemizedTemplate key={proc.id} process={proc} />
       ))}
       {/* Team Members */}
-      <div className="mq450:flex-row flex flex-col items-center gap-y-2 text-center">
-        <h3 className="md:modern-h3 paragraph-regular mq450:flex-row text-gradient">
-          Team Members
+      <div className="mq450:flex-row mq450:text-left flex w-full flex-col items-center gap-y-2 text-center md:flex-row md:text-left">
+        <h3 className="md:modern-h3 paragraph-regular mq450:flex-row text-gradient md:w-1/5">
+          The Team
         </h3>
-        <ul className="list-inside list-disc px-2 text-left max-md:gap-y-4">
+        <ul className="body-regular flex w-full list-inside list-disc flex-col px-2 text-left max-md:gap-y-4 md:w-4/5">
           {caseStudy.teamMembers.map((member, index) => (
-            <li key={index} className="font-satoshi text-white-900">
-              {member.name} <br /> {member.role}
+            <li
+              key={index}
+              className="text-bold font-satoshi text-white-900 max-md:text-center"
+            >
+              {member.name} - {member.role}
             </li>
           ))}
         </ul>
       </div>
       {/* Next Steps */}
-      <div className="mq450:flex-row mq450:text-left flex flex-col items-center gap-y-2 text-center">
-        <h3 className="lg:modern-h3 paragraph-regular text-gradient-highlight text-left">
+      <div className="mq450:flex-row mq450:text-left flex w-full flex-col items-center gap-y-2 text-center md:flex-row md:text-left">
+        <h3 className="lg:modern-h3 paragraph-regular text-gradient-highlight text-left md:w-1/5">
           Next Steps
         </h3>
-        <ul className="list-inside list-disc px-2">
+        <ul className="list-inside list-disc px-2  md:w-4/5">
           {caseStudy.result.nextSteps.map((step, index) => (
-            <li key={index} className="text-left font-satoshi text-white-900">
+            <li
+              key={index}
+              className="text-left font-satoshi text-white-900 max-md:text-center"
+            >
               {step.description}
             </li>
           ))}
