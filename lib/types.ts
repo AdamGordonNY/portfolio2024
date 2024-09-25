@@ -22,18 +22,20 @@ export type CaseStudy = {
   };
   tech: string[]; // tech stack
   summary: string; // retrospective on the project
-  mission: string; // What was the goal of the project?
-  procedure: Process[];
-  result: {
-    outcome: string;
-    goals?: string;
-    learning: string;
-    challenges: string;
-    nextSteps: {
-      step: number;
+  mission: {
+    task: {
+      title: string;
       description: string;
+      goal: string;
+      result: string;
+      takeaways: string;
     }[];
-  };
+  }[]; // What was the goal of the project?
+
+  nextSteps: {
+    step: number;
+    description: string;
+  }[];
   teamMembers: {
     name: string;
     role: string;
