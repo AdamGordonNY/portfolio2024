@@ -48,7 +48,7 @@ const Template = async ({ caseStudy }: TemplateProps) => {
       {/* Tech Stack */}
       <div className="col-span-full flex w-full flex-col items-center justify-between gap-y-5 md:flex-row md:gap-y-0">
         {/* Heading */}
-        <h3 className="md:modern-h3 paragraph-regular modern-h3 text-center font-inter text-gradient md:w-1/5 md:text-left">
+        <h3 className="md:modern-h3 paragraph-regular modern-h3 text-center font-inter text-gradient md:w-1/5 md:px-2 md:text-left">
           Tech Stack
         </h3>
 
@@ -63,8 +63,8 @@ const Template = async ({ caseStudy }: TemplateProps) => {
         <ItemizedTemplate key={proc.id} process={proc} />
       ))}
       {/* Team Members */}
-      <div className="flex flex-col items-center gap-y-2 text-center">
-        <h3 className="md:modern-h3 paragraph-regular text-gradient">
+      <div className="mq450:flex-row flex flex-col items-center gap-y-2 text-center">
+        <h3 className="md:modern-h3 paragraph-regular mq450:flex-row text-gradient">
           Team Members
         </h3>
         <ul className="list-inside list-disc">
@@ -76,14 +76,14 @@ const Template = async ({ caseStudy }: TemplateProps) => {
         </ul>
       </div>
       {/* Next Steps */}
-      <div className="flex flex-col items-center gap-y-2 text-center">
-        <h3 className="md:modern-h3 paragraph-regular text-gradient">
+      <div className="mq450:flex-row mq450:text-left flex flex-col items-center gap-y-2 text-center">
+        <h3 className="lg:modern-h3 paragraph-regular text-gradient-highlight">
           Next Steps
         </h3>
         <ul className="list-inside list-disc px-2">
           {caseStudy.result.nextSteps.map((step, index) => (
             <li key={index} className="font-satoshi text-white-900">
-              Step {step.step}: {step.description}
+              {step.description}
             </li>
           ))}
         </ul>
