@@ -15,7 +15,7 @@ export const projectList: CaseStudy[] = [
     title: "DevToday",
     subtitle: "Where Developers Connect",
     description:
-      "A social media platform for developers to share their knowledge, organize meetups, and share audio content. You can even listen to podcasts while navigating the site.",
+      "A social media platform for developers to share their knowledge, organize meetups, and share audio content. Made with NextJS 14, TailwindCSS, and Prisma as the primary technologies.",
     cardImage: "images/devtodayslanted.svg",
     images: ["/images/devtoday-wide.svg", "/images/devtoday.svg"],
     tech: [
@@ -36,39 +36,65 @@ export const projectList: CaseStudy[] = [
       portfolioPath: "/projects/devtoday",
     },
     summary:
-      "DevToday is a modern platform for developers with a classic touch. It was designed to facilitate productivity and collaboration in the developer community.",
+      "This project was done with the Javascript Mastery Masterclass,  and Brandon was our mentor who did code reviews with us and helped us on any concepts that we hadn't mastered yet.  The Audio Player and the Content Overview pages are what I'm most proud of in the project.  ",
     mission: [
       {
         task: [
           {
-            title: "Planning and Tech Stack Selection",
+            title: "Planning",
             description:
-              "We outlined the tech stack, project structure, and established priorities for the 9-week development timeline. Selected Next.js, Prisma, and Supabase as key technologies.",
+              "With 9 weeks to do the project, and a long list of user stories on our Asana board to divide and conquer, we each went ticket by ticket - with discussion everyday for 30-60 minutes to catch each other up and go over any blockers. ",
             goal: "To establish a clear project roadmap and choose the most suitable technologies.",
             result:
-              "The tech stack was finalized with Next.js for the frontend, Prisma for ORM, and Supabase for the backend database. ESLint and Prettier were also configured.",
-            takeaways:
-              "Team collaboration tools like Asana and daily check-ins were critical in keeping us on track.",
+              "Using Asana and common agile processes with check-ins 5 times a week, we were able to smoothly divide the work and keep a pace that allowed us to complete all but 5 or 6 of the 75 or so User Stories",
+            takeaways: [
+              "Team collaboration tools like Asana and daily check-ins were critical in keeping us on track",
+            ],
           },
           {
-            title: "Authentication System",
+            title: "Authentication / Onboarding",
             description:
               "Implemented a secure and customizable authentication system using ClerkJS to handle user sign-ins and sign-ups.",
-            goal: "To integrate a secure, scalable authentication system.",
+            goal: "To integrate a secure, scalable authentication system, that integrates Github and Google OAuth, with an onboarding system to properly set first time users up.",
             result:
-              "ClerkJS was fully integrated into the site, and we created routes for sign-in, sign-up, and onboarding.",
-            takeaways:
+              "Using a seperate route group (auth) in the app directory, I made a sign-in and sign-up route with a custom design.  Using webhooks, Svix, and Server Actions, these goals were accomplished in short order.",
+            takeaways: [
               "ClerkJS was flexible and customizable, which greatly reduced development time while offering strong authentication features.",
+              "Making a seperate route group for auth made it easier to manage and test the auth system.",
+            ],
           },
           {
-            title: "Profile Pages and Audio Player",
+            title: "Profile Pages",
             description:
-              "Users can create and customize profile pages. Integrated an audio player that allows users to listen to podcasts while navigating the site.",
-            goal: "To create user profiles and provide a seamless audio experience.",
+              "Needed to set up a complex profile page, which displays users personal information, their posts, content of interest, as well as an option to follow/unfollow users.",
+            goal: "For users to have their own personal page that displays all the content they've contributed, as well as links to other platforms they're on.",
             result:
-              "The user profile system was completed with fully functional audio player integration, providing a seamless media experience across the site.",
-            takeaways:
-              "The use of Next.js and Prisma simplified server-side rendering and database queries, improving performance.",
+              "Starting with the layout, set up a DOM that matched our design, then adding functionality to the page.  Using the power of Typescript Types, Prisma's ability to query data easily through either SQL or their own modules, NextJS's server actions, and TailwindCSS convenient and flexible styling, it took somewhere between 2 and 3 weeks to complete this feature.",
+            takeaways: [
+              "NextJS dynamic routing came in handy here in order to load the correct profile page based on the user's ID, as well as editing the profile page. Fetching complex data on the server with the correct custom type was challenging , but mission was accomplished.",
+            ],
+          },
+          {
+            title: "Profile Pages",
+            description:
+              "Needed to set up a complex profile page, which displays users personal information, their posts, content of interest, as well as an option to follow/unfollow users.",
+            goal: "For users to have their own personal page that displays all the content they've contributed, as well as links to other platforms they're on.",
+            result:
+              "Starting with the layout, set up a DOM that matched our design, then adding functionality to the page.  Using the power of Typescript Types, Prisma's ability to query data easily through either SQL or their own modules, NextJS's server actions, and TailwindCSS convenient and flexible styling, it took somewhere between 2 and 3 weeks to complete this feature.",
+            takeaways: [
+              "NextJS dynamic routing came in handy here in order to load the correct profile page based on the user's ID, as well as editing the profile page. Fetching complex data on the server with the correct custom type was challenging , but mission was accomplished.",
+            ],
+          },
+          {
+            title: "Content Overview Pages (Home)",
+            description:
+              "The first thing you see when you load the site, consisting of a center area displaying paginated links to recent content.  Sidebars contain previews of content not selected at the time, as well as popular posts of other types.",
+            goal: "Using the momentum I'd gained from working on the auth and profile pages, and identifying the similarities between some of the elements on the profile page as well as projects I've done before, design the DOM, and set up a sorting and pagination system.",
+            result:
+              "Leveraging the power of Prisma's ability to use raw sql queries, and using the URLSearchparams and useSearchParams features of HTML and React, I was able to set up a system that allowed users to sort by date, popularity, and other factors, as well as paginate through the content.  I completed it rather quickly and even added some animation to the page using framer motion.  I especially am fond of the group cards that fade in and then cascade outward.  Using query-strings, I was able to make the page dynamic and responsive to user input.",
+            takeaways: [
+              "Framer motion used in spurts is a great way to spice up the look of a page, but overdoing it can be distracting. The ability to query data on the server and then send it to the client is a powerful tool that can be used to make a page dynamic, fast, and save on resources.  Following the pattern of designing the HTML first, then adding the dynamic elements, is a good way to keep the project organized and my workflow on track.",
+            ],
           },
         ],
       },
@@ -92,7 +118,7 @@ export const projectList: CaseStudy[] = [
     teamMembers: [
       {
         name: "Adam Gordon",
-        role: "Content Overview Pages, Profile Pages, Audio Player",
+        role: "Content Overview Pages, Profile Pages, Audio Player, Auth and Onboarding System",
       },
       { name: "Darshin Von Parijs", role: "Theme, Layout, Content Pages" },
       { name: "Brandon Etter", role: "Project Manager and Code Reviewer" },
@@ -121,8 +147,9 @@ export const projectList: CaseStudy[] = [
             goal: "To provide users with AI-generated answers to their questions.",
             result:
               "The AI feature is fully integrated, allowing users to ask questions and receive responses generated by the AI.",
-            takeaways:
+            takeaways: [
               "Integrating AI into a Q&A platform opens up new ways to provide real-time, accurate answers.",
+            ],
           },
           {
             title: "Interactivity and User Engagement System",
@@ -131,8 +158,9 @@ export const projectList: CaseStudy[] = [
             goal: "To create an interactive system that encourages engagement.",
             result:
               "The badge system and user activity features were implemented, increasing user engagement and interaction.",
-            takeaways:
+            takeaways: [
               "Gamification through badges and following systems creates stronger user retention.",
+            ],
           },
         ],
       },
@@ -178,8 +206,9 @@ export const projectList: CaseStudy[] = [
             goal: "To provide a central space for developers to record and organize their knowledge.",
             result:
               "The platform allows users to store and categorize their learning and project notes.",
-            takeaways:
+            takeaways: [
               "Developers can stay organized and track their growth by documenting their progress.",
+            ],
           },
         ],
       },

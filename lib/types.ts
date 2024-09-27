@@ -28,7 +28,7 @@ export type CaseStudy = {
       description: string;
       goal: string;
       result: string;
-      takeaways: string;
+      takeaways: string[];
     }[];
   }[]; // What was the goal of the project?
 
