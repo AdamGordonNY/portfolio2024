@@ -96,6 +96,15 @@ export const projectList: CaseStudy[] = [
               "Framer motion used in spurts is a great way to spice up the look of a page, but overdoing it can be distracting. The ability to query data on the server and then send it to the client is a powerful tool that can be used to make a page dynamic, fast, and save on resources.  Following the pattern of designing the HTML first, then adding the dynamic elements, is a good way to keep the project organized and my workflow on track.",
             ],
           },
+          {
+            title: "AUdio Player",
+            description:
+              "A site wide audio-player that allows users to listen to audio content while they browse the site.",
+            goal: "To create a site-wide audio player that allows users to listen to audio content while they browse the site.",
+            result:
+              "Using a Context Provider, the <audio /> HTML API, and a custom hook, I was able to create a site-wide audio player that allows users to listen to audio content while they browse the site.  The player is responsive and can be controlled from any page on the site.  ",
+            takeaways: ["use context"],
+          },
         ],
       },
     ],
