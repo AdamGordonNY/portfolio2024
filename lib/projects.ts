@@ -97,13 +97,15 @@ export const projectList: CaseStudy[] = [
             ],
           },
           {
-            title: "AUdio Player",
+            title: "Audio Player",
             description:
               "A site wide audio-player that allows users to listen to audio content while they browse the site.",
             goal: "To create a site-wide audio player that allows users to listen to audio content while they browse the site.",
             result:
               "Using a Context Provider, the <audio /> HTML API, and a custom hook, I was able to create a site-wide audio player that allows users to listen to audio content while they browse the site.  The player is responsive and can be controlled from any page on the site.  ",
-            takeaways: ["use context"],
+            takeaways: [
+              "Using a context provider, I was able to make the audio player site-wide, and responsive.  The custom hook I made was able to control the audio player from any page on the site, allowing users to browse other posts while listening to a podcast.",
+            ],
           },
         ],
       },
