@@ -32,7 +32,7 @@ export const projectList: CaseStudy[] = [
     ],
     links: {
       repo: "https://github.com/AdamGordonNY/DevTodayAdamsVersion",
-      liveSite: "https://adam-gordon.info",
+      liveSite: "https://devtoday.adam-gordon.info",
       portfolioPath: "/projects/devtoday",
     },
     summary:
