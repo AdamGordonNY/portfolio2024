@@ -11,7 +11,7 @@ import ReusableButton from "./ReusableButton";
 export type SocialMediaButton = {
   title: string;
   icon?: React.JSX.Element | null;
-  href: string;
+  href: string | null;
 };
 
 export const socialArray: SocialMediaButton[] = [
@@ -38,7 +38,7 @@ export const socialArray: SocialMediaButton[] = [
   },
 ];
 
-const SocialLinks = ({ type }: { type: string }) => {
+const SocialLinks = ({ type }: { type?: string }) => {
   if (type === "home") {
     return (
       <div className="flex  flex-1 content-center items-center justify-center gap-x-4 rounded-full py-3">
