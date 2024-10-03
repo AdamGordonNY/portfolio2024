@@ -2,6 +2,7 @@ import React from "react";
 
 import { Separator } from "../ui/separator";
 import SocialLinks from "../SocialLinks";
+import ReusableButton from "../ReusableButton";
 const Heading = () => {
   return (
     <section className="max-mq450:justify-center max-lg:base-regular custom-responsive-width mb-2 mt-5 flex min-w-full flex-col px-0 ">
@@ -24,7 +25,7 @@ const Heading = () => {
         orientation="horizontal"
         className="mx-auto my-5 w-1/2 items-center justify-center"
       />
-      <SocialLinks />
+      <SocialLinks type="social" />
       <Separator
         orientation="horizontal"
         className="mx-auto my-5 w-1/2 items-center justify-center"
@@ -40,6 +41,7 @@ const Heading = () => {
           team that I can be an asset to or to create something with people of
           similarly open and ambitious minds.
         </p>
+        <ReusableButton type="modal" text="My Life" />
       </div>
     </section>
   );

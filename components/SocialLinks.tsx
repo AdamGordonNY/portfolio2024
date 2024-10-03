@@ -49,7 +49,7 @@ const SocialLinks = ({ type }: { type?: string }) => {
     );
   }
   return (
-    <div className="flex flex-1  content-center items-center justify-center gap-x-4 rounded-full py-3 max-md:flex-col">
+    <div className="my-auto flex  min-w-[100px] flex-1 content-center items-center justify-center gap-x-4 rounded-full max-md:flex-col">
       {socialArray.map((social) => (
         <ReusableButton key={social.title} social={social} type="social" />
       ))}
