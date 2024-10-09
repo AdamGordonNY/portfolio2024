@@ -11,6 +11,11 @@ const nextConfig = {
         pathname: "/**",
         hostname: "my.certifyme.online",
       },
+      {
+        protocol: "https",
+        pathname: "/**",
+        hostname: "utfs.io",
+      },
     ],
   },
   async redirects() {

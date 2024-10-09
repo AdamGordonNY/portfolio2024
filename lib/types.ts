@@ -1,3 +1,48 @@
+/* eslint-disable no-unused-vars */
+import { Prisma } from "@prisma/client";
+export type ContentCategoryType =
+  | "Post"
+  | "Podcast"
+  | "Meetup"
+  | "Comment"
+  | "Group"
+  | "User";
+export enum ContentCategoryEnum {
+  POST,
+  PODCAST,
+  MEETUP,
+  COMMENT,
+}
+
+export type PostContent = Prisma.PostGetPayload<{
+  include: {
+    comment: {
+      include: {
+        author: true;
+      };
+    };
+    user: {
+      include: {
+        posts: true;
+        id: true;
+        name: true;
+      };
+    };
+    group: true;
+  };
+}>;
+export type UserContent = Prisma.UserGetPayload<{
+  include: {
+    posts: {
+      include: {
+        comment: true;
+        user: true;
+      };
+    };
+  };
+}>;
+export type ContentType = UserContent;
+
 export type Process = {
   id: number;
   title: string;
