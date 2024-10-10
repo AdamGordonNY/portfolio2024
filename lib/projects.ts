@@ -131,7 +131,10 @@ export const projectList: CaseStudy[] = [
         name: "Adam Gordon",
         role: "Content Overview Pages, Profile Pages, Audio Player, Auth and Onboarding System",
       },
-      { name: "Darshin Von Parijs", role: "Theme, Layout, Content Pages" },
+      {
+        name: "Darshin Van Parijs",
+        role: "Co Developer - handled everything on the site that I didn't",
+      },
       { name: "Brandon Etter", role: "Project Manager and Code Reviewer" },
     ],
   },
