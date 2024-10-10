@@ -120,20 +120,15 @@ export const projectList: CaseStudy[] = [
         step: 2,
         description: "Optimize the site for SEO to improve search visibility.",
       },
-      {
-        step: 3,
-        description:
-          "Integrate the site with my portfolio as a blog documenting my career journey.",
-      },
     ],
     teamMembers: [
       {
         name: "Adam Gordon",
-        role: "Content Overview Pages, Profile Pages, Audio Player, Auth and Onboarding System",
+        role: "Content Overview Pages + Sort/Filter/Pagination, Profile Pages, Audio Player, Auth and Onboarding System, ",
       },
       {
         name: "Darshin Van Parijs",
-        role: "Co Developer - handled everything on the site that I didn't",
+        role: "ORM models and database setup, Meetups,Posts,Group pages and Comment Sections, Dark/Light Theming, Google Maps Integration",
       },
       { name: "Brandon Etter", role: "Project Manager and Code Reviewer" },
     ],
