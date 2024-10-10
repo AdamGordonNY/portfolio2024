@@ -13,9 +13,9 @@ interface ItemizedTemplateProps {
 const ItemizedTemplate = ({ task }: ItemizedTemplateProps) => {
   return (
     <section className="md:base-regular body-regular mq450:w-full mq450:text-center flex flex-1 items-center justify-between font-satoshi text-white-900 md:w-full md:px-2">
-      <div className="custom-responsive-width gap-5 my-10 flex flex-1 flex-col items-center max-md:px-3">
+      <div className="custom-responsive-width my-10 flex flex-1 flex-col items-center gap-5 max-md:px-3">
         {/* Title and Description */}
-        <div className="flex w-full flex-col gap-y-8 md:flex-row align-text-top">
+        <div className="flex w-full flex-col gap-y-8 align-text-top md:flex-row">
           <h3 className="modern-h3 max-mq450:body-regular text-gradient-highlight text-wrap text-left font-inter max-md:text-center md:w-1/5">
             {task.title}
           </h3>
@@ -26,7 +26,7 @@ const ItemizedTemplate = ({ task }: ItemizedTemplateProps) => {
         </div>
 
         {/* Goal, Result, and Takeaways */}
-        <div className="body-regular mq450:text-center my-2 flex w-full flex-col gap-y-8 text-left align-text-top md:flex-row md:items-start py-2">
+        <div className="body-regular mq450:text-center my-2 flex w-full flex-col gap-y-8 py-2 text-left align-text-top md:flex-row md:items-start">
           {/* Goal */}
           <div className="md:w-4/5">
             <h3 className="mq450:text-center modern-base-regular mb-4 text-left text-gradient-end">

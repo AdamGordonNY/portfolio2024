@@ -16,6 +16,7 @@ import MongoDB from "@/components/ui/icons/MongoDB";
 import Tailwind from "@/components/ui/icons/Tailwind";
 import Typescript from "@/components/ui/icons/Typescript";
 import { FaStripeS } from "react-icons/fa";
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }

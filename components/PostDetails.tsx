@@ -2,11 +2,11 @@
 
 import { Separator } from "./ui/separator";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDebounceCallback } from "usehooks-ts";
 import { incrementViews } from "@/lib/actions/actions";
-import dompurify from "dompurify";
 import { format } from "date-fns/format";
+import HTMLParser from "./HTMLParser";
 const PostDetails = ({
   post,
 }: {
@@ -21,38 +21,23 @@ const PostDetails = ({
 }) => {
   const { body, title, id, createdAt } = post;
   const debouncedIncrementViews = useDebounceCallback(incrementViews, 30000);
-  const [postBody, setPostBody] = useState<string>("");
+
   useEffect(() => {
     if (id) debouncedIncrementViews({ id, contentType: "post" });
   }, [id, debouncedIncrementViews]);
   const formattedDate = format(createdAt!, "MMMM dd, yyyy");
-  useEffect(() => {
-    const cleanHTML = async (body: string) => {
-      const clean = await dompurify.sanitize(body);
-      if (!clean) {
-        return body;
-      }
-      return clean;
-    };
 
-    cleanHTML(body!).then((cleaned) => {
-      setPostBody(cleaned);
-    });
-  }, [body]);
   return (
     <section className="mq450:max-w-[375px] flex w-full flex-col flex-wrap items-center gap-y-6 pt-10 font-inter text-white-900">
       <section className="mq450:max-w-[375px] mx-2 flex  flex-col gap-y-6">
         <div className="flex flex-col items-center justify-between px-3">
-          <h1 className="modern-h1 ">{title ?? "Missing Post Title!"}</h1>{" "}
-          <span>{formattedDate}</span>
+          <span className="modern-h3 max-md:base-regular">
+            {title ?? "Missing Post Title!"}
+          </span>{" "}
+          <span className="body-regular mb-5">{formattedDate}</span>
         </div>
 
-        {postBody && (
-          <div
-            dangerouslySetInnerHTML={{ __html: postBody }}
-            className="body-regular text-white-400 flex-col items-center justify-center text-center font-inter max-md:text-left"
-          />
-        )}
+        {body && <HTMLParser htmlString={body!} />}
       </section>
 
       <Separator

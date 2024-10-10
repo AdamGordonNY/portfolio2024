@@ -19,10 +19,10 @@ const Template = async ({ caseStudy }: TemplateProps) => {
         <span className="gradient-heading">
           {caseStudy.title} <br />
         </span>
-        <h3 className="md:modern-h3 paragraph-regular text-white-900 max-w-[60%] text-center italic">
+        <h3 className="md:modern-h3 paragraph-regular max-w-[60%] text-center italic text-white-900">
           {caseStudy.subtitle}
         </h3>
-        <span className="mq450:body-regular md:paragraph-regular font-satoshi text-white-900 text-center">
+        <span className="mq450:body-regular md:paragraph-regular text-center font-satoshi text-white-900">
           {caseStudy.description}
         </span>
       </div>
@@ -58,7 +58,7 @@ const Template = async ({ caseStudy }: TemplateProps) => {
       {/* Tech Stack */}
       <div className="col-span-full flex w-full flex-col items-center justify-between gap-y-5 md:flex-row md:gap-y-0">
         {/* Heading */}
-        <h3 className="md:modern-h3 paragraph-regular modern-h3 font-inter text-gradient text-center md:w-1/5 md:px-2 md:text-left">
+        <h3 className="md:modern-h3 paragraph-regular modern-h3 text-center font-inter text-gradient md:w-1/5 md:px-2 md:text-left">
           Tech Stack
         </h3>
         {/* TechStacks Component */}
@@ -78,7 +78,7 @@ const Template = async ({ caseStudy }: TemplateProps) => {
           {caseStudy.nextSteps.map((step, index) => (
             <li
               key={index}
-              className="font-satoshi text-white-900 text-left max-md:text-center"
+              className="text-left font-satoshi text-white-900 max-md:text-center"
             >
               {step.description}
             </li>
