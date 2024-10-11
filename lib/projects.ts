@@ -75,18 +75,7 @@ export const projectList: CaseStudy[] = [
             ],
           },
           {
-            title: "Profile Pages",
-            description:
-              "Needed to set up a complex profile page, which displays users personal information, their posts, content of interest, as well as an option to follow/unfollow users.",
-            goal: "For users to have their own personal page that displays all the content they've contributed, as well as links to other platforms they're on.",
-            result:
-              "Starting with the layout, set up a DOM that matched our design, then adding functionality to the page.  Using the power of Typescript Types, Prisma's ability to query data easily through either SQL or their own modules, NextJS's server actions, and TailwindCSS convenient and flexible styling, it took somewhere between 2 and 3 weeks to complete this feature.",
-            takeaways: [
-              "NextJS dynamic routing came in handy here in order to load the correct profile page based on the user's ID, as well as editing the profile page. Fetching complex data on the server with the correct custom type was challenging , but mission was accomplished.",
-            ],
-          },
-          {
-            title: "Content Overview Pages (Home)",
+            title: "Content Overview Pages (Home Routes)",
             description:
               "The first thing you see when you load the site, consisting of a center area displaying paginated links to recent content.  Sidebars contain previews of content not selected at the time, as well as popular posts of other types.",
             goal: "Using the momentum I'd gained from working on the auth and profile pages, and identifying the similarities between some of the elements on the profile page as well as projects I've done before, design the DOM, and set up a sorting and pagination system.",
