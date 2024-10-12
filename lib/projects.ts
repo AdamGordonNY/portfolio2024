@@ -1,4 +1,4 @@
-import { CaseStudy } from "./types";
+import { CaseStudy, DevSkills } from "./types";
 
 // const iconsArray: ForwardRefExoticComponent<IconProps & RefAttributes<Icon>>[] =
 //   [
@@ -234,7 +234,73 @@ export const projectList: CaseStudy[] = [
     ],
   },
 ];
-
+export const devSkills: DevSkills = {
+  categories: [
+    {
+      category: "Front End",
+      skills: [
+        "JS",
+        "React",
+        "Vue",
+        "Blazor",
+        "Blade",
+        "TailwindCSS",
+        "Framer Motion",
+        "Aceternity/ShadCn",
+        "HTML",
+        "CSS",
+      ],
+    },
+    {
+      category: "Architecture",
+      skills: [
+        "Laravel",
+        ".NET",
+        "NextJS",
+        "NuxtJS",
+        "Flask ORM",
+        "Apache",
+        "NginX",
+        "Docker",
+        "Kubernetes",
+      ],
+    },
+    {
+      category: "Database Systems",
+      skills: [
+        "MySQL",
+        "MongoDB",
+        "Google Firestore",
+        "PostgresQL",
+        "MS SQL Server",
+        "GraphQL",
+      ],
+    },
+    {
+      category: "Platforms",
+      skills: ["Vercel", "Supabase", "Azure", "Google APIs", "Amazon S3"],
+    },
+    {
+      category: "Design/Organizational Programs",
+      skills: ["Figma", "Canva", "Trello", "AGILE methodology", "Asana"],
+    },
+    {
+      category: "Misc Dev Skills",
+      skills: [
+        "RestFUL API creation and use",
+        "Generative AI integration and Augmentation",
+        "Github Copilot",
+        "Version Control Systems (Github)",
+        "System Design",
+        "Project Management and Planning",
+      ],
+    },
+    {
+      category: "Soft Skills",
+      skills: ["Communication", "Leadership by Example", "Growth Mindset"],
+    },
+  ],
+};
 export const contactDetails: { [key: string]: string } = {
   email: "mailto:adam@adam-gordon.info",
   github: "https://github.com/adamgordonnny",

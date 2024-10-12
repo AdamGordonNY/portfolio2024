@@ -94,6 +94,18 @@ export type EmailType =
   | "email.bounced"
   | "email.opened"
   | "email.clicked";
+export type Skill = string;
+
+export type SkillCategory = {
+  category: string;
+  skills: Skill[];
+};
+
+export type DevSkills = {
+  categories: SkillCategory[];
+};
+
+// Example usage:
 
 export interface WebhookEvent {
   created_at: string;
