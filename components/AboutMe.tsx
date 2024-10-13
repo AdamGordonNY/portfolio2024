@@ -7,7 +7,6 @@ import {
   ModalTrigger,
 } from "@/components/ui/animated-modal";
 import ReusableButton from "./ReusableButton";
-import { BackgroundGradient } from "./ui/background-gradient";
 const AboutMe = () => {
   return (
     <div className="custom-responsive-width mx-4 flex w-fit flex-col items-center font-satoshi">
