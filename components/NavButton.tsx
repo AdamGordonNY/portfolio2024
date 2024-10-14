@@ -11,16 +11,11 @@ const NavButton = ({ text, route }: { text: string; route: string }) => {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
+    // Simplified logic: Check for home or exact match, or any project routes
     if (route === pathname || (text === "home" && pathname === "/")) {
       setActive(true);
-    } else if (pathname.startsWith("/projects/")) {
-      const projectRoutes = [
-        "/projects/devtoday",
-        "/projects/gitnote",
-        "/projects/devoverflow",
-      ];
-      console.log(pathname);
-      setActive(projectRoutes.includes(route));
+    } else if (pathname.startsWith("/projects") && route === "/projects") {
+      setActive(true);
     } else {
       setActive(false);
     }

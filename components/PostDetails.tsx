@@ -28,9 +28,9 @@ const PostDetails = ({
   const formattedDate = format(createdAt!, "MMMM dd, yyyy");
 
   return (
-    <section className="mq450:max-w-[375px] flex w-full flex-col flex-wrap items-center gap-y-6 pt-10 font-inter text-white-900">
-      <section className="mq450:max-w-[375px] mx-2 flex  flex-col gap-y-6">
-        <div className="flex flex-col items-center justify-between px-3">
+    <section className="custom-responsive-width flex w-full flex-col flex-wrap items-center gap-y-6 pt-10 font-inter text-white-900">
+      <section className="custom-responsive-width  flex  flex-col gap-y-6">
+        <div className="flex flex-col items-center justify-between ">
           <span className="modern-h3 max-md:base-regular">
             {title ?? "Missing Post Title!"}
           </span>{" "}

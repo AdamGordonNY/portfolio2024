@@ -9,8 +9,8 @@ const buttons = [
 ];
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 mb-10 flex justify-center">
-      <nav className="custom-responsive-width z-50 flex h-16 items-center justify-between capitalize text-white-900 max-md:w-full md:w-[500px] ">
+    <header className="custom-responsive-width sticky top-0 z-50  flex w-full min-w-full flex-1 justify-center bg-dark-200">
+      <nav className="custom-responsive-width z-50 flex h-16 w-full items-center justify-between bg-dark-200 capitalize text-white-900 max-md:w-full md:w-[500px]">
         {buttons.map((btn) => (
           <NavButton key={btn.text} text={btn.text} route={btn.route} />
         ))}

@@ -1,5 +1,6 @@
 import { ClassValue, clsx } from "clsx";
 import React from "react";
+import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import {
   IconBrandFigma,
@@ -9,14 +10,31 @@ import {
   IconBrandVscode,
   IconBrandVue,
   IconBrandXbox,
+  IconBrandInertia,
+  IconBrandVite,
+  IconBrandVisualStudio,
+  IconBrandMysql,
+  IconBrandJavascript,
+  IconBrandHtml5,
+  IconBrandCss3,
+  IconBrandDocker,
+  IconBrandSocketIo,
+  IconBrandPython,
+  IconBrandGoogleFilled,
+  IconBrandNodejs,
+  IconBrandGithubCopilot,
+  IconBrandNuxt,
+  IconBrandAzure,
 } from "@tabler/icons-react";
+
 import NextJS from "@/components/ui/icons/NextJS";
 import ChatGPT from "@/components/ui/icons/ChatGPT";
 import MongoDB from "@/components/ui/icons/MongoDB";
 import Tailwind from "@/components/ui/icons/Tailwind";
 import Typescript from "@/components/ui/icons/Typescript";
 import { FaStripeS } from "react-icons/fa";
-
+import clerkJS from "@/public/images/clerk.svg";
+import postgresQL from "@/public/images/postgres.svg";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
@@ -36,7 +54,7 @@ export const renderIcon = (icon: string) => {
       );
     case "figma":
       return <IconBrandFigma size={24} className="mq450:size-6  md:size-12" />;
-    case "vsCode":
+    case "vscode":
       return <IconBrandVscode size={24} className="mq450:size-6  md:size-12" />;
     case "xbox":
       return <IconBrandXbox size={24} className="mq450:size-6  md:size-12" />;
@@ -55,6 +73,73 @@ export const renderIcon = (icon: string) => {
       return <FaStripeS size={24} className="mq450:size-6  md:size-12" />;
     case "vue":
       return <IconBrandVue size={24} className="mq450:size-6  md:size-12" />;
+    case "inertia":
+      return (
+        <IconBrandInertia size={24} className="mq450:size-6  md:size-12" />
+      );
+    case "vite":
+      return <IconBrandVite size={24} className="mq450:size-6  md:size-12" />;
+    case "visualstudio":
+      return (
+        <IconBrandVisualStudio size={24} className="mq450:size-6  md:size-12" />
+      );
+    case "mysql":
+      return <IconBrandMysql size={24} className="mq450:size-6  md:size-12" />;
+    case "javascript":
+      return (
+        <IconBrandJavascript size={24} className="mq450:size-6  md:size-12" />
+      );
+    case "html":
+      return <IconBrandHtml5 size={24} className="mq450:size-6  md:size-12" />;
+    case "css":
+      return <IconBrandCss3 size={24} className="mq450:size-6  md:size-12" />;
+    case "docker":
+      return <IconBrandDocker size={24} className="mq450:size-6  md:size-12" />;
+    case "socketio":
+      return (
+        <IconBrandSocketIo size={24} className="mq450:size-6  md:size-12" />
+      );
+    case "python":
+      return <IconBrandPython size={24} className="mq450:size-6  md:size-12" />;
+    case "firestore":
+      return (
+        <IconBrandGoogleFilled size={24} className="mq450:size-6  md:size-12" />
+      );
+    case "nodejs":
+      return <IconBrandNodejs size={24} className="mq450:size-6  md:size-12" />;
+    case "githubcopilot":
+      return (
+        <IconBrandGithubCopilot
+          size={24}
+          className="mq450:size-6  md:size-12"
+        />
+      );
+    case "nuxt":
+      return <IconBrandNuxt size={24} className="mq450:size-6  md:size-12" />;
+    case "azure":
+      return <IconBrandAzure size={24} className="mq450:size-6  md:size-12" />;
+    case "clerk":
+      return (
+        <Image
+          width={24}
+          height={24}
+          src={clerkJS}
+          alt="clerk"
+          className="mq450:size-6  md:size-12"
+        />
+      );
+    case "postgres":
+      return (
+        <Image
+          width={24}
+          height={24}
+          src={postgresQL}
+          alt="postgres"
+          className="mq450:size-6  md:size-12"
+        />
+      );
+    default:
+      return null;
   }
 };
 export const validateString = (

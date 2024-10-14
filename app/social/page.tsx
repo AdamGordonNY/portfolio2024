@@ -9,8 +9,8 @@ const Page = async () => {
   const data = await getPostsFromDevTo();
 
   return (
-    <div className="mq450:w-[375px] flex   flex-col text-center font-satoshi  text-white-900">
-      <div className=" flex items-center justify-between pt-10 md:mx-20 ">
+    <div className="custom-responsive-width flex   flex-col text-center font-satoshi  text-white-900">
+      <div className="custom-responsive-width flex items-center justify-between pt-10 md:mx-20 ">
         <h1 className="base-regular md:modern-h3 font-inter">
           Cross Posted from{" "}
         </h1>

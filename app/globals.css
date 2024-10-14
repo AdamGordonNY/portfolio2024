@@ -69,32 +69,68 @@
     display: none;
   }
 
-  body {
-    font-family: "Satoshi", sans-serif;
-    @apply bg-background text-foreground;
+  /* Prevent overflow on all components and ensure responsiveness */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  /* styles/globals.css */
 
-  /* Custom class for responsive width */
+  /* General reset to avoid overflow issues */
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw; /* Ensure viewport width is not exceeded */
+  }
+
+  .custom-responsive-width {
+    width: 100%;
+    max-width: 100%; /* Always keep the width within container */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    box-sizing: border-box; /* Account for padding and margins */
+  }
 
   @media (max-width: 450px) {
     .custom-responsive-width {
-      min-width: 375px; /* Set the max width to 375px on small screens */
-      width: 100%; /* Make sure the width is 100% of the parent container */
-      max-width: 450px;
+      max-width: 100%; /* Ensure no overflow on small screens */
+      width: 100%; /* Occupy full width of the parent container */
     }
   }
-}
-@font-face {
-  font-family: "Satoshi";
-  src: url("/fonts/satoshi.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "Satoshi-Italic";
-  src: url("/fonts/satoshi-italic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
+  /* Also consider adjusting images and iframes */
+  img,
+  iframe {
+    max-width: 100%;
+    height: auto; /* Ensure they scale down */
+    display: block; /* Prevent inline overflow */
+  }
+
+  /* Prevent horizontal scrolling on small screens */
+  html,
+  body {
+    overflow-x: hidden; /* Globally hide horizontal scroll */
+    width: 100%;
+  }
+
+  /* Make sure any fixed or sticky elements respect the width */
+  .sticky,
+  .fixed {
+    max-width: 100%; /* Prevent them from causing overflow */
+  }
+  @font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/satoshi.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Satoshi-Italic";
+    src: url("/fonts/satoshi-italic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+  }
 }

@@ -22,16 +22,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${inter.className} ${figtree.className} ${poppins.className}  `}
+        className={`${inter.className} ${figtree.className} ${poppins.className} overflow-y-auto overflow-x-hidden`}
       >
         <ThemeContextProvider>
-          <main className="custom-responsive-width  flex min-h-screen min-w-full flex-col justify-between bg-dark-200">
-            <Navbar />
-            {children}
-            <Footer />
-          </main>
+          <Navbar />
+          <main className="w-full flex-1 bg-dark-200">{children}</main>
+          <Footer />
         </ThemeContextProvider>
       </body>
     </html>
