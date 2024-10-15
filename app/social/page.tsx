@@ -9,8 +9,8 @@ const Page = async () => {
   const data = await getPostsFromDevTo();
 
   return (
-    <div className="custom-responsive-width flex   flex-col text-center font-satoshi  text-white-900">
-      <div className="custom-responsive-width flex items-center justify-between pt-10 md:mx-20 ">
+    <div className="custom-responsive-width flex   flex-col text-center items-center font-satoshi  text-white-900">
+      <div className="custom-responsive-width flex items-center justify-between pt-10 md:mx-20 flex-col w-full ">
         <h1 className="base-regular md:modern-h3 font-inter">
           Cross Posted from{" "}
         </h1>
@@ -28,7 +28,7 @@ const Page = async () => {
       <Separator orientation="horizontal" />
       {data &&
         data.map((post, idx) => (
-          <div key={idx} className="mq450:w-full  mq450:flex md:mx-10">
+          <div key={idx} className="w-full  flex md:mx-10">
             {" "}
             <PostDetails post={post as Partial<Post>} />
           </div>
