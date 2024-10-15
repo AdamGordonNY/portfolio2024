@@ -4,7 +4,7 @@ import Template from "@/components/CaseStudies/Template";
 const Page = () => {
   const project = projectList[0];
   return (
-    <div className="custom-responsive-width flex w-full flex-col gap-x-4 bg-inherit md:my-10 lg:px-10">
+    <div className="custom-responsive-width flex w-full flex-col gap-x-4 bg-inherit lg:px-10">
       <Template caseStudy={project!} />
     </div>
   );
