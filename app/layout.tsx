@@ -24,11 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${inter.className} ${figtree.className} ${poppins.className} overflow-y-auto overflow-x-hidden`}
+        className={`${inter.className} ${figtree.className} ${poppins.className}  min-h-screen min-w-full overflow-x-hidden`}
       >
         <ThemeContextProvider>
           <Navbar />
-          <main className="w-full flex-1 bg-dark-200">{children}</main>
+          <main className="flex min-h-screen w-full min-w-full flex-1 bg-dark-200">
+            {children}
+          </main>
           <Footer />
         </ThemeContextProvider>
       </body>

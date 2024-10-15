@@ -2,141 +2,233 @@ import { ClassValue, clsx } from "clsx";
 import React from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
-import {
-  IconBrandFigma,
-  IconBrandLaravel,
-  IconBrandPrisma,
-  IconBrandReact,
-  IconBrandVscode,
-  IconBrandVue,
-  IconBrandXbox,
-  IconBrandInertia,
-  IconBrandVite,
-  IconBrandVisualStudio,
-  IconBrandMysql,
-  IconBrandJavascript,
-  IconBrandHtml5,
-  IconBrandCss3,
-  IconBrandDocker,
-  IconBrandSocketIo,
-  IconBrandPython,
-  IconBrandGoogleFilled,
-  IconBrandNodejs,
-  IconBrandGithubCopilot,
-  IconBrandNuxt,
-  IconBrandAzure,
-} from "@tabler/icons-react";
+import { IconBrandXbox, IconBrandGithubCopilot } from "@tabler/icons-react";
 
-import NextJS from "@/components/ui/icons/NextJS";
 import ChatGPT from "@/components/ui/icons/ChatGPT";
-import MongoDB from "@/components/ui/icons/MongoDB";
-import Tailwind from "@/components/ui/icons/Tailwind";
-import Typescript from "@/components/ui/icons/Typescript";
 import { FaStripeS } from "react-icons/fa";
+import Postgres from "@/components/ui/icons/Postgres";
 import clerkJS from "@/public/images/clerk.svg";
-import postgresQL from "@/public/images/postgres.svg";
+
+import MongoDB from "@/components/ui/icons/MongoDB";
+import Vue from "@/components/ui/icons/Vue";
+
+import JS from "@/components/ui/icons/JS";
+
+import Azure from "@/components/ui/icons/Azure";
+
+import Prisma from "@/components/ui/icons/Prisma";
+import Figma from "@/components/ui/icons/Figma";
+import Laravel from "@/components/ui/icons/Laravel";
+import Typescript from "@/components/ui/icons/Typescript";
+import NextJS from "@/components/ui/icons/NextJS";
+import ReactIcon from "@/components/ui/icons/ReactIcon";
+import Tailwind from "@/components/ui/icons/Tailwind";
+import CSharp from "@/components/ui/icons/CSharp";
+import Firebase from "@/components/ui/icons/Firebase";
+import Python from "@/components/ui/icons/Python";
+import Nuxt from "@/components/ui/icons/Nuxt";
+import MySQL from "@/components/ui/icons/MySQL";
+import Vite from "@/components/ui/icons/Vite";
+import Docker from "@/components/ui/icons/Docker";
+import SocketIO from "@/components/ui/icons/SocketIO";
+import NodeJS from "@/components/ui/icons/NodeJS";
+import HTML from "@/components/ui/icons/HTML";
+import Css from "@/components/ui/icons/Css";
+import { VSCode } from "@/components/ui/icons/VSCode";
+import DotNet from "@/components/ui/icons/DotNet";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 export const renderIcon = (icon: string) => {
   switch (icon) {
     case "react":
-      return <IconBrandReact size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <ReactIcon size={64} className="mq450:size-6   md:size-12" />
+        </div>
+      );
     case "nextjs":
-      return <NextJS size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <NextJS size={64} className="mq450:size-6   md:size-12" />
+        </div>
+      );
     case "tailwind":
-      return <Tailwind size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <Tailwind size={32} className="mq450:size-6  md:size-12" />
+        </div>
+      );
     case "typescript":
-      return <Typescript size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <Typescript size={32} className="mq450:size-6  md:size-12" />
+        </div>
+      );
     case "laravel":
       return (
-        <IconBrandLaravel size={24} className="mq450:size-6  md:size-12" />
+        <div>
+          {" "}
+          <Laravel size={64} className="mq450:size-6  md:size-12" />
+        </div>
       );
     case "figma":
-      return <IconBrandFigma size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <Figma size={64} className="mq450:size-6  md:size-12" />
+        </div>
+      );
     case "vscode":
-      return <IconBrandVscode size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <VSCode size={64} className="mq450:size-6   md:size-12" />
+        </div>
+      );
     case "xbox":
-      return <IconBrandXbox size={24} className="mq450:size-6  md:size-12" />;
+      return <IconBrandXbox size={64} className="mq450:size-6   md:size-12" />;
     case "prisma":
       return (
-        <IconBrandPrisma
-          size={24}
-          className="mq450:size-6 place-self-center text-white-800 md:size-12"
-        />
+        <div>
+          <Prisma size={64} className="mq450:size-6   md:size-12" />
+        </div>
       );
     case "chatgpt":
-      return <ChatGPT size={24} className="mq450:size-6  md:size-12" />;
-    case "mongo":
-      return <MongoDB size={24} className="mq450:size-6  md:size-12" />;
-    case "stripe":
-      return <FaStripeS size={24} className="mq450:size-6  md:size-12" />;
-    case "vue":
-      return <IconBrandVue size={24} className="mq450:size-6  md:size-12" />;
-    case "inertia":
       return (
-        <IconBrandInertia size={24} className="mq450:size-6  md:size-12" />
+        <div>
+          <ChatGPT size={64} className="mq450:size-6   md:size-12" />
+        </div>
+      );
+    case "mongo":
+      return (
+        <div>
+          <MongoDB size={64} className="mq450:size-6   md:size-12" />
+        </div>
+      );
+    case "stripe":
+      return (
+        <div>
+          <FaStripeS size={64} className="mq450:size-6  md:size-12" />
+        </div>
+      );
+    case "vue":
+      return (
+        <div>
+          <Vue size={64} className="mq450:size-6  md:size-12" />
+        </div>
       );
     case "vite":
-      return <IconBrandVite size={24} className="mq450:size-6  md:size-12" />;
-    case "visualstudio":
       return (
-        <IconBrandVisualStudio size={24} className="mq450:size-6  md:size-12" />
+        <div>
+          <Vite size={64} className="mq450:size-6  md:size-12" />
+        </div>
       );
+
     case "mysql":
-      return <IconBrandMysql size={24} className="mq450:size-6  md:size-12" />;
+      return <MySQL size={64} className="mq450:size-6  md:size-12" />;
     case "javascript":
       return (
-        <IconBrandJavascript size={24} className="mq450:size-6  md:size-12" />
+        <div>
+          <JS size={64} className="mq450:size-6 md:size-12" />
+        </div>
       );
     case "html":
-      return <IconBrandHtml5 size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <HTML size={64} className="mq450:size-6 md:size-12" />
+        </div>
+      );
     case "css":
-      return <IconBrandCss3 size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <Css size={64} className="mq450:size-6   md:size-12" />
+        </div>
+      );
     case "docker":
-      return <IconBrandDocker size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <Docker size={64} className="mq450:size-6  md:size-12" />
+        </div>
+      );
     case "socketio":
       return (
-        <IconBrandSocketIo size={24} className="mq450:size-6  md:size-12" />
+        <div>
+          <SocketIO size={64} className="mq450:size-6   md:size-12" />
+        </div>
       );
     case "python":
-      return <IconBrandPython size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <Python size={64} className="mq450:size-6  md:size-12" />
+        </div>
+      );
     case "firestore":
       return (
-        <IconBrandGoogleFilled size={24} className="mq450:size-6  md:size-12" />
+        <div>
+          <Firebase size={64} className="mq450:size-6  md:size-12" />
+        </div>
       );
     case "nodejs":
-      return <IconBrandNodejs size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <NodeJS size={64} className="mq450:size-6  md:size-12" />
+        </div>
+      );
     case "githubcopilot":
       return (
-        <IconBrandGithubCopilot
-          size={24}
-          className="mq450:size-6  md:size-12"
-        />
+        <div>
+          <IconBrandGithubCopilot
+            size={64}
+            className="mq450:size-6  md:size-12"
+          />
+        </div>
       );
     case "nuxt":
-      return <IconBrandNuxt size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <Nuxt size={64} className="mq450:size-6 md:size-12" />
+        </div>
+      );
     case "azure":
-      return <IconBrandAzure size={24} className="mq450:size-6  md:size-12" />;
+      return (
+        <div>
+          <Azure size={64} className="mq450:size-6  md:size-12" />
+        </div>
+      );
     case "clerk":
       return (
-        <Image
-          width={24}
-          height={24}
-          src={clerkJS}
-          alt="clerk"
-          className="mq450:size-6  md:size-12"
-        />
+        <div>
+          <Image
+            width={64}
+            height={64}
+            src={clerkJS}
+            alt="clerk"
+            className="mq450:size-6  md:size-12"
+          />
+        </div>
       );
     case "postgres":
       return (
-        <Image
-          width={24}
-          height={24}
-          src={postgresQL}
-          alt="postgres"
-          className="mq450:size-6  md:size-12"
-        />
+        <div>
+          <Postgres size={64} className="mq450:size-6  md:size-12" />
+        </div>
+      );
+    case "sql":
+      return (
+        <div>
+          <MySQL size={64} className="mq450:size-6  md:size-12" />
+        </div>
+      );
+    case "csharp":
+      return (
+        <div>
+          <CSharp size={64} className="mq450:size-6  md:size-12" />
+        </div>
+      );
+    case "dotnet":
+      return (
+        <div className="rounded-full bg-dark-100 size-16">
+          <DotNet size={64} />
+        </div>
       );
     default:
       return null;

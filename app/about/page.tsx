@@ -4,7 +4,7 @@ import MyProjects from "@/components/Landing/MyProjects";
 
 export default function Home() {
   return (
-    <div className="custom-responsive-width flex min-w-full flex-col font-satoshi">
+    <div className="custom-responsive-width min-size-full flex min-h-screen flex-col font-satoshi">
       <Heading />
       <MyProjects />
 

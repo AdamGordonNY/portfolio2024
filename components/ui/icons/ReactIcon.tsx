@@ -1,4 +1,5 @@
 import React from "react";
+import IconWrapper from "./IconWrapper";
 
 const ReactIcon = (props: any) => {
   return (
@@ -24,4 +25,4 @@ const ReactIcon = (props: any) => {
   );
 };
 
-export default ReactIcon;
+export default IconWrapper(ReactIcon);

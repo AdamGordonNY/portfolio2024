@@ -100,21 +100,31 @@
     }
   }
 
-  /* Also consider adjusting images and iframes */
-  img,
-  iframe {
-    max-width: 100%;
-    height: auto; /* Ensure they scale down */
-    display: block; /* Prevent inline overflow */
-  }
-
   /* Prevent horizontal scrolling on small screens */
   html,
   body {
-    overflow-x: hidden; /* Globally hide horizontal scroll */
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto; /* Only scroll vertically if necessary */
+    height: 100%; /* Ensure body takes full height of the viewport */
+    scroll-snap-type: y mandatory;
   }
-
+  /* Ensure containers don’t exceed viewport height */
+  .container {
+    height: 100%;
+    box-sizing: border-box; /* Include padding/border in height calculations */
+    overflow-y: auto; /* Let the content scroll vertically if needed */
+  }
+  section {
+    scroll-snap-align: start; /* Snap to the start of each section */
+  }
+  /* Ensure images and media don't overflow */
+  img,
+  iframe {
+    max-width: 100%;
+    height: auto; /* Scale media proportionally */
+  }
   /* Make sure any fixed or sticky elements respect the width */
   .sticky,
   .fixed {
@@ -132,5 +142,37 @@
     src: url("/fonts/satoshi-italic.ttf") format("truetype");
     font-weight: bold;
     font-style: italic;
+  }
+  .skills-section {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 1000px;
+  }
+
+  .skill-category {
+    margin-bottom: 2rem;
+  }
+
+  .category-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .skills-list li {
+    flex: 1 1 200px; /* Ensures flexibility of items */
+    font-size: 1rem;
+    padding: 0.5rem;
+    background: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
   }
 }
