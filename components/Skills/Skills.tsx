@@ -8,7 +8,7 @@ const Skills = ({ devSkills }: { devSkills: DevSkills }) => {
       <section className="custom-responsive-width w-full font-satoshi p-2">
         {devSkills.categories.map((category, index) => (
           <div key={index} className="category text-center">
-            <h1 className="modern-h1 mx-auto my-2 text-center text-white-900 md:text-left">
+            <h1 className="md:modern-h1 modern-h3 mx-auto my-2 text-center text-white-900 md:text-left">
               {category.category}
             </h1>
             {/* Use a grid with responsive columns */}
