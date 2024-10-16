@@ -1,5 +1,4 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 
 const NextJS = (props: any) => {
   return (
@@ -40,4 +39,4 @@ const NextJS = (props: any) => {
   );
 };
 
-export default IconWrapper(NextJS);
+export default NextJS;

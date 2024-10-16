@@ -1,12 +1,9 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 
 const HTML = (props: any) => {
   return (
     <svg
-      width="47"
-      height="47"
-      viewBox="0 0 47 47"
+      viewBox="0 0 128 128"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
@@ -32,8 +29,8 @@ const HTML = (props: any) => {
       <defs>
         <clipPath id="clip0_9888_1668">
           <rect
-            width="46.6102"
-            height="46.6102"
+            width="128"
+            height="128"
             fill="white"
             transform="translate(0.129272 0.305054)"
           />
@@ -43,4 +40,4 @@ const HTML = (props: any) => {
   );
 };
 
-export default IconWrapper(HTML);
+export default HTML;

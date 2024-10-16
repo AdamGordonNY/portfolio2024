@@ -1,5 +1,4 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 
 const NextArrow = (props: any) => {
   return (
@@ -22,4 +21,4 @@ const NextArrow = (props: any) => {
   );
 };
 
-export default IconWrapper(NextArrow);
+export default NextArrow;

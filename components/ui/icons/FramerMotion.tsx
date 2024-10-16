@@ -1,5 +1,4 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 const FramerMotion = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -8,4 +7,4 @@ const FramerMotion = (props: any) => {
   );
 };
 
-export default IconWrapper(FramerMotion);
+export default FramerMotion;

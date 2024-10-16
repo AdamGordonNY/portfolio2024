@@ -1,5 +1,4 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 
 const Tailwind = (props: any) => {
   return (
@@ -16,4 +15,4 @@ const Tailwind = (props: any) => {
   );
 };
 
-export default IconWrapper(Tailwind);
+export default Tailwind;

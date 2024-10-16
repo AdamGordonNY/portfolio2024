@@ -1,8 +1,8 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
+
 const Azure = (props: any) => {
   return (
-    <svg viewBox="0 0 128 128">
+    <svg viewBox="0 0 128 128" {...props}>
       <defs>
         <linearGradient
           id="azure-original-a"
@@ -64,4 +64,4 @@ const Azure = (props: any) => {
   );
 };
 
-export default IconWrapper(Azure);
+export default Azure;

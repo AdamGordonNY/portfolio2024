@@ -1,5 +1,5 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
+
 export const VSCode = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -119,4 +119,4 @@ export const VSCode = (props: any) => {
     </svg>
   );
 };
-export default IconWrapper(VSCode);
+export default VSCode;

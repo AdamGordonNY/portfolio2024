@@ -1,5 +1,5 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
+
 const MySQL = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -19,4 +19,4 @@ const MySQL = (props: any) => {
   );
 };
 
-export default IconWrapper(MySQL);
+export default MySQL;

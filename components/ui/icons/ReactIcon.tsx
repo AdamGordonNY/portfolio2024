@@ -1,12 +1,9 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 
 const ReactIcon = (props: any) => {
   return (
     <svg
-      width="47"
-      height="47"
-      viewBox="0 0 47 47"
+      viewBox="0 0 128 128"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
@@ -25,4 +22,4 @@ const ReactIcon = (props: any) => {
   );
 };
 
-export default IconWrapper(ReactIcon);
+export default ReactIcon;

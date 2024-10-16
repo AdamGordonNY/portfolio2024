@@ -1,5 +1,5 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
+
 const Postgres = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -22,4 +22,4 @@ const Postgres = (props: any) => {
   );
 };
 
-export default IconWrapper(Postgres);
+export default Postgres;

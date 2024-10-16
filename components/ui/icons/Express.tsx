@@ -1,5 +1,4 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 const Express = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -8,4 +7,4 @@ const Express = (props: any) => {
   );
 };
 
-export default IconWrapper(Express);
+export default Express;

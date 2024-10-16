@@ -1,5 +1,5 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
+
 const Nuxt = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -29,4 +29,4 @@ const Nuxt = (props: any) => {
   );
 };
 
-export default IconWrapper(Nuxt);
+export default Nuxt;

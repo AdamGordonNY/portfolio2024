@@ -1,16 +1,8 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 
 const Css = (props: any) => {
   return (
-    <svg
-      width="47"
-      height="47"
-      viewBox="0 0 47 47"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" {...props}>
       <g clip-path="url(#clip0_9888_1675)">
         <path
           d="M6.6393 42.1814L2.81581 0.305054H43.8728L40.1404 42.1814L23.3898 46.9152"
@@ -43,4 +35,4 @@ const Css = (props: any) => {
   );
 };
 
-export default IconWrapper(Css);
+export default Css;

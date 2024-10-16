@@ -1,5 +1,4 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 const MongoDB = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -139,4 +138,4 @@ const MongoDB = (props: any) => {
   );
 };
 
-export default IconWrapper(MongoDB);
+export default MongoDB;

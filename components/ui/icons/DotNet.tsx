@@ -1,5 +1,4 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 const DotNet = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -11,4 +10,4 @@ const DotNet = (props: any) => {
   );
 };
 
-export default IconWrapper(DotNet);
+export default DotNet;

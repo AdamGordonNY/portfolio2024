@@ -1,5 +1,4 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 
 const Typescript = (props: any) => {
   return (
@@ -14,4 +13,4 @@ const Typescript = (props: any) => {
   );
 };
 
-export default IconWrapper(Typescript);
+export default Typescript;

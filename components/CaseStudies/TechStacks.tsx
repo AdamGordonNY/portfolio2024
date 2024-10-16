@@ -20,9 +20,11 @@ import nextImg from "@/public/images/next.svg";
 import tailwindImg from "@/public/images/tailwind.svg";
 import tsImg from "@/public/images/ts.svg";
 import postGres from "@/public/images/postgre.svg";
-import clerk from "@/public/images/clerk.svg";
+
 import uploadImg from "@/public/images/uploadthing.svg";
 import shadcnImg from "@/public/images/shadcnui.svg";
+import ClerkIcon from "../ui/icons/ClerkIcon";
+import Postgres from "../ui/icons/Postgres";
 export const TechStack = async ({ tech }: { tech: string }) => {
   const techCheck = async () => {
     switch (tech) {
@@ -43,7 +45,7 @@ export const TechStack = async ({ tech }: { tech: string }) => {
             width={50}
             height={50}
             alt="react"
-            className="size-5 object-cover md:size-12"
+            className="size-5 object-cover md:size-12 place-self-center"
           />
         );
       case "nodejs":
@@ -53,7 +55,7 @@ export const TechStack = async ({ tech }: { tech: string }) => {
             width={50}
             height={50}
             alt="react"
-            className="size-5 md:size-12"
+            className="size-5 md:size-12 place-self-center"
           />
         );
       case "html":
@@ -65,14 +67,16 @@ export const TechStack = async ({ tech }: { tech: string }) => {
             width={50}
             height={50}
             alt="react"
-            className="size-5 md:size-12"
+            className="size-5 md:size-12 place-self-center "
           />
         );
       case "gitHub":
-        return <IconBrandGithub className="size-5 md:size-12" />;
+        return (
+          <IconBrandGithub className="size-5 md:size-12 place-self-center" />
+        );
       case "copilot":
         return (
-          <IconBrandGithubCopilot className="size-5 stroke-white-900 md:size-12" />
+          <IconBrandGithubCopilot className="size-5 stroke-white-900 md:size-12 place-self-center" />
         );
       case "nextjs":
         return (
@@ -81,11 +85,13 @@ export const TechStack = async ({ tech }: { tech: string }) => {
             width={50}
             height={50}
             alt="react"
-            className="size-5 md:size-12"
+            className="size-5 md:size-12 place-self-center"
           />
         );
       case "amazon":
-        return <IconBrandAmazon className="size-5 md:size-12" />;
+        return (
+          <IconBrandAmazon className="size-5 md:size-12 place-self-center" />
+        );
       case "typescript":
         return (
           <Image
@@ -93,7 +99,7 @@ export const TechStack = async ({ tech }: { tech: string }) => {
             width={50}
             height={50}
             alt="react"
-            className="size-5 md:size-12"
+            className="size-5 md:size-12 place-self-center"
           />
         );
       case "tailwind":
@@ -103,11 +109,13 @@ export const TechStack = async ({ tech }: { tech: string }) => {
             width={50}
             height={50}
             alt="react"
-            className="size-5 md:size-12"
+            className="size-5 md:size-12 place-self-center"
           />
         );
       case "laravel":
-        return <IconBrandLaravel className="size-5 md:size-12" />;
+        return (
+          <IconBrandLaravel className="size-5 md:size-12 place-self-center" />
+        );
       case "react":
         return (
           <Image
@@ -115,46 +123,43 @@ export const TechStack = async ({ tech }: { tech: string }) => {
             width={50}
             height={50}
             alt="react"
-            className="size-5 md:size-12"
+            className="size-5 md:size-12 place-self-center"
           />
         );
       case "prisma":
         return (
-          <IconBrandPrisma className="size-5 stroke-white-900 md:size-12" />
+          <IconBrandPrisma className="size-5 stroke-white-900 md:size-12 place-self-center" />
         );
       case "stripe":
-        return <IconBrandStripe className="size-5 md:size-12" />;
+        return (
+          <IconBrandStripe className="size-5 md:size-12 place-self-center" />
+        );
       case "stackoverflow":
-        return <IconBrandStackoverflow className="size-5 md:size-12" />;
+        return (
+          <IconBrandStackoverflow className="size-5 md:size-12 place-self-center" />
+        );
       case "framer":
         return (
-          <IconBrandFramerMotion className="size-5 fill-white-900 md:size-12" />
+          <IconBrandFramerMotion className="size-5 fill-white-900 md:size-12 place-self-center" />
         );
       case "socketio":
-        return <IconBrandSocketIo className="size-5 md:size-12" />;
+        return (
+          <IconBrandSocketIo className="size-5 md:size-12 place-self-center" />
+        );
       case "postgres":
         return (
-          <Image
-            src={postGres}
-            alt="postgres"
-            width={50}
-            height={50}
-            className="size-5 md:size-12"
-          />
+          <Postgres size={64} className="size-5 md:size-12 place-self-center" />
         );
       case "clerkjs":
         return (
-          <Image
-            src={clerk}
-            alt="clerk"
-            width={50}
-            height={50}
-            className="size-5 md:size-12"
+          <ClerkIcon
+            size={64}
+            className="size-5 md:size-12 place-self-center"
           />
         );
       case "supabase":
         return (
-          <IconBrandSupabase className="size-5 stroke-green-400 md:size-12" />
+          <IconBrandSupabase className="size-5 stroke-green-400 md:size-12 place-self-center" />
         );
       default:
         return (
@@ -166,7 +171,11 @@ export const TechStack = async ({ tech }: { tech: string }) => {
         );
     }
   };
-  return <div className=" flex  rounded-full ">{techCheck()}</div>;
+  return (
+    <div className=" flex  rounded-full justify-center items-center ">
+      {techCheck()}
+    </div>
+  );
 };
 
 const TechStacks = ({ tech }: { tech: string[] }) => {

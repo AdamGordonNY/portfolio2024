@@ -1,4 +1,3 @@
-import IconWrapper from "./IconWrapper";
 import React from "react";
 
 const Mail = (props: any) => {
@@ -25,4 +24,4 @@ const Mail = (props: any) => {
   );
 };
 
-export default IconWrapper(Mail);
+export default Mail;

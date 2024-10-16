@@ -1,5 +1,3 @@
-import IconWrapper from "./IconWrapper";
-
 const ImagePlaceholder = (props: any) => {
   return (
     <svg
@@ -19,4 +17,4 @@ const ImagePlaceholder = (props: any) => {
   );
 };
 
-export default IconWrapper(ImagePlaceholder);
+export default ImagePlaceholder;

@@ -1,5 +1,4 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 const GraphQL = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -17,4 +16,4 @@ const GraphQL = (props: any) => {
   );
 };
 
-export default IconWrapper(GraphQL);
+export default GraphQL;

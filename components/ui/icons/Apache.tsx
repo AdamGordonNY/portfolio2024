@@ -1,5 +1,5 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
+
 const Apache = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -217,4 +217,4 @@ const Apache = (props: any) => {
   );
 };
 
-export default IconWrapper(Apache);
+export default Apache;

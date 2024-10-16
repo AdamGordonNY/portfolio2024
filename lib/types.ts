@@ -94,7 +94,10 @@ export type EmailType =
   | "email.bounced"
   | "email.opened"
   | "email.clicked";
-export type Skill = string;
+export type Skill = {
+  name: string;
+  icon?: boolean;
+};
 
 export type SkillCategory = {
   category: string;

@@ -1,5 +1,5 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
+
 const AWS = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -15,4 +15,4 @@ const AWS = (props: any) => {
   );
 };
 
-export default IconWrapper(AWS);
+export default AWS;

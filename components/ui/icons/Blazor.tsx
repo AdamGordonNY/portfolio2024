@@ -1,5 +1,5 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
+
 const Blazor = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -11,4 +11,4 @@ const Blazor = (props: any) => {
   );
 };
 
-export default IconWrapper(Blazor);
+export default Blazor;

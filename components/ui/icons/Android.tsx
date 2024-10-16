@@ -1,5 +1,5 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
+
 const Android = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -23,4 +23,4 @@ const Android = (props: any) => {
   );
 };
 
-export default IconWrapper(Android);
+export default Android;

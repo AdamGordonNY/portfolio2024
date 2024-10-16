@@ -1,5 +1,5 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
+
 const SQL = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -31,4 +31,4 @@ const SQL = (props: any) => {
   );
 };
 
-export default IconWrapper(SQL);
+export default SQL;

@@ -1,17 +1,8 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 
 const ChatGPT = (props: any) => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      x="0px"
-      y="0px"
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" {...props}>
       <linearGradient
         id="SVGID_1__JV8I2qAOf5Ts_gr1"
         x1="37.562"
@@ -41,4 +32,4 @@ const ChatGPT = (props: any) => {
   );
 };
 
-export default IconWrapper(ChatGPT);
+export default ChatGPT;

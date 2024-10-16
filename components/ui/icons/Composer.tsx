@@ -1,5 +1,5 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
+
 const Composer = (props: any) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
@@ -49,4 +49,4 @@ const Composer = (props: any) => {
   );
 };
 
-export default IconWrapper(Composer);
+export default Composer;

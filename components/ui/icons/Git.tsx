@@ -1,16 +1,8 @@
 import React from "react";
-import IconWrapper from "./IconWrapper";
 
 const Git = (props: any) => {
   return (
-    <svg
-      {...props}
-      width="48"
-      height="47"
-      viewBox="0 0 48 47"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg {...props} fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M4.44057 25.6686C3.30375 24.5318 3.30375 22.6886 4.44057 21.5518L21.9215 4.07088C23.0583 2.93406 24.9015 2.93406 26.0383 4.07088L43.5192 21.5518C44.656 22.6886 44.656 24.5318 43.5192 25.6686L26.0383 43.1495C24.9015 44.2863 23.0583 44.2863 21.9215 43.1495L4.44057 25.6686Z"
         fill="#EE513B"
@@ -23,4 +15,4 @@ const Git = (props: any) => {
   );
 };
 
-export default IconWrapper(Git);
+export default Git;
