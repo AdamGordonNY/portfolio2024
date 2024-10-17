@@ -11,25 +11,24 @@ import {
 export const testimonials = [
   {
     name: "Adrian Hajdin",
-    description: null,
-    img: "/adrianendorsement.png",
-    idx: 1,
+
+    title: "JavaScript Mastery CEO",
+    quote:
+      "Adam is a very talented developer who has a great eye for detail and is always looking to learn more. He is a great team player and always goes above and beyond to help others. He is a great asset to any team and I would highly recommend him.",
   },
   {
-    name: "Moses Cowan - MNC Consulting",
-    description:
+    name: "Moses Cowan ",
+    quote:
       "...He trained a multitude of new interns on the framework, and before he left to pursue full employment, made sure that the staff taking over knew what they were doing. He was a great communicator with both the interns and myself. He also learned the ReactJS library and laid the groundwork for many students that followed him. Additionally, Adam also stayed on as a guide to some interns even after his official departure and has demonstrated a capacity to work well with team members, learn new skills on the job, and be a leader in his time working for this firm. He would be a great addition to any team, and I have no doubt he will impress, given the chance to thrive.",
-    img: null,
-    idx: 2,
+    title: "CEO of MNC Consulting LLC",
   },
   {
-    name: "Riva Kantowitz - Founder",
-    description:
+    name: "Riva Kantowitz",
+    quote:
       "...Adam was able to clearly explain the different options we had in a way that we could understand, and he worked through challenges with our partners, to create this for our organization.  We have not deployed it live yet due to unrelated complications with other partners ,I found Adam as an honest, hardworking individual who would be an asset to any organization.... ",
-    img: null,
-    idx: 3,
+    title: "Founder of Radical Flexibility Fund",
   },
-] as const;
+];
 
 export const experiencesData = [
   {

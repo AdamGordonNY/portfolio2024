@@ -9,14 +9,8 @@ import { FaStripeS } from "react-icons/fa";
 
 import Firebase from "@/components/ui/icons/Firebase";
 import MySQL from "@/components/ui/icons/MySQL";
-import Docker from "@/components/ui/icons/Docker";
 import { VSCode } from "@/components/ui/icons/VSCode";
-import DotNet from "@/components/ui/icons/DotNet";
-import FramerMotion from "@/components/ui/icons/FramerMotion";
 import ClerkIcon from "@/components/ui/icons/ClerkIcon";
-import GraphQL from "@/components/ui/icons/GraphQL";
-import Supabase from "@/components/ui/icons/Supabase";
-import Apache from "@/components/ui/icons/Apache";
 import ShadcnUI from "@/components/ui/icons/ShadcnUI";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -25,7 +19,7 @@ export const renderIcon = (icon: string) => {
   switch (icon.toLowerCase()) {
     case "react":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -36,7 +30,7 @@ export const renderIcon = (icon: string) => {
       );
     case "typescript":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -47,7 +41,7 @@ export const renderIcon = (icon: string) => {
       );
     case "nextjs":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             alt="nexjs"
             width={64}
@@ -58,7 +52,7 @@ export const renderIcon = (icon: string) => {
       );
     case "tailwind":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             alt="nexjs"
             width={64}
@@ -67,20 +61,20 @@ export const renderIcon = (icon: string) => {
           />
         </div>
       );
-    case "vue":
+    case "vuejs":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
-            alt="vue"
+            alt="vuejs"
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
           />
         </div>
       );
     case "laravel":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           {" "}
           <Image
             width={64}
@@ -92,7 +86,7 @@ export const renderIcon = (icon: string) => {
       );
     case "figma":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -103,7 +97,7 @@ export const renderIcon = (icon: string) => {
       );
     case "vscode":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <VSCode className="mq450:size-6   md:size-full" />
         </div>
       );
@@ -111,7 +105,7 @@ export const renderIcon = (icon: string) => {
       return <IconBrandXbox className="mq450:size-6   md:size-full" />;
     case "postman":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -122,7 +116,7 @@ export const renderIcon = (icon: string) => {
       );
     case "prisma":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -133,7 +127,7 @@ export const renderIcon = (icon: string) => {
       );
     case "php":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -144,13 +138,13 @@ export const renderIcon = (icon: string) => {
       );
     case "chatgpt":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <ChatGPT className="mq450:size-6   md:size-full" />
         </div>
       );
     case "mongo":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -161,13 +155,13 @@ export const renderIcon = (icon: string) => {
       );
     case "stripe":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <FaStripeS className="mq450:size-6  md:size-full" />
         </div>
       );
     case "vue":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -178,7 +172,7 @@ export const renderIcon = (icon: string) => {
       );
     case "vite":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -188,15 +182,15 @@ export const renderIcon = (icon: string) => {
         </div>
       );
 
-    case "mysql":
+    case "mysql-icon":
       return (
-        <div className="flex items-center justify-center size-[64px]">
-          <MySQL className=" md:size-16 size-8" />
+        <div className="flex size-[64px] items-center justify-center">
+          <MySQL className=" size-8 md:size-16" />
         </div>
       );
     case "javascript":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -207,7 +201,7 @@ export const renderIcon = (icon: string) => {
       );
     case "html":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -218,7 +212,7 @@ export const renderIcon = (icon: string) => {
       );
     case "css":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -229,7 +223,7 @@ export const renderIcon = (icon: string) => {
       );
     case "docker":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -240,7 +234,7 @@ export const renderIcon = (icon: string) => {
       );
     case "socketio":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -251,7 +245,7 @@ export const renderIcon = (icon: string) => {
       );
     case "python":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -260,15 +254,15 @@ export const renderIcon = (icon: string) => {
           />
         </div>
       );
-    case "firestore":
+    case "firebase-icon":
       return (
-        <div className="flex items-center justify-center size-[64px]">
-          <Firebase className=" md:size-16 size-8" />
+        <div className="flex size-[64px] items-center justify-center">
+          <Firebase className=" size-8 md:size-16" />
         </div>
       );
     case "nodejs":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -279,13 +273,13 @@ export const renderIcon = (icon: string) => {
       );
     case "githubcopilot":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <IconBrandGithubCopilot className="mq450:size-6  md:size-full" />
         </div>
       );
     case "nuxt":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -296,7 +290,7 @@ export const renderIcon = (icon: string) => {
       );
     case "azure":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -307,13 +301,13 @@ export const renderIcon = (icon: string) => {
       );
     case "clerkjs":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <ClerkIcon className="mq450:size-6  md:size-full" />
         </div>
       );
     case "postgres":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -324,7 +318,7 @@ export const renderIcon = (icon: string) => {
       );
     case "mysql":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -335,7 +329,7 @@ export const renderIcon = (icon: string) => {
       );
     case "csharp":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -346,7 +340,7 @@ export const renderIcon = (icon: string) => {
       );
     case "dotnet":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -357,7 +351,7 @@ export const renderIcon = (icon: string) => {
       );
     case "framer":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -368,7 +362,7 @@ export const renderIcon = (icon: string) => {
       );
     case "graphql":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -379,13 +373,13 @@ export const renderIcon = (icon: string) => {
       );
     case "clerk":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <ClerkIcon className="mq450:size-6  md:size-full" />
         </div>
       );
     case "supabase":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -396,7 +390,7 @@ export const renderIcon = (icon: string) => {
       );
     case "apache":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -407,7 +401,7 @@ export const renderIcon = (icon: string) => {
       );
     case "nginx":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -418,7 +412,7 @@ export const renderIcon = (icon: string) => {
       );
     case "aws":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -429,7 +423,7 @@ export const renderIcon = (icon: string) => {
       );
     case "firestore":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -440,7 +434,7 @@ export const renderIcon = (icon: string) => {
       );
     case "firebase":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -451,13 +445,13 @@ export const renderIcon = (icon: string) => {
       );
     case "shadcn-ui":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <ShadcnUI className="mq450:size-6  md:size-full" />
         </div>
       );
     case "blazor":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -468,7 +462,7 @@ export const renderIcon = (icon: string) => {
       );
     case "vercel":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -479,7 +473,7 @@ export const renderIcon = (icon: string) => {
       );
     case "google":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -490,7 +484,7 @@ export const renderIcon = (icon: string) => {
       );
     case "android":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -501,7 +495,7 @@ export const renderIcon = (icon: string) => {
       );
     case "canva":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -512,7 +506,7 @@ export const renderIcon = (icon: string) => {
       );
     case "mssql":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -523,7 +517,7 @@ export const renderIcon = (icon: string) => {
       );
     case "eslint":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -534,7 +528,7 @@ export const renderIcon = (icon: string) => {
       );
     case "kubernetes":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -545,7 +539,7 @@ export const renderIcon = (icon: string) => {
       );
     case "google cloud":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
@@ -556,7 +550,7 @@ export const renderIcon = (icon: string) => {
       );
     case "trello":
       return (
-        <div className="flex items-center justify-center size-[64px]">
+        <div className="flex size-[64px] items-center justify-center">
           <Image
             width={64}
             height={64}
